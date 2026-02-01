@@ -1143,6 +1143,14 @@
      Gold: 100
 
 - type: latheRecipe
+  id: ShuttleGunGrappleCircuitboard
+  result: ShuttleGunGrappleCircuitboard
+  completetime: 6
+  materials:
+     Steel: 100
+     Glass: 500
+
+- type: latheRecipe
   id: StationAnchorCircuitboard
   result: StationAnchorCircuitboard
   category: Circuitry

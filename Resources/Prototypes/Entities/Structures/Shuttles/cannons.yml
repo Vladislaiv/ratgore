@@ -50,6 +50,41 @@
   - type: StaticPrice
     price: 1500
 
+- type: entity
+  id: ShuttleGunGrapple
+  parent: [ShuttleGunBase, ConstructibleMachine]
+  name: ship grappling cannon
+  description: Fires a grappling hook that tethers another shuttle and reels it in.
+  components:
+  - type: Sprite
+    sprite: _Crescent/Objects/ShuttleWeapons/50cal.rsi
+    layers:
+    - state: space_artillery
+  - type: Gun
+    projectileSpeed: 60
+    fireRate: 0.0166667
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/harpoon.ogg
+  - type: ShipGrappleGun
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 150
+      behaviors:
+      - !type:ChangeConstructionNodeBehavior
+        node: machineFrame
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+  - type: BasicEntityAmmoProvider
+    proto: ShipGrappleProjectile
+    capacity: 1
+    count: 1
+  - type: RechargeBasicEntityAmmo
+    rechargeCooldown: 60
+  - type: Machine
+    board: ShuttleGunGrappleCircuitboard
+
 # ---- Laser weapon branch ----
 # naming: LSE (Laser) + conventional power + suffix (c for PowerCage, e for wired energy) + Name
 # example: LSE-100e "Clown destroyer" (powered by the wiring, very weak)

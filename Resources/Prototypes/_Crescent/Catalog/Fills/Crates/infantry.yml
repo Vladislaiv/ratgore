@@ -663,4 +663,4 @@
   - type: StorageFill
     contents:
       - id: C4
-        amount: 10
+        amount: 5

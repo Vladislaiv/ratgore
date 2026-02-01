@@ -57,6 +57,7 @@ research-technology-cyberdawn-radiojammer = Радиоглушитель
 research-technology-cyberdawn-ewar = Электронная война
 research-technology-cyberdawn-emag = Криптографическая карта последовательностей
 research-technology-cyberdawn-advancedballistics = Продвинутая баллистика
+research-technology-cyberdawn-boardingweapons = Абордажное вооружение
 research-technology-cyberdawn-dnascram = Скремблер ДНК
 research-technology-cyberdawn-emp = Имплант электромагнитного импульса
 research-technology-cyberdawn-CDTAdvancedComponents = Advanced components

@@ -10,7 +10,6 @@
   skinColoration: Hues
   maleFirstNames: names_moth_first_male
   femaleFirstNames: names_moth_first_female
-  lastNames: names_moth_last
   minHeight: 1
   defaultHeight: 1
   maxHeight: 1

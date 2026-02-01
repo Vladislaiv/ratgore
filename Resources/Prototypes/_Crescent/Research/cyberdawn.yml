@@ -101,6 +101,18 @@
   - WeaponRifleSVDMarksmanNCSP
 
 - type: technology
+  id: CyberdawnBoardingWeapons
+  name: research-technology-cyberdawn-boardingweapons
+  icon:
+    sprite: _Crescent/Objects/ShuttleWeapons/50cal.rsi
+    state: space_artillery
+  discipline: Cyberdawn
+  tier: 2
+  cost: 9000
+  recipeUnlocks:
+  - ShuttleGunGrappleCircuitboard
+
+- type: technology
   id: CDTAdvancedFirearmcomponents
   name: research-technology-cyberdawn-CDTAdvancedFirearmcomponents
   icon:

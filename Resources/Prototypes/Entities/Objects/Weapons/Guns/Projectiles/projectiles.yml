@@ -1475,6 +1475,47 @@
     soundHit:
       collection: MeatLaserImpact
 
+- type: entity
+  id: ShipGrappleProjectile
+  name: ship grappling hook
+  parent: BaseBullet
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Launchers/grappling_gun.rsi
+    layers:
+    - state: hook
+  - type: Ammo
+    muzzleFlash: null
+  - type: Physics
+    bodyType: Dynamic
+    linearDamping: 0
+    angularDamping: 0
+  - type: Fixtures
+    fixtures:
+      projectile:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.2,-0.2,0.2,0.2"
+        hard: false
+        mask:
+        - Impassable
+        - BulletImpassable
+  - type: Projectile
+    deleteOnCollide: false
+    ignoreWeaponGrid: true
+    damage:
+      types:
+        Blunt: 0
+  - type: ShipWeaponProjectile
+  - type: ProjectileIFF
+    visualType: SolidCircle
+    color: "#FFCC66"
+    scale: 1.0
+  - type: ShipGrappleProjectile
+  - type: TimedDespawn
+    lifetime: 1.6667
+
 - type: entity #Goobstation, put here so the X-01 stuff isnt spread everywhere.
   name: ion bolt
   id: BulletEnergyGunIon
