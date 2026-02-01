@@ -92,7 +92,7 @@
     - type: Gun
       fireOnDropChance: 0
       projectileSpeed: 40
-      fireRate: 1.2
+      fireRate: 0.5
       selectedMode: FullAuto
       availableModes:
         - FullAuto
@@ -112,7 +112,7 @@
           variation: 0.08
     - type: BasicEntityAmmoProvider
       proto: BulletPlasmaBall
-      capacity: 20
+      capacity: 10
       count: 10
     - type: ApcPowerReceiver
       powerLoad: 3500
@@ -170,8 +170,8 @@
           variation: 0.08
     - type: BasicEntityAmmoProvider
       proto: BulletPlasmaArc
-      capacity: 10
-      count: 10
+      capacity: 5
+      count: 5
     - type: ApcPowerReceiver
       powerLoad: 5000
     - type: HardpointAnchorableOnly

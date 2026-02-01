@@ -1356,7 +1356,7 @@ entities:
     - type: VesselIcon
       iffIcon:
         sprite: _Crescent/ShipIcons/ifficons.rsi
-        state: frigate
+        state: destroyer
     - type: BecomesStation
       id: Hyena
 - proto: AAAardpointMediumMissile

@@ -772,6 +772,7 @@
       - SHIShiverBlade
       - ClothingOuterHardsuitSHIJuggernaut
       - ClothingOuterHardsuitSHISpeedsuit
+      - FleaLPC
       - FujinLPC
       - MetempsychoticMachineCircuitboard
       - HardlinerFlatpack
@@ -1668,6 +1669,7 @@
     runningState: fab-active
     staticRecipes:
     - GoodSilkCrate
+    - FillamentSilkCrate
     - AlcoholCrate
     - BadscrapCrate
     - Ammocrate

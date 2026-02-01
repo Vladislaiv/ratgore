@@ -342,6 +342,18 @@
   - FujinLPC
 
 - type: technology
+  id: ShinoharaStealthPod
+  name: research-technology-shinohara-stealth-pod
+  icon:
+    sprite: _Crescent/Objects/Misc/lpcchip.rsi
+    state: icon
+  discipline: Corporate
+  tier: 2
+  cost: 8000
+  recipeUnlocks:
+  - FleaLPC
+
+- type: technology
   id: ShinoharaAdvancedMechWeapons
   name: research-technology-shinohara-advancedmechweaponry
   icon:

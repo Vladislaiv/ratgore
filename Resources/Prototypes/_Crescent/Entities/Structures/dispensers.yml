@@ -79,8 +79,11 @@
       TradeDeedHigh: SpaceCash3500
       TradeDeedVeryHigh: SpaceCash4500
       TradeDeedUnique: SpaceCash6000
-      TradeDeed10k: SpaceCash7500
       TradeDeedExotic: SpaceCash10000
+      TradeDeed20k: SpaceCash20000
+      TradeDeed25k: SpaceCash25000
+      TradeDeed30k: SpaceCash30000
+      TradeDeed50k: SpaceCash50000
   - type: Sprite
     sprite: _Crescent/Structures/deedsmachine.rsi
     layers:

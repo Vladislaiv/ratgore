@@ -42,14 +42,15 @@ public sealed class HadalCorrosionSystem : EntitySystem
             if (!TryComp<CorrosionResistanceComponent>(ent, out var resistance))
                 resistance = new CorrosionResistanceComponent { ResistanceMultiplier = 1f };
 
-            var corrosionAmount = resistance.ResistanceMultiplier * 0.0002f + hadalCorrosion.CorrosionLevel;
+            var corrosionAmount = resistance.ResistanceMultiplier * 0.0002f;
             if (!inHadal)
                 corrosionAmount = corrosionAmount * -5;
 
             if (EntityManager.TryGetComponent<MetaDataComponent>(ent, out var meta) && meta.EntityPrototype?.ID == "MobFleshGolemCorroded")
                 corrosionAmount = corrosionAmount * -10f;
 
-            hadalCorrosion.CorrosionLevel = Math.Min(1f, Math.Max(0f, corrosionAmount));
+            hadalCorrosion.CorrosionLevel += corrosionAmount;
+            hadalCorrosion.CorrosionLevel = Math.Clamp(hadalCorrosion.CorrosionLevel, 0f, 1f);
 
             var staticomp = EnsureComp<StaticOverlayComponent>(ent);
             staticomp.AdditionLevel = hadalCorrosion.CorrosionLevel;

@@ -1,12 +1,10 @@
 uniform highp vec4 rgb_color; // RGB color between 0 and 255
 uniform highp float addition_level; // Number between 0 and 1
 
-// Source - https://stackoverflow.com/a/4275343
-// Posted by appas, modified by community. See post 'Timeline' for change history
-// Retrieved 2026-01-29, License - CC BY-SA 4.0
-
-highp float noise(highp vec2 co){
-    return fract(sin(dot(co, vec2(12.9898, 78.233))) * 43758.5453);
+highp float noise(highp vec2 p) {
+    p = fract(p * vec2(123.34, 456.21));
+    p += dot(p, p + 45.32);
+    return fract(p.x * p.y);
 }
 
 void fragment() {

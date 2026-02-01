@@ -9,7 +9,6 @@
     - Vanguard
     - Lodka
     - Ivarod
-    - Sunder
     - Stern
     - Gargut
     - Hind
@@ -46,6 +45,7 @@
     - Cerberus
     - Corvax
     - Ouroboros
+    - Cleaver
 
 - type: entity
   id: CountsmanMothershipComputer
@@ -60,10 +60,8 @@
     - Covetor
     - Gnosis
     - Praxis
-    - Sunesis
     - Laelaps
     #- Dragoon
-    - Suzerain
 
 - type: entity
   id: NemesisMothershipComputer
@@ -127,7 +125,6 @@
     - buffalo
     - gazpachov
     - Musinyane
-    - Flea
     - Bison
     - Nazaar
     - colossus
@@ -153,8 +150,9 @@
   components:
   - type: ShipyardListing
     shuttles:
-    - Khopesh
-    - Broadsword
+    - HornetDrone
+    #- Khopesh
+    #- Broadsword
 
 - type: entity
   id: UnionfallClementineMothershipComputer

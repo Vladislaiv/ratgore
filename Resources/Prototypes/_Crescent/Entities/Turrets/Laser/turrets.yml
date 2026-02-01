@@ -163,7 +163,7 @@
         params:
           variation: 0.12
     - type: RechargeBasicEntityAmmo
-      rechargeCooldown: 0.2
+      rechargeCooldown: 0.5
       rechargeSound:
         path: /Audio/Weapons/Guns/Bolt/lmg_bolt_closed.ogg
         params:
@@ -442,8 +442,8 @@
           ents: []
     - type: Gun
       fireOnDropChance: 0
-      projectileSpeed: 75
-      fireRate: 2.6
+      projectileSpeed: 50
+      fireRate: 1
       selectedMode: FullAuto
       availableModes:
         - FullAuto
@@ -452,7 +452,7 @@
         params:
           variation: 0.12
     - type: RechargeBasicEntityAmmo
-      rechargeCooldown: 2
+      rechargeCooldown: 5
       rechargeSound:
         path: /Audio/Weapons/Guns/Bolt/lmg_bolt_closed.ogg
         params:
@@ -460,8 +460,8 @@
           variation: 0.08
     - type: BasicEntityAmmoProvider
       proto: BulletDamnation
-      capacity: 25
-      count: 10
+      capacity: 5
+      count: 5
     - type: ApcPowerReceiver
       powerLoad: 6000
     - type: HardpointAnchorableOnly
