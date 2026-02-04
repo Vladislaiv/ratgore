@@ -52,7 +52,6 @@
                 <BoxContainer Orientation="Vertical" MinWidth="400" HorizontalExpand="False">
                     <PanelContainer StyleClasses="LobbyBackground" VerticalExpand="True">
                         <BoxContainer Orientation="Vertical" Margin="15">
-                            <Label Name="ServerName" Access="Public" StyleClasses="LabelHeadingBigger" HorizontalAlignment="Center" />
                             
                             <PanelContainer StyleClasses="ServerInfoBackground" Margin="0 5" VerticalExpand="False">
                                 <BoxContainer Orientation="Vertical" Margin="10">
@@ -62,7 +61,6 @@
                             </PanelContainer>
 
                             <controls:HLine Color="#606060" Margin="0 5"/>
-                            <Label Text="ГОЛОСОВАНИЯ" StyleClasses="LabelHeading" HorizontalAlignment="Center" />
                             
                             <ScrollContainer VerticalExpand="True" Margin="0 10">
                                 <BoxContainer Name="VoteContainer" Access="Public" Orientation="Vertical" SeparationOverride="4" />
@@ -70,19 +68,22 @@
                             
                             <Control Name="DonationAnchor" Margin="0 0 0 10" />
                             
-                            <vote:VoteCallMenuButton Name="CallVoteButton" StyleClasses="NovaLobbyButton" Text="Голосование" HorizontalExpand="True" />
+                            <BoxContainer Orientation="Horizontal" SeparationOverride="10">
+                                <vote:VoteCallMenuButton Name="CallVoteButton" StyleClasses="NovaLobbyButton" Text="Голосование" HorizontalExpand="True" />
+                                <changelog:ChangelogButton Name="Changelog" Access="Public" StyleClasses="NovaLobbyButton" Text="Обновления" HorizontalExpand="True" />
+                            </BoxContainer>
                         </BoxContainer>
                     </PanelContainer>
                 </BoxContainer>
 
                 <BoxContainer Orientation="Vertical" HorizontalExpand="True">
                      <BoxContainer Orientation="Vertical" VerticalExpand="True">
-                        <controls:StripeBack Margin="0 0 0 10">
-                            <Label Name="StartTime" Access="Public" Align="Center" StyleClasses="LabelBig" FontColorOverride="Gold" HorizontalExpand="True" />
+                        <controls:StripeBack Margin="0 0 0 10" MinHeight="40">
+                            <Label Name="StartTime" Access="Public" Align="Center" StyleClasses="LabelBig" FontColorOverride="Gold" HorizontalExpand="True" VerticalAlignment="Center" />
                         </controls:StripeBack>
                         
-                        <lobbyUi:LobbyCharacterPreviewPanel Name="CharacterPreview" Access="Public" VerticalExpand="True" HorizontalExpand="True" />
-                        
+                        <Control VerticalExpand="True" />
+
                         <BoxContainer Orientation="Horizontal" HorizontalAlignment="Center" SeparationOverride="20" Margin="0 5">
                             <RichTextLabel Name="LobbySong" Access="Public" />
                             <RichTextLabel Name="LobbyBackground" Access="Public" />
@@ -102,11 +103,6 @@
                 <BoxContainer Orientation="Vertical" MinWidth="400" HorizontalExpand="False">
                     <PanelContainer StyleClasses="LobbyBackground" VerticalExpand="True">
                         <BoxContainer Orientation="Vertical" Margin="10">
-                            <BoxContainer Orientation="Horizontal" Margin="0 0 0 5">
-                                <Label Text="ЧАТ" StyleClasses="LabelHeading" VAlign="Center" />
-                                <Control HorizontalExpand="True" />
-                                <changelog:ChangelogButton Name="Changelog" Access="Public" StyleClasses="NovaLobbyButton" Text="Обновления" />
-                            </BoxContainer>
                             <widgets:ChatBox Name="Chat" Access="Public" VerticalExpand="True" />
                         </BoxContainer>
                     </PanelContainer>

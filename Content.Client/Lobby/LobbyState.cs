@@ -35,12 +35,20 @@ namespace Content.Client.Lobby
         protected override Type? LinkedScreenType { get; } = typeof(LobbyGui);
         public LobbyGui? Lobby;
 
+        private Label? _startTimeLabel;
+        private Label? _stationTimeLabel;
+        private Control? _voteContainer;
+
         protected override void Startup()
         {
             if (_userInterfaceManager.ActiveScreen == null)
                 return;
 
             Lobby = (LobbyGui) _userInterfaceManager.ActiveScreen;
+
+            _startTimeLabel = Lobby.FindControl<Label>("StartTime");
+            _stationTimeLabel = Lobby.FindControl<Label>("StationTime");
+            _voteContainer = Lobby.FindControl<Control>("VoteContainer");
 
             var chatController = _userInterfaceManager.GetUIController<ChatUIController>();
             _gameTicker = _entityManager.System<ClientGameTicker>();
@@ -51,10 +59,11 @@ namespace Content.Client.Lobby
 
             chatController.SetMainChat(true);
 
-            _voteManager.SetPopupContainer(Lobby.VoteContainer);
-            LayoutContainer.SetAnchorPreset(Lobby, LayoutContainer.LayoutPreset.Wide);
-            Lobby.ServerName.Text = _baseClient.GameInfo?.ServerName; 
+            if (_voteContainer != null)
+                _voteManager.SetPopupContainer(_voteContainer);
 
+            LayoutContainer.SetAnchorPreset(Lobby, LayoutContainer.LayoutPreset.Wide);
+            
             UpdateLobbyUi();
 
             Lobby.CharacterSetupButton.OnPressed += OnSetupPressed;
@@ -87,6 +96,9 @@ namespace Content.Client.Lobby
             }
 
             Lobby = null;
+            _startTimeLabel = null;
+            _stationTimeLabel = null;
+            _voteContainer = null;
         }
 
         public void SwitchState(LobbyGui.LobbyGuiState state)
@@ -124,26 +136,31 @@ namespace Content.Client.Lobby
 
             if (_gameTicker.IsGameStarted)
             {
-                Lobby.StartTime.Text = string.Empty;
+                if (_startTimeLabel != null) _startTimeLabel.Text = string.Empty;
+                
                 var roundTime = _gameTiming.CurTime.Subtract(_gameTicker.RoundStartTimeSpan);
-                Lobby.StationTime.Text = Loc.GetString("lobby-state-player-status-round-time", ("hours", roundTime.Hours), ("minutes", roundTime.Minutes));
+                if (_stationTimeLabel != null)
+                    _stationTimeLabel.Text = Loc.GetString("lobby-state-player-status-round-time", 
+                        ("hours", roundTime.Hours), ("minutes", roundTime.Minutes));
                 return;
             }
 
-            Lobby.StationTime.Text = Loc.GetString("lobby-state-player-status-round-not-started");
+            if (_stationTimeLabel != null)
+                _stationTimeLabel.Text = Loc.GetString("lobby-state-player-status-round-not-started");
+            
             string text;
 
             if (_gameTicker.Paused)
                 text = Loc.GetString("lobby-state-paused");
             else if (_gameTicker.StartTime < _gameTiming.CurTime)
             {
-                Lobby.StartTime.Text = Loc.GetString("lobby-state-soon");
+                if (_startTimeLabel != null) _startTimeLabel.Text = Loc.GetString("lobby-state-soon");
                 return;
             }
             else
             {
                 var difference = _gameTicker.StartTime - _gameTiming.CurTime;
-                var seconds = difference.TotalSeconds;
+                var seconds = (int)difference.TotalSeconds;
                 if (seconds < 0)
                     text = Loc.GetString(seconds < -5
                         ? "lobby-state-right-now-question"
@@ -152,7 +169,8 @@ namespace Content.Client.Lobby
                     text = $"{difference.Minutes}:{difference.Seconds:D2}";
             }
 
-            Lobby.StartTime.Text = Loc.GetString("lobby-state-round-start-countdown-text", ("timeLeft", text));
+            if (_startTimeLabel != null)
+                _startTimeLabel.Text = Loc.GetString("lobby-state-round-start-countdown-text", ("timeLeft", text));
         }
 
         private void LobbyStatusUpdated()
@@ -181,7 +199,7 @@ namespace Content.Client.Lobby
             }
             else
             {
-                Lobby.StartTime.Text = string.Empty;
+                if (_startTimeLabel != null) _startTimeLabel.Text = string.Empty;
                 Lobby.ReadyButton.Text = Loc.GetString(Lobby.ReadyButton.Pressed ? "lobby-state-player-status-ready" : "lobby-state-player-status-not-ready");
                 Lobby.ReadyButton.ToggleMode = true;
                 Lobby.ReadyButton.Disabled = false;

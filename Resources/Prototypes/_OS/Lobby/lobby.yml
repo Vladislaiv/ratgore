@@ -91,3 +91,9 @@
 #  path: /Textures/_White/LobbyScreens/brig.rsi
 #  name: Brig
 #  artist: Waggier
+
+- type: animatedLobbyScreen
+  id: ImperiaLobbyScreen
+  path: /Textures/_Rat/LobbyScreens/imperia.rsi
+  name: Coat of Arms of the Empire
+  artist: Kraida

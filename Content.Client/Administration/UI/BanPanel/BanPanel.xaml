@@ -13,7 +13,7 @@
                 <BoxContainer Orientation="Horizontal" Margin="2">
                     <CheckBox Name="IpCheckbox" MinWidth="100" Text="{Loc ban-panel-ip}" Pressed="False" />
                     <Control MinWidth="50" />
-                    <LineEdit Name="IpLine" MinWidth="100" HorizontalExpand="True" PlaceHolder="{Loc ban-panel-ip}" ToolTip="{Loc ban-panel-ip-hwid-tooltip}" Editable="False" />
+                    <LineEdit Name="IpLine" MinWidth="100" HorizontalExpand="True" PlaceHolder="{Loc ban-panel-ip}" ToolTip="{Loc ban-panel-ip-tooltip}" Editable="False" />
                 </BoxContainer>
                 <BoxContainer Orientation="Horizontal" Margin="2">
                     <CheckBox Name="HwidCheckbox" MinWidth="100" Text="{Loc ban-panel-hwid}" Pressed="True" />

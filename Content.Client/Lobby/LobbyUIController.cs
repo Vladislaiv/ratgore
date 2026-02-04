@@ -94,7 +94,11 @@ public sealed class LobbyUIController : UIController, IOnStateEntered<LobbyState
 
     private LobbyCharacterPreviewPanel? GetLobbyPreview()
     {
-        return _stateManager.CurrentState is LobbyState lobby ? lobby.Lobby?.CharacterPreview : null;
+        if (_stateManager.CurrentState is not LobbyState lobby || lobby.Lobby == null)
+            return null;
+
+        // БЕЗОПАСНЫЙ ПОИСК: Не вызывает исключение, если "CharacterPreview" не найден в XAML
+        return lobby.Lobby.Children.FirstOrDefault(c => c.Name == "CharacterPreview") as LobbyCharacterPreviewPanel;
     }
 
     private void OnRequirementsUpdated()
@@ -206,7 +210,6 @@ public sealed class LobbyUIController : UIController, IOnStateEntered<LobbyState
         return _prototypeManager.Index<JobPrototype>(highPriorityJob ?? SharedGameTicker.FallbackOverflowJob);
     }
 
-    // ДОЛЖЕН БЫТЬ PUBLIC
     public EntityUid LoadProfileEntity(HumanoidCharacterProfile? humanoid, bool jobClothes, bool loadouts)
     {
         EntityUid dummyEnt;
@@ -229,7 +232,6 @@ public sealed class LobbyUIController : UIController, IOnStateEntered<LobbyState
         return dummyEnt;
     }
 
-    // ДОБАВЛЕНО: Этот метод запрашивал HumanoidProfileEditor
     public void RemoveDummyClothes(EntityUid dummy)
     {
         if (!_inventory.TryGetSlots(dummy, out var slots)) return;
@@ -241,7 +243,6 @@ public sealed class LobbyUIController : UIController, IOnStateEntered<LobbyState
         }
     }
 
-    // ДОЛЖЕН БЫТЬ PUBLIC
     public void GiveDummyJobClothes(EntityUid dummy, JobPrototype job, HumanoidCharacterProfile profile)
     {
         if (!_inventory.TryGetSlots(dummy, out var slots) || job.StartingGear == null) return;
@@ -260,7 +261,6 @@ public sealed class LobbyUIController : UIController, IOnStateEntered<LobbyState
         }
     }
 
-    // ДОЛЖЕН БЫТЬ PUBLIC
     public void GiveDummyLoadout(EntityUid dummy, JobPrototype job, HumanoidCharacterProfile profile)
     {
         _loadouts.ApplyCharacterLoadout(dummy, job, profile, _jobRequirements.GetRawPlayTimeTrackers(), _jobRequirements.IsWhitelisted(), out _);
