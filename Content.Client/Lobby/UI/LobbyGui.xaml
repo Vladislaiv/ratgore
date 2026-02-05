@@ -40,6 +40,7 @@
                         <BoxContainer Orientation="Horizontal" SeparationOverride="8" HorizontalExpand="True" HorizontalAlignment="Right" VerticalAlignment="Center">
                             <Button Name="OptionsButton" Access="Public" Text="{Loc 'ui-lobby-options-button'}" StyleClasses="NovaLobbyButton" MinWidth="110" MinHeight="35" />
                             <Button Name="AHelpButton" Access="Public" Text="{Loc 'ui-lobby-ahelp-button'}" StyleClasses="NovaLobbyButton" MinWidth="110" MinHeight="35" />
+                            <Button Name="DiscordRelinkButton" Access="Public" Text="{Loc 'ui-lobby-discord-relink-button'}" StyleClasses="NovaLobbyButton" MinWidth="110" MinHeight="35" />
                             <Button Name="LeaveButton" Access="Public" Text="{Loc 'ui-lobby-leave-button'}" StyleClasses="NovaLobbyButton" StyleIdentifier="Red" MinWidth="110" MinHeight="35" />
                         </BoxContainer>
                         

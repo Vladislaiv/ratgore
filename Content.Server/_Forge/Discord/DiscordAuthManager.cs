@@ -51,6 +51,7 @@ public sealed partial class DiscordAuthManager : IPostInjectInit
         _netMgr.RegisterNetMessage<MsgSyncSponsorData>();
         // ratgore start
         _netMgr.RegisterNetMessage<MsgDiscordAuthCheck>(OnAuthCheck);
+        _netMgr.RegisterNetMessage<MsgDiscordAuthRequest>(OnAuthRequest);
         // ratgore end
         _netMgr.RegisterNetMessage<MsgDiscordAuthSkip>(OnAuthSkip);
         _netMgr.RegisterNetMessage<MsgDiscordStatusResponse>();
@@ -89,6 +90,26 @@ public sealed partial class DiscordAuthManager : IPostInjectInit
             var session = _playerMgr.GetSessionById(userId);
             PlayerVerified?.Invoke(this, session);
         }
+    }
+
+    private async void OnAuthRequest(MsgDiscordAuthRequest msg)
+    {
+        if (!_enabled)
+            return;
+
+        var userId = msg.MsgChannel.UserId;
+        var data = await IsVerified(userId);
+        var link = await GenerateLink(userId);
+        var qrCode = await GenerateQrCode(link ?? string.Empty);
+
+        var message = new MsgDiscordAuthRequired
+        {
+            Link = link ?? string.Empty,
+            ErrorMessage = data.ErrorMessage ?? string.Empty,
+            QrCodeBytes = qrCode
+        };
+
+        _netMgr.ServerSendMessage(message, msg.MsgChannel);
     }
     // ratgore end
 
