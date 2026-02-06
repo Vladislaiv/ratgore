@@ -23,9 +23,6 @@ log(`- PR_NUMBER: ${process.env.PR_NUMBER}`);
 log(`- GITHUB_REPOSITORY: ${process.env.GITHUB_REPOSITORY}`);
 log(`- CHANGELOG_DIR: ${process.env.CHANGELOG_DIR}`);
 log(`- GH_PAT exists: ${!!process.env.GH_PAT ? "YES (masked)" : "NO"}`);
-if (process.env.GH_PAT) {
-  log(`- GH_PAT first 8 chars: ${process.env.GH_PAT.substring(0, 8)}...`);
-}
 
 // Use GitHub token if available for API calls
 if (process.env.GH_PAT) {
