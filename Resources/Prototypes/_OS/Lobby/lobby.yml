@@ -103,3 +103,9 @@
   path: /Textures/_Rat/LobbyScreens/ratgore.rsi
   name: Coat of arms of Ratgore
   artist: Kraida (∩˃o˂∩)♡
+
+- type: animatedLobbyScreen
+  id: RatLobbyScreen
+  path: /Textures/_Rat/LobbyScreens/rat.rsi
+  name: Spinning Rat
+  artist: NoName
