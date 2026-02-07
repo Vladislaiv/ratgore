@@ -1,3 +1,4 @@
+using System.Numerics;
 using Content.Shared.Shuttles.BUIStates;
 using Content.Shared.Shuttles.Systems;
 using Robust.Shared.GameStates;
@@ -33,4 +34,14 @@ public sealed partial class RadarConsoleComponent : Component
     [DataField]
     public bool KeepWorldAligned = false;
     // end
+
+    // Frontier: settable target
+    [DataField]
+    public Vector2? Target;
+
+    [DataField]
+    public EntityUid? TargetEntity;
+
+    [DataField]
+    public bool HideTarget = false;
 }

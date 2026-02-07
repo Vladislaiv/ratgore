@@ -882,11 +882,15 @@ public sealed partial class ShuttleConsoleSystem : SharedShuttleConsoleSystem
         if (!Resolve(entity, ref entity.Comp1, ref entity.Comp2))
             return new NavInterfaceState(SharedRadarConsoleSystem.DefaultMaxRange, null, 0, docks, Shared._NF.Shuttles.Events.InertiaDampeningMode.Dampened, GetNetEntity(entity.Owner)); // Frontier: add inertia dampening
 
-        return GetNavState(
+        var state = GetNavState(
             entity,
             docks,
             entity.Comp2.Coordinates,
             entity.Comp2.LocalRotation.Theta);
+        state.Target = entity.Comp1.Target;
+        state.TargetEntity = GetNetEntity(entity.Comp1.TargetEntity);
+        state.HideTarget = entity.Comp1.HideTarget;
+        return state;
     }
 
     public NavInterfaceState GetNavState(
@@ -898,10 +902,14 @@ public sealed partial class ShuttleConsoleSystem : SharedShuttleConsoleSystem
         if (!Resolve(entity, ref entity.Comp1, ref entity.Comp2))
             return new NavInterfaceState(SharedRadarConsoleSystem.DefaultMaxRange, GetNetCoordinates(coordinates), angle, docks, InertiaDampeningMode.Dampened, GetNetEntity(entity.Owner)); // Frontier: add inertial dampening
 
-        return new NavInterfaceState(entity.Comp1.MaxRange, GetNetCoordinates(coordinates), angle, docks, _shuttle.NfGetInertiaDampeningMode(entity), GetNetEntity(entity.Owner))
+        var state = new NavInterfaceState(entity.Comp1.MaxRange, GetNetCoordinates(coordinates), angle, docks, _shuttle.NfGetInertiaDampeningMode(entity), GetNetEntity(entity.Owner))
         {
             AlignToWorld = entity.Comp1.KeepWorldAligned,
         }; // Frontier: inertia dampening
+        state.Target = entity.Comp1.Target;
+        state.TargetEntity = GetNetEntity(entity.Comp1.TargetEntity);
+        state.HideTarget = entity.Comp1.HideTarget;
+        return state;
     }
 
     /// <summary>

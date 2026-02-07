@@ -58,6 +58,10 @@ public sealed partial class ShuttleNavControl : BaseShuttleControl
     public bool ShowIFF { get; set; } = true;
     public bool ShowDocks { get; set; } = true;
 
+    public Func<EntityUid, MapGridComponent, IFFComponent?, bool>? IFFFilter { get; set; } = null;
+
+    public Func<EntityUid, MapGridComponent, IFFComponent?, bool>? IFFLineFilter { get; set; } = null;
+
     /// <summary>
     /// Raised if the user left-clicks on the radar control with the relevant entitycoordinates.
     /// </summary>
@@ -112,6 +116,7 @@ public sealed partial class ShuttleNavControl : BaseShuttleControl
 
         public bool ShowIFF;
         public bool ShowDocks;
+        public Func<EntityUid, MapGridComponent, IFFComponent?, bool>? IFFFilter;
         public Box2 viewAABB;
         public Angle rot;
         public MapCoordinates mapPos;
@@ -143,6 +148,11 @@ public sealed partial class ShuttleNavControl : BaseShuttleControl
                 return;
 
             var labelName = ShuttlesSys.GetIFFLabel(gUid, self: false, iff);
+            var shouldDrawIFF = ShowIFF && labelName != null && labelName != "grid";
+            if (IFFFilter != null)
+            {
+                shouldDrawIFF &= IFFFilter(gUid, gComp, iff);
+            }
             var gridMatrix = TransformSys.GetWorldMatrix(gUid);
             var matty = Matrix3x2.Multiply(gridMatrix, selfWorldMatrixInvert);
             var color = ShuttlesSys.GetIFFColor(gUid, self: false, iff);
@@ -177,7 +187,7 @@ public sealed partial class ShuttleNavControl : BaseShuttleControl
 
             //.2 NOTE: this code handles the ship dots and icons at the edge of your nav screen
             // this is likely where the ship icons not showing up is handled
-            if (labelName != null && labelName !="grid" && !gridAABB.Intersects(viewAABB) && ShowIFF) //.2 | 2025 - edit to make exploded/generated grids not spam ur radar screen
+            if (shouldDrawIFF && !gridAABB.Intersects(viewAABB)) //.2 | 2025 - edit to make exploded/generated grids not spam ur radar screen
             {
                 const float ShipSelectionDotRadius = 1f;
                 float xSpaceRequired = ShipSelectionDotRadius;
@@ -201,7 +211,7 @@ public sealed partial class ShuttleNavControl : BaseShuttleControl
                 // yes 1.0 scale is intended here.
                 var labelText = Loc.GetString(
                     "shuttle-console-iff-label",
-                    ("name", labelName),
+                    ("name", labelName!),
                     ("distance", $"{distance:0.0}"));
                 var labelDimensions = handle.GetDimensions(Font, labelText, 1f);
                 Vector2 textUiPosition = new Vector2(-labelDimensions.X / 2f, 0);
@@ -541,6 +551,7 @@ public sealed partial class ShuttleNavControl : BaseShuttleControl
         drawJob.viewAABB = viewAABB;
         drawJob.ShowDocks = ShowDocks;
         drawJob.ShowIFF = ShowIFF;
+        drawJob.IFFFilter = IFFFilter;
         drawJob.MousePositionOnUi = vert;
         drawJob.closeGrids.Clear();
         _parMan.ProcessNow(drawJob, _grids.Count);
@@ -573,11 +584,12 @@ public sealed partial class ShuttleNavControl : BaseShuttleControl
 
             gridCentre.Y = -gridCentre.Y;
             var distance = gridCentre.Length();
-            if (ShowIFF && labelName != null && labelName != "grid") //.2 edit: grids dont show up as labels anymore finally
+            if (ShowIFF && labelName != null && labelName != "grid" &&
+                (IFFFilter == null || IFFFilter(gUid, grid.Comp, iff))) //.2 edit: grids dont show up as labels anymore finally
             {
                 var labelText = Loc.GetString(
                     "shuttle-console-iff-label",
-                    ("name", labelName),
+                    ("name", labelName!),
                     ("distance", $"{distance:0.0}"));
 
                 // yes 1.0 scale is intended here.
@@ -603,9 +615,116 @@ public sealed partial class ShuttleNavControl : BaseShuttleControl
 
         }
 
-        if (ourGrid is null)
+        if (!HideTarget && Target is { } target)
+        {
+            var targetName = Loc.GetString("shuttle-console-target-name");
+            if (TargetEntity != null && EntManager.TryGetEntity(TargetEntity.Value, out var targetEnt) &&
+                EntManager.TryGetComponent(targetEnt.Value, out MetaDataComponent? targetMeta))
+            {
+                targetName = targetMeta.EntityName;
+            }
+
+            var distance = Vector2.Distance(target, mapPos.Position);
+            var displayedDistance = distance < 50f ? $"{distance:0.0}" : distance < 1000 ? $"{distance:0}" : $"{distance / 1000:0.0}k";
+            var labelText = Loc.GetString("shuttle-console-iff-label", ("name", targetName), ("distance", displayedDistance));
+
+            Vector2 linePos;
+            if (viewAABB.Contains(target))
+            {
+                var targetInShuttle = Vector2.Transform(target, ourWorldMatrixInvert);
+                targetInShuttle.Y = -targetInShuttle.Y;
+                linePos = ScalePosition(targetInShuttle);
+            }
+            else
+            {
+                linePos = ResolveUIPosition(rot, target, mapPos.Position, new Vector2(1f, 1f));
+            }
+
+            handle.DrawLine(MidPointVector, linePos, TargetColor.WithAlpha(0.7f));
+            var labelDimensions = handle.GetDimensions(Font, labelText, 1f);
+            var labelPos = linePos + new Vector2(6f, -labelDimensions.Y / 2f);
+            labelPos = new Vector2(
+                Math.Clamp(labelPos.X, 0f, PixelWidth - labelDimensions.X),
+                Math.Clamp(labelPos.Y, 0f, PixelHeight - labelDimensions.Y));
+            handle.DrawString(Font, labelPos, labelText, TargetColor);
+        }
+
+        if (ourGrid is null || ourGridId is null)
             return;
         DrawIFFDesignatedObjects(handle, ourWorldMatrix, ourGrid, viewAABB);
+
+        if (IFFLineFilter != null)
+        {
+            DrawIFFSearchLines(handle, xform.MapID, ourGridId.Value, viewAABB, ourWorldMatrixInvert, mapPos.Position, rot,
+                fixturesQuery, bodyQuery);
+        }
+    }
+
+    private void DrawIFFSearchLines(
+        DrawingHandleScreen handle,
+        MapId mapId,
+        EntityUid selfGrid,
+        Box2 viewAABB,
+        Matrix3x2 selfWorldMatrixInvert,
+        Vector2 selfMapPos,
+        Angle rot,
+        EntityQuery<FixturesComponent> fixturesQuery,
+        EntityQuery<PhysicsComponent> bodyQuery)
+    {
+        foreach (var grid in _mapManager.GetAllGrids(mapId))
+        {
+            var gUid = grid.Owner;
+            if (gUid == selfGrid || !fixturesQuery.HasComponent(gUid))
+                continue;
+
+            var gridBody = bodyQuery.GetComponent(gUid);
+            EntManager.TryGetComponent<IFFComponent>(gUid, out var iff);
+
+            if (!_shuttles.CanDraw(gUid, gridBody, iff))
+                continue;
+
+            if (IFFLineFilter != null && !IFFLineFilter(gUid, grid.Comp, iff))
+                continue;
+
+            var labelName = _shuttles.GetIFFLabel(gUid, self: false, iff);
+            if (labelName == null)
+                continue;
+
+            var gridMatrix = _transform.GetWorldMatrix(gUid);
+            var gridAABB = gridMatrix.TransformBox(grid.Comp.LocalAABB);
+
+            Vector2 linePos;
+            var isInView = gridAABB.Intersects(viewAABB);
+            if (isInView)
+            {
+                var matty = Matrix3x2.Multiply(gridMatrix, selfWorldMatrixInvert);
+                var gridCentre = Vector2.Transform(gridBody.LocalCenter, matty);
+                gridCentre.Y = -gridCentre.Y;
+                linePos = ScalePosition(gridCentre);
+            }
+            else
+            {
+                var gridMapPos = _transform.ToMapCoordinates(new EntityCoordinates(gUid, gridBody.LocalCenter)).Position;
+                linePos = ResolveUIPosition(rot, gridMapPos, selfMapPos, new Vector2(1f, 1f));
+            }
+
+            var color = _shuttles.GetIFFColor(gUid, self: false, iff).WithAlpha(0.7f);
+            handle.DrawLine(MidPointVector, linePos, color);
+
+            if (isInView)
+                continue;
+
+            var gridMapPos2 = _transform.ToMapCoordinates(new EntityCoordinates(gUid, gridBody.LocalCenter)).Position;
+            var distance = Vector2.Distance(gridMapPos2, selfMapPos);
+            var displayedDistance = distance < 50f ? $"{distance:0.0}" : distance < 1000 ? $"{distance:0}" : $"{distance / 1000:0.0}k";
+            var labelText = Loc.GetString("shuttle-console-iff-label", ("name", labelName), ("distance", displayedDistance));
+            var labelDimensions = handle.GetDimensions(Font, labelText, 1f);
+            var labelPos = linePos + new Vector2(6f, -labelDimensions.Y / 2f);
+            labelPos = new Vector2(
+                Math.Clamp(labelPos.X, 0f, PixelWidth - labelDimensions.X),
+                Math.Clamp(labelPos.Y, 0f, PixelHeight - labelDimensions.Y));
+            handle.DrawString(Font, labelPos, labelText, color);
+        }
     }
 
     public Vector2 ResolveUIPosition(Angle rotation, Vector2 gridWorldPos, Vector2 selfPos, Vector2 spaceRequired)

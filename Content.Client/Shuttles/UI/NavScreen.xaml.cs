@@ -56,7 +56,7 @@ public sealed partial class NavScreen : BoxContainer
     {
         NavRadar.UpdateState(scc);
         HullrotUpdateState(scc);
-        NfUpdateState(); // Frontier Update State
+        NfUpdateState(scc); // Frontier Update State
     }
 
     public void UpdateState(IFFInterfaceState scc)

@@ -1,3 +1,4 @@
+using System.Numerics;
 using Content.Shared._NF.Shuttles.Events;
 using Robust.Shared.Map;
 using Robust.Shared.Serialization;
@@ -36,6 +37,21 @@ public sealed class NavInterfaceState
     /// </summary>
     public bool AlignToWorld = false;
 
+    /// <summary>
+    /// A settable target to show on radar
+    /// </summary>
+    public Vector2? Target { get; set; }
+
+    /// <summary>
+    /// A settable target to show on radar
+    /// </summary>
+    public NetEntity? TargetEntity { get; set; }
+
+    /// <summary>
+    /// Whether or not to show the target coords
+    /// </summary>
+    public bool HideTarget = true;
+
 
     public NavInterfaceState(
         float maxRange,
@@ -43,7 +59,10 @@ public sealed class NavInterfaceState
         double angle,
         Dictionary<NetEntity, List<DockingPortState>> docks,
         InertiaDampeningMode dampeningMode, // Frontier: add dampeningMode
-        NetEntity Console)
+        NetEntity Console,
+        Vector2? target = null,
+        NetEntity? targetEntity = null,
+        bool hideTarget = true)
     {
         MaxRange = maxRange;
         Coordinates = coordinates;
@@ -51,6 +70,9 @@ public sealed class NavInterfaceState
         Docks = docks;
         DampeningMode = dampeningMode; // Frontier
         console = Console;
+        Target = target;
+        TargetEntity = targetEntity;
+        HideTarget = hideTarget;
     }
 }
 

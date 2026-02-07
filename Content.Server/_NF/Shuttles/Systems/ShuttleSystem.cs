@@ -4,17 +4,21 @@
 using Content.Server.Shuttles.Components;
 using Content.Shared._NF.Shuttles.Events;
 using Content.Shared.CCVar;
+using Content.Shared.Shuttles.Components;
 using Robust.Shared.Physics.Components;
 
 namespace Content.Server.Shuttles.Systems;
 
 public sealed partial class ShuttleSystem
 {
+    [Dependency] private readonly RadarConsoleSystem _radarConsole = default!;
     private float _spaceFrictionStrength;
     private float _anchorDampeningStrength;
     private void NfInitialize()
     {
         SubscribeLocalEvent<ShuttleConsoleComponent, SetInertiaDampeningRequest>(OnSetInertiaDampening);
+        SubscribeLocalEvent<ShuttleConsoleComponent, SetTargetCoordinatesRequest>(NfSetTargetCoordinates);
+        SubscribeLocalEvent<ShuttleConsoleComponent, SetHideTargetRequest>(NfSetHideTarget);
         _spaceFrictionStrength = _cfg.GetCVar(CCVars.SpaceFrictionStrength);
         _anchorDampeningStrength = _cfg.GetCVar(CCVars.AnchorDampeningStrength);
     }
@@ -64,5 +68,38 @@ public sealed partial class ShuttleSystem
             return InertiaDampeningMode.Off;
         else
             return InertiaDampeningMode.Dampened;
+    }
+
+    public void NfSetTargetCoordinates(EntityUid uid, ShuttleConsoleComponent component, SetTargetCoordinatesRequest args)
+    {
+        if (!TryComp<RadarConsoleComponent>(uid, out var radarConsole))
+            return;
+
+        var transform = Transform(uid);
+        // Get the grid entity from the console transform
+        if (!transform.GridUid.HasValue)
+            return;
+
+        var gridUid = transform.GridUid.Value;
+
+        _radarConsole.SetTarget((uid, radarConsole), args.TrackedEntity, args.TrackedPosition);
+        _radarConsole.SetHideTarget((uid, radarConsole), false); // Force target visibility
+        _console.RefreshShuttleConsoles(gridUid);
+    }
+
+    public void NfSetHideTarget(EntityUid uid, ShuttleConsoleComponent component, SetHideTargetRequest args)
+    {
+        if (!TryComp<RadarConsoleComponent>(uid, out var radarConsole))
+            return;
+
+        var transform = Transform(uid);
+        // Get the grid entity from the console transform
+        if (!transform.GridUid.HasValue)
+            return;
+
+        var gridUid = transform.GridUid.Value;
+
+        _radarConsole.SetHideTarget((uid, radarConsole), args.Hidden);
+        _console.RefreshShuttleConsoles(gridUid);
     }
 }

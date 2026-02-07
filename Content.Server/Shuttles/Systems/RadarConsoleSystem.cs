@@ -1,5 +1,6 @@
 using System.Numerics;
 using Content.Server.UserInterface;
+using Content.Server.Shuttles.Components;
 using Content.Shared.Shuttles.BUIStates;
 using Content.Shared.Shuttles.Components;
 using Content.Shared.Shuttles.Systems;
@@ -14,14 +15,21 @@ public sealed partial class RadarConsoleSystem : SharedRadarConsoleSystem
 {
     [Dependency] private readonly ShuttleConsoleSystem _console = default!;
     [Dependency] private readonly UserInterfaceSystem _uiSystem = default!;
+    [Dependency] private readonly TransformSystem _transform = default!;
 
     public override void Initialize()
     {
         base.Initialize();
         SubscribeLocalEvent<RadarConsoleComponent, ComponentStartup>(OnRadarStartup);
+        SubscribeLocalEvent<RadarConsoleComponent, BoundUIOpenedEvent>(OnUIOpened);
     }
 
     private void OnRadarStartup(EntityUid uid, RadarConsoleComponent component, ComponentStartup args)
+    {
+        UpdateState(uid, component);
+    }
+
+    private void OnUIOpened(EntityUid uid, RadarConsoleComponent component, ref BoundUIOpenedEvent args)
     {
         UpdateState(uid, component);
     }
@@ -53,5 +61,29 @@ public sealed partial class RadarConsoleSystem : SharedRadarConsoleSystem
             component.LastUpdatedState.IFFState = _console.GetIFFState(uid, null);
             _uiSystem.SetUiState(uid, RadarConsoleUiKey.Key, component.LastUpdatedState);
         }
+    }
+
+    public void SetTarget(Entity<RadarConsoleComponent> ent, NetEntity targetEntity, Vector2 target)
+    {
+        if (EntityManager.TryGetEntity(targetEntity, out var targetUid)
+            && HasComp<ShuttleComponent>(targetUid)
+            && (!TryComp(targetUid, out IFFComponent? iff) || (iff.Flags & (IFFFlags.Hide | IFFFlags.HideLabel)) == 0)
+            && TryComp(targetUid, out TransformComponent? xform))
+        {
+            ent.Comp.TargetEntity = targetUid.Value;
+            ent.Comp.Target = _transform.GetMapCoordinates(xform).Position;
+        }
+        else
+        {
+            ent.Comp.Target = target;
+            ent.Comp.TargetEntity = null;
+        }
+        Dirty(ent);
+    }
+
+    public void SetHideTarget(Entity<RadarConsoleComponent> ent, bool hideTarget)
+    {
+        ent.Comp.HideTarget = hideTarget;
+        Dirty(ent);
     }
 }
