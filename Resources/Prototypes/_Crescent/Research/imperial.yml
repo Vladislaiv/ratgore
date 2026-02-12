@@ -297,6 +297,18 @@
   - WeaponPlasmaRifleSeethe
 
 - type: technology
+  id: ImperialJuggernaut
+  name: research-technology-imperial-juggernautarmor
+  icon:
+    sprite: _Crescent/Clothing/Empire/OuterClothing/mandatejuggernaut.rsi
+    state: icon
+  discipline: Imperial
+  tier: 2
+  cost: 10000
+  recipeUnlocks:
+  - ClothingOuterHardsuitImperialJuggernaut
+
+- type: technology
   id: ImperialBomb
   name: research-technology-imperial-bomblauncher
   icon:

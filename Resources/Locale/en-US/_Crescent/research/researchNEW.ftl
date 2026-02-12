@@ -105,6 +105,7 @@ research-technology-imperial-wanderer = Imperial Scout Exosuit
 research-technology-imperial-carrion = Imperial Utility Exosuit
 research-technology-imperial-advancedrifling = Advanced Rifling
 research-technology-imperial-bomblauncher = M320 Launcher
+research-technology-imperial-juggernautarmor = Experimental Armor Shielding
 research-technology-imperial-triumphant = Imperial Cruiser
 research-technology-imperial-suzerain = Imperial Siege Battlecruiser
 research-technology-imperial-nemesis = Imperial Artillery Carrier
