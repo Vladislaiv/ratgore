@@ -35,9 +35,9 @@
       selectedMode: FullAuto
       availableModes:
         - FullAuto
-      angleDecay: 15
-      minAngle: 10
-      maxAngle: 22.5
+      angleDecay: 20
+      minAngle: 12
+      maxAngle: 35
       soundGunshot:
         path: /Audio/Weapons/Guns/Gunshots/laserturret.ogg
         params:
@@ -91,14 +91,14 @@
           ents: []
     - type: Gun
       fireOnDropChance: 0
-      projectileSpeed: 100
-      fireRate: 0.5
+      projectileSpeed: 150
+      fireRate: 2.5
       selectedMode: FullAuto
       availableModes:
         - FullAuto
-      angleDecay: 15
-      minAngle: 10
-      maxAngle: 22.5
+      angleDecay: 22
+      minAngle: 12
+      maxAngle: 32
       soundGunshot:
         path: /Audio/Weapons/Guns/Gunshots/lasergatling.ogg
         params:
@@ -112,8 +112,8 @@
           variation: 0.08
     - type: BasicEntityAmmoProvider
       proto: BulletPlasmaBall
-      capacity: 10
-      count: 10
+      capacity: 25
+      count: 25
     - type: ApcPowerReceiver
       powerLoad: 3500
     - type: HardpointAnchorableOnly
@@ -152,11 +152,14 @@
           ents: []
     - type: Gun
       fireOnDropChance: 0
-      projectileSpeed: 80
+      projectileSpeed: 180
       fireRate: 0.5
       selectedMode: FullAuto
       availableModes:
         - FullAuto
+      angleDecay: 30
+      minAngle: 14
+      maxAngle: 35
       soundGunshot:
         path: /Audio/Weapons/Guns/Gunshots/ship_perforator.ogg
         params:

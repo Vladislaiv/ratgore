@@ -15,7 +15,7 @@
         Structural: 125
         Blunt: 40
   - type: TimedDespawn
-    lifetime: 20 #1600m + Lock on range = 2000m
+    lifetime: 28 #2520
   - type: Sprite
     sprite: _Crescent/Objects/Turrets/Ammunition/Projectiles/shortbow.rsi
     layers:
@@ -37,8 +37,8 @@
   - type: HeatSeeking
     rotationSpeed: 15 # slow rotation so it isnt aimbot, still fairly accurate though
     acceleration: 120
-    topSpeed: 100
-    fieldOfView: 30
+    topSpeed: 90
+    fieldOfView: 15
     defaultSeekingRange: 400
     guidanceAlgorithm: PredictiveGuidance
   - type: Fixtures
@@ -84,7 +84,7 @@
         Structural: 150
         Blunt: 40
   - type: TimedDespawn
-    lifetime: 20 #1600m + Lock on range = 2000m
+    lifetime: 28 #2520
   - type: Sprite
     sprite: _Crescent/Objects/Turrets/Ammunition/Projectiles/shortbow.rsi
     layers:
@@ -105,10 +105,10 @@
     color: Red
   - type: HeatSeeking
     rotationSpeed: 10 # slow rotation so it isnt aimbot, still fairly accurate though
-    acceleration: 120
-    topSpeed: 120
-    fieldOfView: 20
-    defaultSeekingRange: 300
+    acceleration: 90
+    topSpeed: 90
+    fieldOfView: 15
+    defaultSeekingRange: 400
     guidanceAlgorithm: PredictiveGuidance
   - type: Fixtures
     fixtures:
@@ -154,7 +154,7 @@
         Structural: 175
         Blunt: 40
   - type: TimedDespawn
-    lifetime: 18 #1620 + Lock on range = 2420m
+    lifetime: 25 #2500
   - type: Sprite
     sprite: _Crescent/Objects/Turrets/Ammunition/Projectiles/azimuth.rsi
     layers:
@@ -176,8 +176,8 @@
   - type: HeatSeeking
     rotationSpeed: 25
     acceleration: 50
-    topSpeed: 150
-    fieldOfView: 50
+    topSpeed: 100
+    fieldOfView: 35
     defaultSeekingRange: 800
     guidanceAlgorithm: PurePursuit
   - type: Fixtures
@@ -221,7 +221,7 @@
         Structural: 250
         Blunt: 40
   - type: TimedDespawn
-    lifetime: 18 #1620 + Lock on range = 2320m
+    lifetime: 25 #2500
   - type: Sprite
     sprite: _Crescent/Objects/Turrets/Ammunition/Projectiles/azimuth.rsi
     layers:
@@ -236,7 +236,7 @@
     rotationSpeed: 35
     acceleration: 100
     topSpeed: 150
-    fieldOfView: 45
+    fieldOfView: 35
     defaultSeekingRange: 700
     guidanceAlgorithm: PurePursuit
 
@@ -255,7 +255,7 @@
         Structural: 200
         Blunt: 40
   - type: TimedDespawn
-    lifetime: 18 #1620 + Lock on range = 2620
+    lifetime: 25 #2500
   - type: Sprite
     sprite: _Crescent/Objects/Turrets/Ammunition/Projectiles/azimuth.rsi
     layers:
@@ -268,9 +268,9 @@
     maxTileBreak: 4
   - type: HeatSeeking
     rotationSpeed: 35
-    acceleration: 70
-    topSpeed: 175
-    fieldOfView: 60
+    acceleration: 100
+    topSpeed: 100
+    fieldOfView: 25
     defaultSeekingRange: 1000
     guidanceAlgorithm: PurePursuit
 
@@ -289,7 +289,7 @@
         Structural: 200
         Blunt: 40
   - type: TimedDespawn
-    lifetime: 18 #1620 + Lock on range = 2170
+    lifetime: 25 #2500
   - type: Sprite
     sprite: _Crescent/Objects/Turrets/Ammunition/Projectiles/azimuth.rsi
     layers:
@@ -303,7 +303,7 @@
   - type: HeatSeeking
     rotationSpeed: 30
     acceleration: 60
-    topSpeed: 150
+    topSpeed: 100
     fieldOfView: 45
     defaultSeekingRange: 850
     guidanceAlgorithm: PurePursuit
@@ -326,7 +326,7 @@
         Structural: 225
         Blunt: 60
   - type: TimedDespawn
-    lifetime: 20 #1800m + Heat Seeking Range = 3300m
+    lifetime: 50 #5000
   - type: Sprite
     sprite: _Crescent/Objects/Turrets/Ammunition/Projectiles/arbalest.rsi
     layers:
@@ -349,7 +349,7 @@
     rotationSpeed: 35
     acceleration: 45
     topSpeed: 100
-    fieldOfView: 60
+    fieldOfView: 40
     defaultSeekingRange: 1500
     guidanceAlgorithm: PurePursuit
   - type: Fixtures
@@ -377,6 +377,7 @@
       - !type:DoActsBehavior
         acts: [ "Destruction" ]
       - !type:ExplodeBehavior
+  - type: IgnoresHullrotShields
 
 - type: entity
   id: ArbalestRocketProjectileNCWL
@@ -394,7 +395,7 @@
         Structural: 225
         Blunt: 60
   - type: TimedDespawn
-    lifetime: 20 #1800m + Heat Seeking Range = 3300m
+    lifetime: 50 #5000m
   - type: Sprite
     sprite: _Crescent/Objects/Turrets/Ammunition/Projectiles/arbalest.rsi
     layers:
@@ -445,6 +446,7 @@
       - !type:DoActsBehavior
         acts: [ "Destruction" ]
       - !type:ExplodeBehavior
+  - type: IgnoresHullrotShields
 
 - type: entity
   id: ArbalestRocketProjectileGSC
@@ -462,7 +464,7 @@
         Structural: 275
         Blunt: 60
   - type: TimedDespawn
-    lifetime: 20 #1800m + Heat Seeking Range = 2800m
+    lifetime: 50 #5000
   - type: Sprite
     sprite: _Crescent/Objects/Turrets/Ammunition/Projectiles/arbalest.rsi
     layers:
@@ -484,7 +486,7 @@
   - type: HeatSeeking
     rotationSpeed: 20
     acceleration: 75
-    topSpeed: 125
+    topSpeed: 100
     fieldOfView: 40
     defaultSeekingRange: 1000
     guidanceAlgorithm: PurePursuit
@@ -513,6 +515,7 @@
       - !type:DoActsBehavior
         acts: [ "Destruction" ]
       - !type:ExplodeBehavior
+  - type: IgnoresHullrotShields
 
 #gargoyle
 
@@ -532,7 +535,7 @@
         Structural: 275
         Blunt: 60
   - type: TimedDespawn
-    lifetime: 50 #3000m + Lock on range = 4500m
+    lifetime: 70 #5600m
   - type: Sprite
     sprite: _Crescent/Objects/Turrets/Ammunition/Projectiles/gargoyle.rsi
     layers:
@@ -601,7 +604,7 @@
         Structural: 275
         Blunt: 60
   - type: TimedDespawn
-    lifetime: 50 #3000m + Lock on range = 6000m
+    lifetime: 70 #5600m
   - type: Sprite
     sprite: _Crescent/Objects/Turrets/Ammunition/Projectiles/gargoyle.rsi
     layers:
@@ -672,7 +675,7 @@
         Structural: 275
         Blunt: 60
   - type: TimedDespawn
-    lifetime: 100 #6000m + Lock on = 11000m  (This might need adjustment)
+    lifetime: 100 #9000m
   - type: Sprite
     sprite: _Crescent/Objects/Turrets/Ammunition/Projectiles/catapult.rsi
     layers:

@@ -79,7 +79,7 @@
     - type: Gun
       fireOnDropChance: 0
       projectileSpeed: 80
-      fireRate: 4.5
+      fireRate: 5
       selectedMode: FullAuto
       availableModes:
         - FullAuto
@@ -126,7 +126,7 @@
           ents: []
     - type: Gun
       fireOnDropChance: 0
-      projectileSpeed: 90
+      projectileSpeed: 100
       fireRate: 2
       selectedMode: FullAuto
       availableModes:
@@ -173,7 +173,7 @@
                 collection: MetalGlassBreak
     - type: Gun
       fireOnDropChance: 0
-      projectileSpeed: 90
+      projectileSpeed: 100
       fireRate: 1.5
       selectedMode: FullAuto
       availableModes:
@@ -217,7 +217,7 @@
                 collection: MetalGlassBreak
     - type: Gun
       fireOnDropChance: 0
-      projectileSpeed: 90
+      projectileSpeed: 100
       fireRate: 3
       selectedMode: FullAuto
       availableModes:
@@ -268,7 +268,7 @@
           ents: []
     - type: Gun
       fireOnDropChance: 0
-      projectileSpeed: 90
+      projectileSpeed: 70
       fireRate: 1.2
       selectedMode: FullAuto
       availableModes:
@@ -320,7 +320,7 @@
           ents: []
     - type: Gun
       fireOnDropChance: 0
-      projectileSpeed: 90
+      projectileSpeed: 70
       fireRate: 1.5
       selectedMode: FullAuto
       availableModes:
@@ -372,7 +372,7 @@
           ents: []
     - type: Gun
       fireOnDropChance: 0
-      projectileSpeed: 90
+      projectileSpeed: 70
       fireRate: 0.85
       selectedMode: FullAuto
       availableModes:

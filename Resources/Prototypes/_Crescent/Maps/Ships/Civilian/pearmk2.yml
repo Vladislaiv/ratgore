@@ -6,9 +6,9 @@
   name: Груша МКII
   description: |
     "Груша МКII" — это боеспособная модернизация, сделанная из обломка "Груши". Ее вооружение собрано из пушек, добытых на заброшенных кораблях.
-    LOADOUT: 1x 90mm 'Gistum' artillery cannon, 1x 48mm 'Shortbow' rocket pod, 1x Fixed Universal Hardpoint
+    LOADOUT: 1x 88mm 'Corpus' flak-screen point defense system, 1x 20mm 'Screamer' light carbine repeater cannon, 1x Fixed Universal Hardpoint
     MINIMUM CREW: 1x Pilot, 1x Gunner/Loader
-  price: 24000
+  price: 30000
   category: Small
   group: Scrap
   path: /Maps/_Crescent/Shuttles/Civilian/pearmk2.yml

@@ -4,7 +4,7 @@ meta:
   engineVersion: 260.2.0
   forkId: ""
   forkVersion: ""
-  time: 01/18/2026 21:29:23
+  time: 02/10/2026 22:30:20
   entityCount: 221
 maps: []
 grids:
@@ -127,6 +127,8 @@ entities:
             92: -5,-3
             119: -5,-3
             140: -5,-3
+            161: -5,-3
+            182: -5,-3
         - node:
             zIndex: 1
             id: LatticeCornerNW
@@ -134,6 +136,8 @@ entities:
             98: 5,-3
             125: 5,-3
             146: 5,-3
+            167: 5,-3
+            188: 5,-3
         - node:
             zIndex: 1
             id: LatticeCornerSE
@@ -144,6 +148,10 @@ entities:
             116: -2,5
             134: -4,3
             137: -2,5
+            155: -4,3
+            158: -2,5
+            176: -4,3
+            179: -2,5
         - node:
             zIndex: 1
             id: LatticeCornerSW
@@ -154,6 +162,10 @@ entities:
             110: 4,3
             128: 2,5
             131: 4,3
+            149: 2,5
+            152: 4,3
+            170: 2,5
+            173: 4,3
         - node:
             id: LatticeEdgeE
           decals:
@@ -166,6 +178,12 @@ entities:
             133: -4,3
             136: -2,5
             138: -5,-3
+            154: -4,3
+            157: -2,5
+            159: -5,-3
+            175: -4,3
+            178: -2,5
+            180: -5,-3
         - node:
             id: LatticeEdgeN
           decals:
@@ -184,6 +202,16 @@ entities:
             142: 0,-6
             143: 3,-6
             144: 5,-3
+            160: -5,-3
+            162: -3,-6
+            163: 0,-6
+            164: 3,-6
+            165: 5,-3
+            181: -5,-3
+            183: -3,-6
+            184: 0,-6
+            185: 3,-6
+            186: 5,-3
         - node:
             id: LatticeEdgeS
           decals:
@@ -199,6 +227,14 @@ entities:
             129: 4,3
             132: -4,3
             135: -2,5
+            147: 2,5
+            150: 4,3
+            153: -4,3
+            156: -2,5
+            168: 2,5
+            171: 4,3
+            174: -4,3
+            177: -2,5
         - node:
             id: LatticeEdgeW
           decals:
@@ -211,6 +247,12 @@ entities:
             127: 2,5
             130: 4,3
             145: 5,-3
+            148: 2,5
+            151: 4,3
+            166: 5,-3
+            169: 2,5
+            172: 4,3
+            187: 5,-3
         - node:
             color: '#FFFFFFFF'
             id: TechCornerE
@@ -410,8 +452,8 @@ entities:
       id: Vanguard
     - type: VesselIcon
       iffIcon:
-       sprite: _Crescent/ShipIcons/ifficons.rsi
-       state: fighter
+        sprite: _Crescent/ShipIcons/ifficons.rsi
+        state: fighter
     - type: SelfDeleteGrid
 - proto: AAAHardpointFixed
   entities:
@@ -421,6 +463,9 @@ entities:
       rot: 3.141592653589793 rad
       pos: -2.5,2.5
       parent: 1
+    - type: DeviceLinkSink
+      links:
+      - 116
     - type: Physics
       canCollide: False
   - uid: 3
@@ -429,6 +474,9 @@ entities:
       rot: 3.141592653589793 rad
       pos: 3.5,2.5
       parent: 1
+    - type: DeviceLinkSink
+      links:
+      - 116
     - type: Physics
       canCollide: False
 - proto: AirlockCommand
@@ -594,11 +642,43 @@ entities:
     - type: Transform
       pos: 3.5,3.5
       parent: 1
+    - type: DeviceLinkSink
+      links:
+      - 154
   - uid: 33
     components:
     - type: Transform
       pos: -2.5,3.5
       parent: 1
+    - type: DeviceLinkSink
+      links:
+      - 153
+- proto: BlastDoorOpen
+  entities:
+  - uid: 150
+    components:
+    - type: Transform
+      pos: 1.5,5.5
+      parent: 1
+    - type: DeviceLinkSink
+      links:
+      - 116
+  - uid: 151
+    components:
+    - type: Transform
+      pos: 0.5,5.5
+      parent: 1
+    - type: DeviceLinkSink
+      links:
+      - 116
+  - uid: 152
+    components:
+    - type: Transform
+      pos: -0.5,5.5
+      parent: 1
+    - type: DeviceLinkSink
+      links:
+      - 116
 - proto: BoriaticGeneratorHerculesShuttle
   entities:
   - uid: 34
@@ -624,6 +704,51 @@ entities:
       rot: 1.5707963267948966 rad
       pos: -1.5,3.5
       parent: 1
+- proto: C_ComputerTabletopShuttle
+  entities:
+  - uid: 116
+    components:
+    - type: Transform
+      pos: 0.5,4.5
+      parent: 1
+    - type: DeviceLinkSource
+      linkedPorts:
+        2:
+        - - Group1
+          - Toggle
+        3:
+        - - Group1
+          - Toggle
+        152:
+        - - Group2
+          - Toggle
+        151:
+        - - Group2
+          - Toggle
+        150:
+        - - Group2
+          - Toggle
+    - type: NamedModules
+      buttonNames:
+      - Toggle 50mm 'Whistler'autocannons
+      - Toggle Blast Doors
+      - Module C
+      - Module D
+      - Module E
+    - type: ContainerContainer
+      containers:
+        board: !type:Container
+          showEnts: False
+          occludes: True
+          ents: []
+        disk_slot: !type:ContainerSlot
+          showEnts: False
+          occludes: True
+          ent: null
+        id_slot: !type:ContainerSlot
+          showEnts: False
+          occludes: True
+          ent: null
 - proto: CableApcExtension
   entities:
   - uid: 37
@@ -1030,35 +1155,6 @@ entities:
       rot: 3.141592653589793 rad
       pos: 0.5,3.5
       parent: 1
-- proto: ComputerTabletopShuttle
-  entities:
-  - uid: 116
-    components:
-    - type: Transform
-      pos: 0.5,4.5
-      parent: 1
-    - type: DeviceLinkSource
-      linkedPorts:
-        3:
-        - - Group1
-          - SpaceArtilleryFire
-        2:
-        - - Group1
-          - SpaceArtilleryFire
-    - type: ContainerContainer
-      containers:
-        board: !type:Container
-          showEnts: False
-          occludes: True
-          ents: []
-        disk_slot: !type:ContainerSlot
-          showEnts: False
-          occludes: True
-          ent: null
-        id_slot: !type:ContainerSlot
-          showEnts: False
-          occludes: True
-          ent: null
 - proto: DrinkVodkaBottleFull
   entities:
   - uid: 117
@@ -1281,23 +1377,6 @@ entities:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: 1.5,-2.5
-      parent: 1
-- proto: ShuttersNormalOpen
-  entities:
-  - uid: 150
-    components:
-    - type: Transform
-      pos: -0.5,5.5
-      parent: 1
-  - uid: 151
-    components:
-    - type: Transform
-      pos: 0.5,5.5
-      parent: 1
-  - uid: 152
-    components:
-    - type: Transform
-      pos: 1.5,5.5
       parent: 1
 - proto: SignalButton
   entities:

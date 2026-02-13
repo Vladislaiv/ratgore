@@ -30,11 +30,14 @@
           ents: []
     - type: Gun
       fireOnDropChance: 0
-      fireRate: 4
+      fireRate: 8
       projectileSpeed: 150
       selectedMode: FullAuto
       availableModes:
         - FullAuto
+      angleDecay: 10
+      minAngle: 6
+      maxAngle: 20
       soundGunshot: /Audio/Weapons/Guns/Gunshots/vulcan.ogg
     - type: ItemSlots
       slots:
@@ -91,7 +94,7 @@
           ents: []
     - type: Gun
       fireOnDropChance: 0
-      fireRate: 4.5
+      fireRate: 8
       projectileSpeed: 150
       selectedMode: FullAuto
       availableModes:
@@ -153,10 +156,13 @@
     - type: Gun
       fireOnDropChance: 0
       projectileSpeed: 130
-      fireRate: 5.5
+      fireRate: 5
       selectedMode: FullAuto
       availableModes:
         - FullAuto
+      angleDecay: 6
+      minAngle: 3
+      maxAngle: 12
       soundGunshot: /Audio/Weapons/Guns/Gunshots/vulcan.ogg
     - type: ContainerContainer
       containers:
@@ -221,6 +227,9 @@
       selectedMode: FullAuto
       availableModes:
         - FullAuto
+      angleDecay: 4
+      minAngle: 2
+      maxAngle: 8
       soundGunshot: /Audio/Weapons/Guns/Gunshots/gun_sentry.ogg
     - type: ContainerContainer
       containers:
@@ -280,7 +289,7 @@
     - type: Gun
       fireOnDropChance: 0
       projectileSpeed: 100
-      fireRate: 2.0
+      fireRate: 2.5
       selectedMode: FullAuto
       availableModes:
         - FullAuto
@@ -350,6 +359,9 @@
       selectedMode: FullAuto
       availableModes:
         - FullAuto
+      angleDecay: 4
+      minAngle: 3
+      maxAngle: 8
       soundGunshot: /Audio/Weapons/Guns/Gunshots/ship_duster.ogg
     - type: BallisticAmmoProvider
       soundInsert:
@@ -398,11 +410,16 @@
     - type: Gun
       fireOnDropChance: 0
       projectileSpeed: 150
-      fireRate: 2.5
-      selectedMode: FullAuto
+      burstFireRate: 4.5
+      burstCooldown: 1.2
+      selectedMode: Burst
       availableModes:
-        - FullAuto
+        - Burst
+      angleDecay: 3
+      minAngle: 2
+      maxAngle: 6
       soundGunshot: /Audio/Weapons/Guns/Gunshots/ship_duster.ogg
+    - type: MagazineAmmoProvider
     - type: ContainerContainer
       containers:
         ballistic-ammo: !type:Container
@@ -411,7 +428,7 @@
       slots:
         gun_magazine:
           name: Magazine
-          #startingItem: MagazineGistum
+          startingItem: MagazineGistum
           insertSound: /Audio/Weapons/Guns/MagIn/ltrifle_magin.ogg
           ejectSound: /Audio/Weapons/Guns/MagOut/ltrifle_magout.ogg
           priority: 2
@@ -490,6 +507,9 @@
       selectedMode: SemiAuto
       availableModes:
         - SemiAuto
+      angleDecay: 1.5
+      minAngle: 8
+      maxAngle: 18
       soundGunshot: /Audio/Weapons/Guns/Gunshots/ship_duster.ogg
     - type: BallisticAmmoProvider
       soundInsert:
