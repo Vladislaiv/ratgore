@@ -284,8 +284,6 @@
             Slash: 15
             Heat: 35
             Structural: 25 # "expertly contained to cut through nearly any material" yet it had no structural damage
-  - type: GuideHelp
-    guides: [ SecurityWeapons ]
 
 - type: entity
   name: double-bladed energy sword

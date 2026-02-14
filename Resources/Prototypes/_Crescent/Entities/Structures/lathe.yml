@@ -1572,11 +1572,11 @@
     idleState: fab-idle
     runningState: fab-active
     staticRecipes:
-    - FabricsCrate
     - WineCrate
-    - AntibioticCrate
+    - ImperialScrap
     - CyberneticCrate
-    - BadscrapCrate
+    - ImperialArmor
+    - ImperialQualitySalvage
   - type: Anchorable
     flags:
     - Anchorable
@@ -1736,7 +1736,8 @@
     - UnionWeaponCrate
     - UnionBallisticsCrate
     - UnionVodka
-    - ScrapCrate
+    - UnionScrap
+    - UnionQualitySalvage
   - type: Anchorable
     flags:
     - Anchorable
@@ -1778,3 +1779,87 @@
   - type: Anchorable
     flags:
     - Anchorable
+
+#Newport
+
+- type: entity
+  parent: BaseLathe
+  id: NewportTradeGoodPrinter
+  name: Newport commodity fablathe
+  description: A cheap fablathe preloaded with many commodity patterns. A independent merchant's best friend.
+  components:
+  - type: Sprite
+    sprite: _Crescent/Structures/cratefab.rsi
+    layers:
+    - state: fab-idle
+      map: ["enum.LatheVisualLayers.IsRunning"]
+    - state: buttons_on
+      shader: unshaded
+      map: ["enum.PowerDeviceVisualLayers.Powered"]
+  - type: MaterialStorage
+    dropOnDeconstruct: false #should drop ores instead of ingots/sheets
+    ignoreColor: true
+    canEjectStoredMaterials: true
+    whitelist:
+      tags:
+      - Sheet
+      - Metal
+      - RawMaterial
+      - CraftMaterials
+      - Ingot
+  - type: Lathe
+    idleState: fab-idle
+    runningState: fab-active
+    staticRecipes:
+    - GoodSilkCrate
+    - FillamentSilkCrate
+    - BadscrapCrate
+    - Ammocrate
+    - Scopcrate
+    - AlloysCrate
+    - ScrapCrate
+  - type: Anchorable
+    flags:
+    - Anchorable
+
+#Freeport
+
+- type: entity
+  parent: BaseLathe
+  id: FreeportTradeGoodPrinter
+  name: Freeport commodity fablathe
+  description: A hacked fablathe preloaded with many commodity patterns. An shady merchant's best friend.
+  components:
+  - type: Sprite
+    sprite: _Crescent/Structures/cratefab.rsi
+    layers:
+    - state: fab-idle
+      map: ["enum.LatheVisualLayers.IsRunning"]
+    - state: buttons_on
+      shader: unshaded
+      map: ["enum.PowerDeviceVisualLayers.Powered"]
+  - type: MaterialStorage
+    dropOnDeconstruct: false #should drop ores instead of ingots/sheets
+    ignoreColor: true
+    canEjectStoredMaterials: true
+    whitelist:
+      tags:
+      - Sheet
+      - Metal
+      - RawMaterial
+      - CraftMaterials
+      - Ingot
+  - type: Lathe
+    idleState: fab-idle
+    runningState: fab-active
+    staticRecipes:
+    - AntibioticCrate
+    - DrugCrate
+    - FreeportScrappersLootbox
+    - GunpartsCrate
+    - PlasmaCrate
+    - FreeportValuableScrap
+  - type: Anchorable
+    flags:
+    - Anchorable
+
