@@ -844,7 +844,7 @@
   - type: StaticPrice
     price: 9000
   - type: ReverseEngineering
-    difficulty: 5
+    difficulty: 4
     recipes: 
       - ShieldEmitterSmallFlatpack
 
@@ -862,7 +862,7 @@
   - type: StaticPrice
     price: 9000
   - type: ReverseEngineering
-    difficulty: 6
+    difficulty: 5
     recipes: 
       - ShieldEmitterMediumFlatpack
 

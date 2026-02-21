@@ -1882,6 +1882,9 @@
     layers:
     - state: icon
   - type: StaticPrice
-    price: 0 #Don't want this to be free money - it's just for drugrunning
+    price: 5000 #Don't want this to be free money - it's just for drugrunning - It won't be free money, they're pawning off one of two combat vessels
   - type: ShipVoucher
     ship: Beelzebub
+  - type: ReverseEngineering # SectorCrescent
+    recipes:
+      - BeelzebubLPC

@@ -319,7 +319,7 @@
     sound:
       path: /Audio/Weapons/ebladehum.ogg
   - type: ReverseEngineering # SectorCrescent
-    difficulty: 5
+    difficulty: 4
     recipes:
       - SHIShiverBlade
       - SHIKatana
