@@ -13926,7 +13926,7 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
-- proto: Cartridge120mmGyrostable
+- proto: Cartridge120mmFlux
   entities:
   - uid: 1472
     components:
@@ -14068,7 +14068,7 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
-- proto: Cartridge120mmPlasma
+- proto: Cartridge120mmFlak
   entities:
   - uid: 1493
     components:
@@ -22062,7 +22062,7 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
-- proto: Magazine35mmGyrostable
+- proto: Magazine35mmHE
   entities:
   - uid: 1920
     components:
@@ -22134,7 +22134,7 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
-- proto: Magazine35mmPlasma
+- proto: Magazine35mmHE
   entities:
   - uid: 1930
     components:

@@ -16,7 +16,7 @@
       thresholds:
         - trigger:
             !type:DamageTrigger
-            damage: 400
+            damage: 2000
           # TODO: Construction graph
           behaviors:
             - !type:ChangeConstructionNodeBehavior
@@ -36,14 +36,14 @@
       availableModes:
         - FullAuto
       angleDecay: 0
-      minAngle: 0
-      maxAngle: 0
+      minAngle: 5
+      maxAngle: 5
       soundGunshot:
         path: /Audio/Weapons/Guns/Gunshots/laserturret.ogg
         params:
           variation: 0.12
     - type: RechargeBasicEntityAmmo
-      rechargeCooldown: 10
+      rechargeCooldown: 5
       rechargeSound:
         path: /Audio/Weapons/Guns/Bolt/lmg_bolt_closed.ogg
         params:
@@ -51,8 +51,8 @@
           variation: 0.08
     - type: BasicEntityAmmoProvider
       proto: BulletCurse
-      capacity: 5
-      count: 5
+      capacity: 8
+      count: 8
     - type: ApcPowerReceiver
       powerLoad: 2500
     - type: HardpointAnchorableOnly
@@ -75,7 +75,7 @@
       thresholds:
         - trigger:
             !type:DamageTrigger
-            damage: 400
+            damage: 2000
           # TODO: Construction graph
           behaviors:
             - !type:ChangeConstructionNodeBehavior
@@ -95,14 +95,14 @@
       availableModes:
         - FullAuto
       angleDecay: 0
-      minAngle: 0
-      maxAngle: 0
+      minAngle: 5
+      maxAngle: 5
       soundGunshot:
         path: /Audio/Weapons/Guns/Gunshots/laserturret.ogg
         params:
           variation: 0.12
     - type: RechargeBasicEntityAmmo
-      rechargeCooldown: 10
+      rechargeCooldown: 3
       rechargeSound:
         path: /Audio/Weapons/Guns/Bolt/lmg_bolt_closed.ogg
         params:
@@ -110,8 +110,8 @@
           variation: 0.08
     - type: BasicEntityAmmoProvider
       proto: BulletCurse
-      capacity: 5
-      count: 5
+      capacity: 10
+      count: 10
     - type: ApcPowerReceiver
       powerLoad: 2500
     - type: HardpointAnchorableOnly
@@ -136,7 +136,7 @@
       thresholds:
         - trigger:
             !type:DamageTrigger
-            damage: 800
+            damage: 1200
           # TODO: Construction graph
           behaviors:
             - !type:ChangeConstructionNodeBehavior
@@ -150,8 +150,8 @@
           ents: []
     - type: Gun
       fireOnDropChance: 0
-      projectileSpeed: 180
-      fireRate: 25
+      projectileSpeed: 200
+      fireRate: 5
       selectedMode: FullAuto
       availableModes:
         - FullAuto
@@ -163,7 +163,7 @@
         params:
           variation: 0.12
     - type: RechargeBasicEntityAmmo
-      rechargeCooldown: 0.5
+      rechargeCooldown: 0.25
       rechargeSound:
         path: /Audio/Weapons/Guns/Bolt/lmg_bolt_closed.ogg
         params:
@@ -171,10 +171,10 @@
           variation: 0.08
     - type: BasicEntityAmmoProvider
       proto: BulletRetribution
-      capacity: 500
-      count: 500
+      capacity: 50
+      count: 50
     - type: ApcPowerReceiver
-      powerLoad: 5000
+      powerLoad: 2500
     - type: HardpointAnchorableOnly
       class: Energy
       size: Small
@@ -195,7 +195,7 @@
       thresholds:
         - trigger:
             !type:DamageTrigger
-            damage: 400
+            damage: 1200
           # TODO: Construction graph
           behaviors:
             - !type:ChangeConstructionNodeBehavior
@@ -209,8 +209,8 @@
           ents: []
     - type: Gun
       fireOnDropChance: 0
-      projectileSpeed: 180
-      fireRate: 25
+      projectileSpeed: 200
+      fireRate: 10
       selectedMode: FullAuto
       availableModes:
         - FullAuto
@@ -222,7 +222,7 @@
         params:
           variation: 0.12
     - type: RechargeBasicEntityAmmo
-      rechargeCooldown: 0.5
+      rechargeCooldown: 0.25
       rechargeSound:
         path: /Audio/Weapons/Guns/Bolt/lmg_bolt_closed.ogg
         params:
@@ -230,10 +230,10 @@
           variation: 0.08
     - type: BasicEntityAmmoProvider
       proto: BulletRetribution
-      capacity: 500
-      count: 500
+      capacity: 150
+      count: 150
     - type: ApcPowerReceiver
-      powerLoad: 2500
+      powerLoad: 5000
     - type: HardpointAnchorableOnly
       class: Energy
       size: Small
@@ -256,7 +256,7 @@
       thresholds:
         - trigger:
             !type:DamageTrigger
-            damage: 800
+            damage: 1800
           # TODO: Construction graph
           behaviors:
             - !type:ChangeConstructionNodeBehavior
@@ -270,9 +270,10 @@
           ents: []
     - type: Gun
       fireOnDropChance: 0
-      projectileSpeed: 140
+      projectileSpeed: 200
       burstFireRate: 20
-      burstCooldown: 2
+      burstCooldown: 1
+      shotsPerBurst: 10
       selectedMode: Burst
       availableModes:
         - Burst
@@ -284,7 +285,7 @@
         params:
           variation: 0.12
     - type: RechargeBasicEntityAmmo
-      rechargeCooldown: 2
+      rechargeCooldown: 0.25
       rechargeSound:
         path: /Audio/Weapons/Guns/Bolt/lmg_bolt_closed.ogg
         params:
@@ -292,8 +293,8 @@
           variation: 0.08
     - type: BasicEntityAmmoProvider
       proto: BulletAbsolution
-      capacity: 40
-      count: 40
+      capacity: 100
+      count: 100
     - type: ApcPowerReceiver
       powerLoad: 4000
     - type: HardpointAnchorableOnly
@@ -316,7 +317,7 @@
       thresholds:
         - trigger:
             !type:DamageTrigger
-            damage: 800
+            damage: 1800
           # TODO: Construction graph
           behaviors:
             - !type:ChangeConstructionNodeBehavior
@@ -330,8 +331,10 @@
           ents: []
     - type: Gun
       fireOnDropChance: 0
-      projectileSpeed: 140
-      fireRate: 3
+      projectileSpeed: 200
+      burstFireRate: 20
+      burstCooldown: 1
+      shotsPerBurst: 20
       selectedMode: Burst
       availableModes:
         - Burst
@@ -343,7 +346,7 @@
         params:
           variation: 0.12
     - type: RechargeBasicEntityAmmo
-      rechargeCooldown: 2
+      rechargeCooldown: 0.25
       rechargeSound:
         path: /Audio/Weapons/Guns/Bolt/lmg_bolt_closed.ogg
         params:
@@ -351,10 +354,10 @@
           variation: 0.08
     - type: BasicEntityAmmoProvider
       proto: BulletAbsolution
-      capacity: 40
-      count: 40
+      capacity: 100
+      count: 100
     - type: ApcPowerReceiver
-      powerLoad: 4000
+      powerLoad: 6000
     - type: HardpointAnchorableOnly
       class: Energy
       size: Medium
@@ -377,7 +380,7 @@
       thresholds:
         - trigger:
             !type:DamageTrigger
-            damage: 800
+            damage: 2600
           # TODO: Construction graph
           behaviors:
             - !type:ChangeConstructionNodeBehavior
@@ -392,7 +395,7 @@
     - type: Gun
       fireOnDropChance: 0
       projectileSpeed: 200
-      fireRate: 1
+      fireRate: 4
       selectedMode: FullAuto
       availableModes:
         - FullAuto
@@ -401,7 +404,7 @@
         params:
           variation: 0.12
     - type: RechargeBasicEntityAmmo
-      rechargeCooldown: 5
+      rechargeCooldown: 0.75
       rechargeSound:
         path: /Audio/Weapons/Guns/Bolt/lmg_bolt_closed.ogg
         params:
@@ -409,10 +412,10 @@
           variation: 0.08
     - type: BasicEntityAmmoProvider
       proto: BulletDamnation
-      capacity: 5
-      count: 5
+      capacity: 35
+      count: 35
     - type: ApcPowerReceiver
-      powerLoad: 6000
+      powerLoad: 8000
     - type: HardpointAnchorableOnly
       class: Energy
       size: Large
@@ -433,7 +436,7 @@
       thresholds:
         - trigger:
             !type:DamageTrigger
-            damage: 400
+            damage: 2600
           # TODO: Construction graph
           behaviors:
             - !type:ChangeConstructionNodeBehavior
@@ -448,7 +451,7 @@
     - type: Gun
       fireOnDropChance: 0
       projectileSpeed: 200
-      fireRate: 1
+      fireRate: 5
       selectedMode: FullAuto
       availableModes:
         - FullAuto
@@ -465,10 +468,10 @@
           variation: 0.08
     - type: BasicEntityAmmoProvider
       proto: BulletDamnation
-      capacity: 5
-      count: 5
+      capacity: 40
+      count: 40
     - type: ApcPowerReceiver
-      powerLoad: 6000
+      powerLoad: 10000
     - type: HardpointAnchorableOnly
       class: Energy
       size: Large

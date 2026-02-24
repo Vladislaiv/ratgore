@@ -483,19 +483,13 @@
 
 - type: latheRecipe
   id: Scout35mmGyrostableRecipe
-  result: Magazine35mmGyrostable
+  result: Magazine35mmHE
   completetime: 2
   materials:
     Steel: 2000
     Uranium: 1000
 
-- type: latheRecipe
-  id: Scout35mmPlasmaRecipe
-  result: Magazine35mmPlasma
-  completetime: 2
-  materials:
-    Steel: 2000
-    Plasma: 1500
+
 
 #50mm Whistler Ammo
 - type: latheRecipe
@@ -572,7 +566,7 @@
 
 - type: latheRecipe
   id: Pithatis120mmGyrostableRecipe
-  result: Cartridge120mmGyrostable
+  result: Cartridge120mmFlux
   completetime: 2
   materials:
     Steel: 1000
@@ -581,7 +575,7 @@
 
 - type: latheRecipe
   id: Pithatis120mmPlasmaRecipe
-  result: Cartridge120mmPlasma
+  result: Cartridge120mmFlak
   completetime: 2
   materials:
     Steel: 1000

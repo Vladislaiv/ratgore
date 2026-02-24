@@ -238,16 +238,9 @@
     Steel: 10
     Uranium: 5
   outputs:
-    Magazine35mmGyrostable: 1
+    Magazine35mmHE: 1
 
-- type: factoryRecipe
-  id: FabricateMagazine35mmScoutPlasma
-  name: fabricate 35mmm plasma drum
-  inputs:
-    Steel: 10
-    Plasma: 5
-  outputs:
-    Magazine35mmPlasma: 1
+
 
 #50mm Whistler Ammo
 - type: factoryRecipe

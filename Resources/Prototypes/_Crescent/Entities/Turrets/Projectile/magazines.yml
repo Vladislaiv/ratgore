@@ -1,8 +1,8 @@
 #vulcan
 - type: entity
   id: Magazine35mm
-  name: 35mm FMJ USM feeder drum
-  description: A munitions drum designed for 35mm rotary cannons.
+  name: 35mm Armor Piercing drum magazine
+  description: A munitions drum designed for 35mm rotary cannons. This one contains standard armor-piercing rounds.
   parent: BaseItem
   components:
   - type: Tag
@@ -42,9 +42,9 @@
   - type: Appearance
 
 - type: entity
-  id: Magazine35mmGyrostable
-  name: 35mm gyrostable USM feeder drum
-  description: A munitions drum designed for 35mm rotary cannons. This one contains special gyrostable projectiles.
+  id: Magazine35mmHE
+  name: 35mm High Explosive feeder drum
+  description: A munitions drum designed for 35mm rotary cannons. This one contains special High Explosive projectiles.
   parent: BaseItem
   components:
   - type: Tag
@@ -54,8 +54,8 @@
     mayTransfer: true
     whitelist:
       tags:
-        - Cartridge35mmGyrostable
-    proto: Bullet35mmGyrostable
+        - Cartridge35mmHE
+    proto: Bullet35mmHE
     capacity: 250
     soundRack:
       path: /Audio/Weapons/Guns/Bolt/lmg_bolt_closed.ogg
@@ -83,47 +83,6 @@
     zeroVisible: false
   - type: Appearance
 
-- type: entity
-  id: Magazine35mmPlasma
-  name: 35mm plasma-core USM feeder drum
-  description: A munitions drum designed for 35mm rotary cannons. This one contains special photon-plasma core projectiles.
-  parent: BaseItem
-  components:
-  - type: Tag
-    tags:
-    - Magazine35mm
-  - type: BallisticAmmoProvider
-    mayTransfer: true
-    whitelist:
-      tags:
-        - Cartridge35mmPlasma
-    proto: Bullet35mmPlasma
-    capacity: 250
-    soundRack:
-      path: /Audio/Weapons/Guns/Bolt/lmg_bolt_closed.ogg
-      params:
-        variation: 0.05
-    soundInsert:
-      path: /Audio/Weapons/Guns/MagIn/rifle_load.ogg
-      params:
-        variation: 0.05
-  - type: Item
-    size: Large
-  - type: ContainerContainer
-    containers:
-      ballistic-ammo: !type:Container
-  - type: Sprite
-    sprite: _Crescent/Objects/Turrets/Ammunition/Magazine/whistler.rsi
-    layers:
-    - state: base-plasma
-      map: ["enum.GunVisualLayers.Base"]
-    - state: mag-1
-      map: ["enum.GunVisualLayers.Mag"]
-  - type: MagazineVisuals
-    magState: mag
-    steps: 2
-    zeroVisible: false
-  - type: Appearance
 
 #whistler
 
@@ -182,8 +141,8 @@
     mayTransfer: true
     whitelist:
       tags:
-        - Cartridge50mmGyrostable
-    proto: Bullet50mmGyrostable
+        - Cartridge50mmHE
+    proto: Bullet50mmHE
     capacity: 50
     soundRack:
       path: /Audio/Weapons/Guns/Bolt/lmg_bolt_closed.ogg
@@ -224,8 +183,8 @@
     mayTransfer: true
     whitelist:
       tags:
-        - Cartridge50mmPlasma
-    proto: Bullet50mmPlasma
+        - Cartridge50mmSAPHE
+    proto: Bullet50mmSAPHE
     capacity: 30
     soundRack:
       path: /Audio/Weapons/Guns/Bolt/lmg_bolt_closed.ogg
@@ -311,8 +270,8 @@
     mayTransfer: true
     whitelist:
       tags:
-        - Cartridge20mmGyrostable
-    proto: Bullet20mmGyrostable
+        - Cartridge20mmFrag
+    proto: Bullet20mmFrag
     capacity: 200
     soundRack:
       path: /Audio/Weapons/Guns/Bolt/lmg_bolt_closed.ogg
@@ -449,7 +408,7 @@
     whitelist:
       tags:
         - Cartridge90mm
-    proto: Cartridge90mmGyrostable
+    proto: Cartridge90mmAP
     capacity: 15
   - type: Item
     size: Normal
@@ -480,7 +439,7 @@
     whitelist:
       tags:
         - Cartridge90mm
-    proto: Cartridge90mmPlasma
+    proto: Cartridge90mmHE
     capacity: 15
   - type: Item
     size: Normal

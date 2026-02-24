@@ -319,16 +319,7 @@
       - id: Magazine35mm
         amount: 10
 
-- type: entity
-  id: Crate35mmAmmoPlasma
-  parent: N14CrateAluminium
-  name: 35mm PC 'Scout' gatling magazine crate
-  description: 10 boxes of PC ammunition for the 'Scout' weapon platform. Superior payload at the cost of reduced range.
-  components:
-  - type: StorageFill
-    contents:
-      - id: Magazine35mmPlasma
-        amount: 10
+
 
 - type: entity
   id: Crate35mmAmmoGyrostable
@@ -338,7 +329,7 @@
   components:
   - type: StorageFill
     contents:
-      - id: Magazine35mmGyrostable
+      - id: Magazine35mmHE
         amount: 10
 
 - type: entity
@@ -470,7 +461,7 @@
   components:
   - type: StorageFill
     contents:
-      - id: Cartridge120mmPlasma
+      - id: Cartridge120mmFlak
         amount: 20
 
 - type: entity
@@ -481,7 +472,7 @@
   components:
   - type: StorageFill
     contents:
-      - id: Cartridge120mmGyrostable
+      - id: Cartridge120mmFlux
         amount: 20
 
 - type: entity

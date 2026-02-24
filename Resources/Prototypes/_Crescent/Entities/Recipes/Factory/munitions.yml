@@ -145,7 +145,7 @@
     Plasma: 5
     Uranium: 3
   outputs:
-    Cartridge120mmGyrostable: 1
+    Cartridge120mmFlux: 1
 
 - type: factoryRecipe
   id: 120mmPlasmaFabrication
@@ -155,7 +155,7 @@
     Plasma: 3
     Uranium: 5
   outputs:
-    Cartridge120mmPlasma: 1
+    Cartridge120mmFlak: 1
 
 #300mm Pithis #hahahaha piss-this
 - type: factoryRecipe

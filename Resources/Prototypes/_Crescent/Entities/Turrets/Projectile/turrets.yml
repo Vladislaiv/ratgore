@@ -16,7 +16,7 @@
       thresholds:
         - trigger:
             !type:DamageTrigger
-            damage: 800
+            damage: 1200
           # TODO: Construction graph
           behaviors:
             - !type:ChangeConstructionNodeBehavior
@@ -30,14 +30,15 @@
           ents: []
     - type: Gun
       fireOnDropChance: 0
-      fireRate: 8
-      projectileSpeed: 150
+      fireRate: 6
+      projectileSpeed: 140
       selectedMode: FullAuto
       availableModes:
         - FullAuto
-      angleDecay: 10
-      minAngle: 6
-      maxAngle: 20
+      angleDecay: 1
+      minAngle: 2
+      maxAngle: 4.5
+      angleIncrease: 0.25
       soundGunshot: /Audio/Weapons/Guns/Gunshots/vulcan.ogg
     - type: ItemSlots
       slots:
@@ -80,7 +81,7 @@
       thresholds:
         - trigger:
             !type:DamageTrigger
-            damage: 800
+            damage: 2000
           # TODO: Construction graph
           behaviors:
             - !type:ChangeConstructionNodeBehavior
@@ -94,8 +95,8 @@
           ents: []
     - type: Gun
       fireOnDropChance: 0
-      fireRate: 8
-      projectileSpeed: 150
+      fireRate: 6
+      projectileSpeed: 140
       selectedMode: FullAuto
       availableModes:
         - FullAuto
@@ -119,7 +120,7 @@
             tags:
               - Cartridge20mm
     - type: ApcPowerReceiver
-      powerLoad: 1000
+      powerLoad: 2000
     - type: HardpointAnchorableOnly
       class: Ballistic
       size: Small
@@ -145,7 +146,7 @@
       thresholds:
         - trigger:
             !type:DamageTrigger
-            damage: 500
+            damage: 1400
           behaviors:
             - !type:ChangeConstructionNodeBehavior
               node: machineFrame
@@ -155,14 +156,15 @@
     - type: MagazineAmmoProvider
     - type: Gun
       fireOnDropChance: 0
-      projectileSpeed: 130
-      fireRate: 5
+      projectileSpeed: 120
+      fireRate: 3
       selectedMode: FullAuto
       availableModes:
         - FullAuto
-      angleDecay: 6
-      minAngle: 3
-      maxAngle: 12
+      angleDecay: 1
+      minAngle: 2.5
+      maxAngle: 5.5
+      angleIncrease: 0.5
       soundGunshot: /Audio/Weapons/Guns/Gunshots/vulcan.ogg
     - type: ContainerContainer
       containers:
@@ -213,7 +215,7 @@
       thresholds:
         - trigger:
             !type:DamageTrigger
-            damage: 500
+            damage: 2500
           behaviors:
             - !type:ChangeConstructionNodeBehavior
               node: machineFrame
@@ -222,14 +224,15 @@
                 collection: MetalGlassBreak
     - type: Gun
       fireOnDropChance: 0
-      projectileSpeed: 100
-      fireRate: 2.5
+      projectileSpeed: 140
+      fireRate: 4
       selectedMode: FullAuto
       availableModes:
         - FullAuto
-      angleDecay: 4
-      minAngle: 2
-      maxAngle: 8
+      angleDecay: 0.5
+      minAngle: 1.5
+      maxAngle: 3
+      angleIncrease: 0.25
       soundGunshot: /Audio/Weapons/Guns/Gunshots/gun_sentry.ogg
     - type: ContainerContainer
       containers:
@@ -254,10 +257,10 @@
             tags:
               - Cartridge50mm
     - type: ApcPowerReceiver
-      powerLoad: 1000
+      powerLoad: 3000
     - type: HardpointAnchorableOnly
       class: Ballistic
-      size: Small
+      size: Medium
 
 
 - type: entity
@@ -279,7 +282,7 @@
       thresholds:
         - trigger:
             !type:DamageTrigger
-            damage: 750
+            damage: 3000
           behaviors:
             - !type:ChangeConstructionNodeBehavior
               node: machineFrame
@@ -288,11 +291,15 @@
                 collection: MetalGlassBreak
     - type: Gun
       fireOnDropChance: 0
-      projectileSpeed: 100
-      fireRate: 2.5
+      projectileSpeed: 140
+      fireRate: 4
       selectedMode: FullAuto
       availableModes:
         - FullAuto
+      angleDecay: 0.5
+      minAngle: 1.2
+      maxAngle: 2.5
+      angleIncrease: 0.25
       soundGunshot: /Audio/Weapons/Guns/Gunshots/gun_sentry.ogg
     - type: ContainerContainer
       containers:
@@ -317,10 +324,10 @@
             tags:
               - Cartridge50mm
     - type: ApcPowerReceiver
-      powerLoad: 800
+      powerLoad: 3000
     - type: HardpointAnchorableOnly
       class: Ballistic
-      size: Small
+      size: Medium
 
 # 120mm
 
@@ -342,7 +349,7 @@
       thresholds:
         - trigger:
             !type:DamageTrigger
-            damage: 1500
+            damage: 2500
           behaviors:
             - !type:ChangeConstructionNodeBehavior
               node: machineFrame
@@ -355,19 +362,20 @@
     - type: Gun
       fireOnDropChance: 0
       projectileSpeed: 200
-      fireRate: 0.5
+      fireRate: 0.3
       selectedMode: FullAuto
       availableModes:
         - FullAuto
-      angleDecay: 4
-      minAngle: 3
-      maxAngle: 8
+      angleDecay: 0.1
+      minAngle: 0.5
+      maxAngle: 2
+      angleIncrease: 0.4
       soundGunshot: /Audio/Weapons/Guns/Gunshots/ship_duster.ogg
     - type: BallisticAmmoProvider
       soundInsert:
         path: /Audio/Weapons/Guns/UnionfallWeapons/amr_close_1.ogg
       fillWithDoAfter: true
-      fillDelay: 3
+      fillDelay: 1.5
       cycleable: true
       capacity: 4
       proto: Cartridge120mm
@@ -400,7 +408,7 @@
       thresholds:
         - trigger:
             !type:DamageTrigger
-            damage: 3000
+            damage: 4000
           behaviors:
             - !type:ChangeConstructionNodeBehavior
               node: machineFrame
@@ -410,14 +418,15 @@
     - type: Gun
       fireOnDropChance: 0
       projectileSpeed: 150
-      burstFireRate: 4.5
-      burstCooldown: 1.2
+      burstFireRate: 8
+      burstCooldown: 2
       selectedMode: Burst
       availableModes:
         - Burst
-      angleDecay: 3
-      minAngle: 2
-      maxAngle: 6
+      angleDecay: 0.3
+      minAngle: 1
+      maxAngle: 3.5
+      angleIncrease: 0.5
       soundGunshot: /Audio/Weapons/Guns/Gunshots/ship_duster.ogg
     - type: MagazineAmmoProvider
     - type: ContainerContainer
@@ -460,7 +469,7 @@
     - type: Gun
       fireOnDropChance: 0
       projectileSpeed: 150
-      fireRate: 2.8
+      fireRate: 1.5
       selectedMode: FullAuto
       availableModes:
         - FullAuto
@@ -490,7 +499,7 @@
       thresholds:
         - trigger:
             !type:DamageTrigger
-            damage: 3500
+            damage: 5000
           behaviors:
             - !type:ChangeConstructionNodeBehavior
               node: machineFrame
@@ -507,9 +516,10 @@
       selectedMode: SemiAuto
       availableModes:
         - SemiAuto
-      angleDecay: 1.5
-      minAngle: 8
-      maxAngle: 18
+      angleDecay: 0.05
+      minAngle: 0.4
+      maxAngle: 1.5
+      angleIncrease: 1
       soundGunshot: /Audio/Weapons/Guns/Gunshots/ship_duster.ogg
     - type: BallisticAmmoProvider
       soundInsert:
@@ -543,7 +553,11 @@
     - type: Gun
       fireOnDropChance: 0
       projectileSpeed: 250
-      fireRate: 0.2
+      fireRate: 0.25
+      angleDecay: 0.05
+      minAngle: 0.4
+      maxAngle: 1.5
+      angleIncrease: 1
       selectedMode: FullAuto
       availableModes:
         - FullAuto
@@ -551,7 +565,7 @@
     - type: ApcPowerReceiver
       powerLoad: 8500
     - type: BallisticAmmoProvider
-      fillDelay: 3.5
+      fillDelay: 5
       cycleable: true
       capacity: 2
 
@@ -573,7 +587,7 @@
       thresholds:
         - trigger:
             !type:DamageTrigger
-            damage: 2000
+            damage: 4000
           # TODO: Construction graph
           behaviors:
             - !type:ChangeConstructionNodeBehavior
@@ -589,7 +603,7 @@
     - type: Gun
       fireOnDropChance: 0
       projectileSpeed: 100
-      fireRate: 3
+      fireRate: 1.5
       selectedMode: FullAuto
       availableModes:
         - FullAuto

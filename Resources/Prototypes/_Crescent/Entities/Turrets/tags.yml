@@ -22,9 +22,9 @@
 
 - type: Tag
   id: CartridgeArbalest
-  
+
 #35mm tag
- 
+
 - type: Tag
   id: Cartridge35mm
 
@@ -35,19 +35,19 @@
   id: Cartridge35mmPlasma
 
 - type: Tag
-  id: Cartridge35mmGyrostable
-  
+  id: Cartridge35mmHE
+
 #whistler tag
 
 - type: Tag
   id: Cartridge50mm
 
 - type: Tag
-  id: Cartridge50mmPlasma
+  id: Cartridge50mmSAPHE
 
 - type: Tag
-  id: Cartridge50mmGyrostable
-  
+  id: Cartridge50mmHE
+
 - type: Tag
   id: Magazine50mm
 
@@ -60,7 +60,7 @@
   id: Cartridge20mmPlasma
 
 - type: Tag
-  id: Cartridge20mmGyrostable
+  id: Cartridge20mmFrag
 
 - type: Tag
   id: Magazine20mm
@@ -72,7 +72,7 @@
 
 - type: Tag
   id: CorpusShell
-  
+
 #90mm tag
 
 - type: Tag
