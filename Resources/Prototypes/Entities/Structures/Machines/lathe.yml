@@ -1228,10 +1228,8 @@
         # NEW SHIPGUN AMMO RECIPIES START
         - Screamer20mmRegularRecipe
         - Screamer20mmGyrostableRecipe
-        - Screamer20mmPlasmaRecipe
         - Scout35mmRegularRecipe
         - Scout35mmGyrostableRecipe
-        - Scout35mmPlasmaRecipe
         - Striker50mmRegularRecipe
         - Striker50mmGyrostableRecipe
         - Striker50mmPlasmaRecipe

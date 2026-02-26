@@ -257,16 +257,6 @@
   group: genericAmmo
 
 - type: cargoProduct
-  id: Shuttle20mmAmmoPlasmaGeneric
-  icon:
-    sprite: _Crescent/Objects/Turrets/Ammunition/Magazine/screamer.rsi
-    state: base-plasma
-  product: Crate20mmAmmoPlasma
-  cost: 4000
-  category: cargoproduct-category-name-shuttleammo
-  group: genericAmmo
-
-- type: cargoProduct
   id: Shuttle20mmAmmoGyrostableGeneric
   icon:
     sprite: _Crescent/Objects/Turrets/Ammunition/Magazine/screamer.rsi
@@ -285,16 +275,6 @@
     state: base
   product: Crate35mmAmmo
   cost: 2500
-  category: cargoproduct-category-name-shuttleammo
-  group: genericAmmo
-
-- type: cargoProduct
-  id: Shuttle35mmAmmoPlasmaGeneric
-  icon:
-    sprite: _Crescent/Objects/Turrets/Ammunition/Magazine/striker.rsi
-    state: base-plasma
-  product: Crate35mmAmmoPlasma
-  cost: 5000
   category: cargoproduct-category-name-shuttleammo
   group: genericAmmo
 

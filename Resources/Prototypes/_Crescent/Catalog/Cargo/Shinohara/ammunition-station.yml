@@ -11,16 +11,6 @@
   group: genericAmmo
 
 - type: cargoProduct
-  id: Shuttle20mmAmmoPlasmaShinohara
-  icon:
-    sprite: _Crescent/Objects/Turrets/Ammunition/Magazine/screamer.rsi
-    state: base-plasma
-  product: Crate20mmAmmoPlasma
-  cost: 2000
-  category: cargoproduct-category-name-shuttleammo
-  group: genericAmmo
-
-- type: cargoProduct
   id: Shuttle20mmAmmoGyrostableShinohara
   icon:
     sprite: _Crescent/Objects/Turrets/Ammunition/Magazine/screamer.rsi
@@ -39,16 +29,6 @@
     state: base
   product: Crate35mmAmmo
   cost: 1250
-  category: cargoproduct-category-name-shuttleammo
-  group: genericAmmo
-
-- type: cargoProduct
-  id: Shuttle35mmAmmoPlasmaShinohara
-  icon:
-    sprite: _Crescent/Objects/Turrets/Ammunition/Magazine/striker.rsi
-    state: base-plasma
-  product: Crate35mmAmmoPlasma
-  cost: 2500
   category: cargoproduct-category-name-shuttleammo
   group: genericAmmo
 

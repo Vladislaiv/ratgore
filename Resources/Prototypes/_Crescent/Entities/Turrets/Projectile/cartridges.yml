@@ -225,7 +225,7 @@
       - Cartridge35mmHE
   - type: CartridgeAmmo
     deleteOnSpawn: true
-    proto: Bullet20mmHE
+    proto: Bullet35mmHE
   - type: Sprite
     sprite: _Crescent/Objects/Turrets/Ammunition/Cartridge/striker.rsi
     layers:
