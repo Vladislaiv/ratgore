@@ -128,7 +128,7 @@
   - type: ShipWeaponProjectile
 
 - type: entity
-  id: Bullet20mmHE
+  id: Bullet35mmHE
   name: 35mm High Explosive projectile
   description: Uh oh.
   parent: BaseBulletTrigger
