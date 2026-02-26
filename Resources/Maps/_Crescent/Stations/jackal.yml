@@ -22957,7 +22957,7 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
-- proto: Magazine35mmGyrostable
+- proto: Magazine35mmHE
   entities:
   - uid: 1967
     components:
@@ -23029,7 +23029,7 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
-- proto: Magazine35mmPlasma
+- proto: Magazine35mmHE
   entities:
   - uid: 1977
     components:
@@ -23363,7 +23363,7 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
-- proto: Magazine50mmGyrostable
+- proto: Magazine50mmHE
   entities:
   - uid: 1935
     components:
@@ -23435,7 +23435,7 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
-- proto: Magazine50mmPlasma
+- proto: Magazine50mmSAPHE  
   entities:
   - uid: 1946
     components:

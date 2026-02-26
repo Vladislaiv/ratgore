@@ -51,7 +51,7 @@
 
 - type: listing
   id: StoreListing50mmautocannon
-  name: 50mm 'Whistler' light autocannon flatpack
+  name: 50mm 'Striker' light autocannon flatpack
   description: An artillery for medium ballistic hardpoint.
   icon: { sprite: _Crescent/Objects/Turrets/Projectile/autocannon.rsi, state: autocannon }
   productEntity: WeaponTurretSmallArtilleryFlatpack
@@ -62,7 +62,7 @@
 
 - type: listing
   id: StoreListing120mmcannon
-  name: 120mm 'Pithatis' mono-barreled artillery cannon flatpack
+  name: 120mm 'Anvil' mono-barreled artillery cannon flatpack
   description: A artillery for medium ballistic hardpoints
   icon: { sprite: _Crescent/Objects/Turrets/Projectile/medium_auto.rsi, state: medium_auto}
   productEntity: WeaponTurretMediumArtilleryFlatpack
@@ -73,7 +73,7 @@
 
 - type: listing
   id: StoreListing90mmcannon
-  name: 90mm 'Gistum' tri-barreled repeater cannon flatpack (DO NOT WORK, SORRY)
+  name: 90mm 'Resolute' tri-barreled repeater cannon flatpack (DO NOT WORK, SORRY)
   description: A large machine gun for large hardpoints.
   icon: { sprite: _Crescent/Objects/Turrets/Projectile/repeater.rsi, state: repeater }
   productEntity: WeaponTurretLargeMachinegunFlatpack
@@ -84,7 +84,7 @@
 
 - type: listing
   id: StoreListing300mmbattery
-  name: 300mm 'Pithis' dual-barreled subnuclear battery flatpack
+  name: 300mm 'Leviathan' dual-barreled subnuclear battery flatpack
   description: A large artillery cannon for large hardpoints.
   icon: { sprite: _Crescent/Objects/Turrets/Projectile/howitzer.rsi, state: howitzer }
   productEntity: WeaponTurretLargeArtilleryFlatpack

@@ -1032,8 +1032,8 @@
 - type: entity
   parent: BaseFlatpack
   id: WeaponTurretSmallArtilleryFlatpack
-  name: 50mm 'Whistler' light autocannon Flatpack
-  description: Parts used to build a 50mm 'Whistler' light autocannon. Activate with a multitool to deploy.
+  name: 50mm 'Striker' light autocannon Flatpack
+  description: Parts used to build a 50mm 'Striker' light autocannon. Activate with a multitool to deploy.
   components:
   - type: Flatpack
     entity: WeaponTurretSmallArtillery
@@ -1086,8 +1086,8 @@
 - type: entity
   parent: BaseFlatpack
   id: WeaponTurretMediumArtilleryFlatpack
-  name: 120mm 'Pithatis' mono-barreled artillery cannon Flatpack
-  description: Parts used to build a 120mm 'Pithatis' mono-barreled artillery cannon. Activate with a multitool to deploy.
+  name: 120mm 'Anvil' mono-barreled artillery cannon Flatpack
+  description: Parts used to build a 120mm 'Anvil' mono-barreled artillery cannon. Activate with a multitool to deploy.
   components:
   - type: Flatpack
     entity: WeaponTurretMediumArtillery
@@ -1104,8 +1104,8 @@
 - type: entity
   parent: BaseFlatpack
   id: WeaponTurretLargeMachinegunFlatpack
-  name: 90mm 'Gistum' tri-barreled repeater cannon Flatpack
-  description: Parts used to build a 90mm 'Gistum' tri-barreled repeater cannon. Activate with a multitool to deploy.
+  name: 90mm 'Resolute' tri-barreled repeater cannon Flatpack
+  description: Parts used to build a 90mm 'Resolute' tri-barreled repeater cannon. Activate with a multitool to deploy.
   components:
   - type: Flatpack
     entity: WeaponTurretLargeMachinegun
@@ -1122,8 +1122,8 @@
 - type: entity
   parent: BaseFlatpack
   id: WeaponTurretLargeArtilleryFlatpack
-  name: 300mm 'Pithis' dual-barreled subnuclear battery Flatpack
-  description: Parts used to build a 300mm 'Pithis' dual-barreled subnuclear battery. Activate with a multitool to deploy.
+  name: 300mm 'Leviathan' dual-barreled subnuclear battery Flatpack
+  description: Parts used to build a 300mm 'Leviathan' dual-barreled subnuclear battery. Activate with a multitool to deploy.
   components:
   - type: Flatpack
     entity: WeaponTurretLargeArtillery
