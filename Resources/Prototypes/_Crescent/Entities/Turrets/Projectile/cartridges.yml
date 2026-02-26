@@ -79,7 +79,7 @@
     deleteOnSpawn: true
     proto: Bullet120mmBase
   - type: Sprite
-    sprite: _Crescent/Objects/Turrets/Ammunition/Cartridge/Anvil.rsi
+    sprite: _Crescent/Objects/Turrets/Ammunition/Cartridge/anvil.rsi
     layers:
     - state: gyro
       map: ["enum.AmmoVisualLayers.Base"]
@@ -100,7 +100,7 @@
     deleteOnSpawn: true
     proto: Bullet120mmFlak
   - type: Sprite
-    sprite: _Crescent/Objects/Turrets/Ammunition/Cartridge/Anvil.rsi
+    sprite: _Crescent/Objects/Turrets/Ammunition/Cartridge/anvil.rsi
     layers:
     - state: heat
       map: ["enum.AmmoVisualLayers.Base"]
@@ -121,7 +121,7 @@
     deleteOnSpawn: true
     proto: Bullet120mmFlux
   - type: Sprite
-    sprite: _Crescent/Objects/Turrets/Ammunition/Cartridge/Anvil.rsi
+    sprite: _Crescent/Objects/Turrets/Ammunition/Cartridge/anvil.rsi
     layers:
     - state: apds
       map: ["enum.AmmoVisualLayers.Base"]
@@ -182,7 +182,7 @@
     deleteOnSpawn: true
     proto: Bullet300mmBase
   - type: Sprite
-    sprite: _Crescent/Objects/Turrets/Ammunition/Cartridge/Leviathan.rsi
+    sprite: _Crescent/Objects/Turrets/Ammunition/Cartridge/leviathan.rsi
     layers:
     - state: ap
       map: ["enum.AmmoVisualLayers.Base"]
@@ -205,7 +205,7 @@
     deleteOnSpawn: true
     proto: Bullet35mmBase
   - type: Sprite
-    sprite: _Crescent/Objects/Turrets/Ammunition/Cartridge/Striker.rsi
+    sprite: _Crescent/Objects/Turrets/Ammunition/Cartridge/striker.rsi
     layers:
     - state: ap
       map: ["enum.AmmoVisualLayers.Base"]
@@ -227,7 +227,7 @@
     deleteOnSpawn: true
     proto: Bullet20mmHE
   - type: Sprite
-    sprite: _Crescent/Objects/Turrets/Ammunition/Cartridge/Striker.rsi
+    sprite: _Crescent/Objects/Turrets/Ammunition/Cartridge/striker.rsi
     layers:
     - state: heat
       map: ["enum.AmmoVisualLayers.Base"]
@@ -273,7 +273,7 @@
     deleteOnSpawn: true
     proto: Bullet50mmBase
   - type: Sprite
-    sprite: _Crescent/Objects/Turrets/Ammunition/Cartridge/Striker.rsi
+    sprite: _Crescent/Objects/Turrets/Ammunition/Cartridge/striker.rsi
     layers:
     - state: apds
       map: ["enum.AmmoVisualLayers.Base"]
@@ -295,7 +295,7 @@
     deleteOnSpawn: true
     proto: Bullet50mmHE
   - type: Sprite
-    sprite: _Crescent/Objects/Turrets/Ammunition/Cartridge/Striker.rsi
+    sprite: _Crescent/Objects/Turrets/Ammunition/Cartridge/striker.rsi
     layers:
     - state: ap
       map: ["enum.AmmoVisualLayers.Base"]
@@ -317,7 +317,7 @@
     deleteOnSpawn: true
     proto: Bullet50mmSAPHE
   - type: Sprite
-    sprite: _Crescent/Objects/Turrets/Ammunition/Cartridge/Striker.rsi
+    sprite: _Crescent/Objects/Turrets/Ammunition/Cartridge/striker.rsi
     layers:
     - state: heat
       map: ["enum.AmmoVisualLayers.Base"]
@@ -341,7 +341,7 @@
     deleteOnSpawn: true
     proto: Bullet90mmBase
   - type: Sprite
-    sprite: _Crescent/Objects/Turrets/Ammunition/Cartridge/Anvil.rsi
+    sprite: _Crescent/Objects/Turrets/Ammunition/Cartridge/anvil.rsi
     scale: 0.75, 0.75
     layers:
     - state: gyro
@@ -364,7 +364,7 @@
     deleteOnSpawn: true
     proto: Bullet90mmAP
   - type: Sprite
-    sprite: _Crescent/Objects/Turrets/Ammunition/Cartridge/Anvil.rsi
+    sprite: _Crescent/Objects/Turrets/Ammunition/Cartridge/anvil.rsi
     scale: 0.75, 0.75
     layers:
     - state: apds
@@ -387,7 +387,7 @@
     deleteOnSpawn: true
     proto: Bullet90mmHE
   - type: Sprite
-    sprite: _Crescent/Objects/Turrets/Ammunition/Cartridge/Anvil.rsi
+    sprite: _Crescent/Objects/Turrets/Ammunition/Cartridge/anvil.rsi
     scale: 0.75, 0.75
     layers:
     - state: heat
