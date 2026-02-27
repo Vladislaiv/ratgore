@@ -11,7 +11,7 @@
   showInVote: true
   description: Последние дни Тайпана. Длится 2-4 часа. Большая карта.
   rules:
-  - Adventure
+  - OverworldRemap
   - HullrotEventScheduler
 
 

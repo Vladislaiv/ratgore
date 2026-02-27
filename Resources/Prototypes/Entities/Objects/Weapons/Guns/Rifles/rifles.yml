@@ -195,6 +195,10 @@
     steps: 1
     zeroVisible: true
   - type: Appearance
+  - type: ReverseEngineering
+    recipes:
+      - WeaponRifleAkCyberdawn
+      - WeaponRifleKrinkovCyberdawn
 
 - type: entity
   name: NT M-90gl Hercules 7.62x51mm
@@ -241,6 +245,14 @@
     steps: 1
     zeroVisible: true
   - type: Appearance
+  - type: ReverseEngineering # SectorCrescent
+    difficulty: 2
+    recipes:
+      - WeaponRifleM90GrenadeLauncher
+      - WeaponRifleLecterSHI
+      - WeaponRifleHoundMarksman
+      - WeaponRifleGoro
+
 
 - type: entity
   name: SHI M931c Lecter 5.56x45mm
@@ -292,6 +304,12 @@
     steps: 1
     zeroVisible: true
   - type: Appearance
+  - type: ReverseEngineering # SectorCrescent
+    difficulty: 2
+    recipes:
+      - WeaponRifleLecterSHI
+      - WeaponRifleHoundMarksman
+      - WeaponRifleGoro
 
 - type: entity
   name: SHI PAA-2 Lecter 7.62x51mm
