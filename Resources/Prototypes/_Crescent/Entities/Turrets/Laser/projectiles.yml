@@ -44,7 +44,6 @@
   - type: ProjectilePhasePrevent
   - type: ShipWeaponProjectile
   - type: Projectile
-    ignoreWeaponGrid: true
     damage:
       types:
         Heat: 75
@@ -75,7 +74,6 @@
   - type: ProjectilePhasePrevent
   - type: ShipWeaponProjectile
   - type: Projectile
-    ignoreWeaponGrid: true
     damage:
       types:
         Heat: 100
@@ -102,7 +100,6 @@
   - type: ProjectilePhasePrevent
   - type: ShipWeaponProjectile
   - type: Projectile
-    ignoreWeaponGrid: true
     damage:
       types:
         Heat: 250
