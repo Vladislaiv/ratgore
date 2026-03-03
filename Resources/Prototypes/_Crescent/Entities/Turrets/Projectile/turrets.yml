@@ -714,7 +714,7 @@
     - type: ApcPowerReceiver
       powerLoad: 8500
     - type: BallisticAmmoProvider
-      fillDelay: 5
+      fillDelay: 1
       cycleable: true
       capacity: 2
     - type: Destructible
