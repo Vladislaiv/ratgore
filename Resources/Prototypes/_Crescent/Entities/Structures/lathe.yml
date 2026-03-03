@@ -51,8 +51,6 @@
     - BasicMechatronicsFromCombinedScrap
     - BallisticCyclerFromCombinedScrap
     - HardsuitElectronicsFromCombinedScrap
-  - type: MaterialStorageMagnetPickup
-    magnetEnabled: True
 
 - type: entity
   parent: [ BaseMachinePowered, ConstructibleMachine ]
@@ -107,8 +105,6 @@
     - BasicMechatronicsFromCombinedScrap
     - BallisticCyclerFromCombinedScrap
     - HardsuitElectronicsFromCombinedScrap
-  - type: MaterialStorageMagnetPickup
-    magnetEnabled: True
 
 #drugs
 
@@ -199,8 +195,6 @@
       - CryostasisBeaker
       - SyringeCryostasis
       - StasisBedMachineCircuitboardBiochemical
-  - type: MaterialStorageMagnetPickup
-    magnetEnabled: True
   - type: Anchorable
     flags:
     - Anchorable
@@ -1664,8 +1658,6 @@
     runningState: base_machine_processing
     staticRecipes:
     - JugBoriaticFuelCraft
-  - type: MaterialStorageMagnetPickup
-    magnetEnabled: True
 
 #ship parts
 
@@ -1702,8 +1694,6 @@
   - type: Anchorable
     flags:
     - Anchorable
-  - type: MaterialStorageMagnetPickup
-    magnetEnabled: True
 
 #organs
 
@@ -1736,8 +1726,6 @@
   - type: Anchorable
     flags:
     - Anchorable
-  - type: MaterialStorageMagnetPickup
-    magnetEnabled: True
 
 
 #crates
@@ -1780,8 +1768,6 @@
   - type: Anchorable
     flags:
     - Anchorable
-  - type: MaterialStorageMagnetPickup
-    magnetEnabled: True
 
 #shi
 
@@ -1822,8 +1808,6 @@
   - type: Anchorable
     flags:
     - Anchorable
-  - type: MaterialStorageMagnetPickup
-    magnetEnabled: True
 
 #saws
 
@@ -1865,8 +1849,6 @@
   - type: Anchorable
     flags:
     - Anchorable
-  - type: MaterialStorageMagnetPickup
-    magnetEnabled: True
 
 #indie
 
@@ -1907,8 +1889,6 @@
   - type: Anchorable
     flags:
     - Anchorable
-  - type: MaterialStorageMagnetPickup
-    magnetEnabled: True
 
 #ncwl
 
@@ -1949,8 +1929,6 @@
   - type: Anchorable
     flags:
     - Anchorable
-  - type: MaterialStorageMagnetPickup
-    magnetEnabled: True
 
 #ipm
 
@@ -1989,8 +1967,6 @@
   - type: Anchorable
     flags:
     - Anchorable
-  - type: MaterialStorageMagnetPickup
-    magnetEnabled: True
 
 #Newport
 
@@ -2033,8 +2009,6 @@
   - type: Anchorable
     flags:
     - Anchorable
-  - type: MaterialStorageMagnetPickup
-    magnetEnabled: True
 
 #Freeport
 
@@ -2076,5 +2050,3 @@
   - type: Anchorable
     flags:
     - Anchorable
-  - type: MaterialStorageMagnetPickup
-    magnetEnabled: True

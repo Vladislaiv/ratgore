@@ -1,7 +1,7 @@
 - type: vessel
   id: Musinyane
   name:  ТПШ Мяне
-  description: Патрульный корвет Корпоративной Безопасности.
+  description: Легкий крейсер корпоративной безопасности, экипаж которого должен состоять из трех-четырех человек.
   price: 75000
   category: Medium
   group: None
@@ -19,7 +19,7 @@
         - type: VesselIcon
           iffIcon:
             sprite: _Crescent/ShipIcons/ifficons.rsi
-            state: corvette
+            state: cruiser
         - type: StationNameSetup
           mapNameTemplate: 'ТПШ Мяне {1}'
           nameGenerator:

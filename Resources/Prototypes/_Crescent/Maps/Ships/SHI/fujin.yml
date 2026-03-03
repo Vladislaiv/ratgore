@@ -19,7 +19,7 @@
         - type: VesselIcon
           iffIcon:
             sprite: _Crescent/ShipIcons/ifficons.rsi
-            state: cruiser
+            state: battlecruiser
         - type: StationNameSetup
           mapNameTemplate: 'ТПШ Фуджин {1}'
           nameGenerator:
