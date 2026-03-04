@@ -40,7 +40,7 @@
   - type: Projectile
     damage:
       types:
-        Piercing: 22 # 22 x 8 = 174
+        Piercing: 13 # 13 x 8 = 104
 
 - type: entity
   id: PelletShotgunSpread
@@ -64,7 +64,7 @@
   - type: Projectile
     damage:
       types:
-        Piercing: 15 # 15 x 8 = 120
+        Piercing: 8 # 8 x 8 = 64
         Heat: 4 # 5 x 8 = 32
   - type: IgnitionSource
     ignited: true
