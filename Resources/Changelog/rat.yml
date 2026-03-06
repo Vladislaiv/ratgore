@@ -405,5 +405,21 @@ Entries:
     id: 54
     time: '2026-03-03T16:01:34.0000000+00:00'
     url: https://github.com/ss14-art/ratgore/pull/56
+  - author: freycyik
+    changes:
+      - type: Fix
+        message: Исправлено продажа дисков шаттлов в карго
+    id: 55
+    time: '2026-03-06T11:32:32.0000000+00:00'
+    url: https://github.com/ss14-art/ratgore/pull/60
+  - author: freycyik
+    changes:
+      - type: Tweak
+        message: Уменьшен урон дроби дробовика. 174>128
+      - type: Tweak
+        message: Уменьшен урон пули дробовика. 80>60
+    id: 56
+    time: '2026-03-06T11:32:48.0000000+00:00'
+    url: https://github.com/ss14-art/ratgore/pull/57
 Name: Rat
 Order: -1
