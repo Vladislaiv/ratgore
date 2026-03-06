@@ -30,7 +30,7 @@
     layers:
     - state: icon
   - type: StaticPrice
-    price: 8000
+    price: 2500
   - type: ShipVoucher
     ship: Gnosis
   - type: ReverseEngineering # Sector Crescent
@@ -50,7 +50,7 @@
     layers:
     - state: icon
   - type: StaticPrice
-    price: 195000
+    price: 2500
   - type: ShipVoucher
     ship: Suzerain
   - type: ReverseEngineering # Sector Crescent
@@ -70,7 +70,7 @@
     layers:
     - state: icon
   - type: StaticPrice
-    price: 175000
+    price: 2500
   - type: ShipVoucher
     ship: Nemesis
   - type: ReverseEngineering # Sector Crescent
@@ -90,7 +90,7 @@
     layers:
     - state: icon
   - type: StaticPrice
-    price: 35000
+    price: 2500
   - type: ShipVoucher
     ship: Janissary
   - type: ReverseEngineering # Sector Crescent
@@ -99,9 +99,9 @@
 
 - type: entity
   parent: BaseItem
-  id: ShipVoucherKhan
-  name: DSM 'Khan' pattern LPC fabprint disk
-  description: An LPC fabprint disk loaded with an Imperial Khan-class subshuttle. Has to be redeemed at a shipyard console.
+  id: ShipVoucherVoruna
+  name: DSM 'Voruna' pattern LPC fabprint disk
+  description: An LPC fabprint disk loaded with an Imperial Voruna-class subshuttle. Has to be redeemed at a shipyard console.
   components:
   - type: Item
     size: Small
@@ -110,12 +110,12 @@
     layers:
     - state: icon
   - type: StaticPrice
-    price: 15000
+    price: 2500
   - type: ShipVoucher
-    ship: Khan
+    ship: Voruna
   - type: ReverseEngineering # Sector Crescent
     recipes:
-      - KhanLPC
+      - VorunaLPC
 
 - type: entity
   parent: BaseItem
@@ -130,29 +130,12 @@
     layers:
     - state: icon
   - type: StaticPrice
-    price: 10000
+    price: 2500
   - type: ShipVoucher
     ship: Perigale
   - type: ReverseEngineering # Sector Crescent
     recipes:
       - PerigaleLPC
-
-- type: entity
-  parent: BaseItem
-  id: ShipVoucherRaider
-  name: DSM 'Raider' pattern LPC fabprint disk
-  description: An LPC fabprint disk loaded with an Imperial Raider-class cloaked troop transport. Has to be redeemed at a shipyard console.
-  components:
-  - type: Item
-    size: Small
-  - type: Sprite
-    sprite: _Crescent/Objects/Misc/lpcchip.rsi
-    layers:
-    - state: icon
-  - type: StaticPrice
-    price: 30000
-  - type: ShipVoucher
-    ship: Raider
 
 - type: entity
   parent: BaseItem
@@ -167,7 +150,7 @@
     layers:
     - state: icon
   - type: StaticPrice
-    price: 40000
+    price: 2500
   - type: ShipVoucher
     ship: Sunesis
   - type: ReverseEngineering # Sector Crescent
@@ -187,7 +170,7 @@
     layers:
     - state: icon
   - type: StaticPrice
-    price: 60000
+    price: 2500
   - type: ShipVoucher
     ship: Triumphant
   - type: ReverseEngineering # Sector Crescent
@@ -207,7 +190,7 @@
     layers:
     - state: icon
   - type: StaticPrice
-    price: 136300
+    price: 2500
   - type: ShipVoucher
     ship: Laelaps
   - type: ReverseEngineering # Sector Crescent
@@ -227,7 +210,7 @@
     layers:
     - state: icon
   - type: StaticPrice
-    price: 15000
+    price: 2500
   - type: ShipVoucher
     ship: Ibis
   - type: ReverseEngineering # Sector Crescent
@@ -247,7 +230,7 @@
     layers:
     - state: icon
   - type: StaticPrice
-    price: 40000
+    price: 2500
   - type: ShipVoucher
     ship: Covetor
   - type: ReverseEngineering # Sector Crescent
@@ -267,7 +250,7 @@
     layers:
     - state: icon
   - type: StaticPrice
-    price: 12000
+    price: 2500
   - type: ShipVoucher
     ship: Redemptor
   - type: ReverseEngineering # Sector Crescent
@@ -287,7 +270,7 @@
     layers:
     - state: icon
   - type: StaticPrice
-    price: 30000
+    price: 2500
   - type: ShipVoucher
     ship: Praxis
   - type: ReverseEngineering # Sector Crescent
@@ -307,7 +290,7 @@
     layers:
     - state: icon
   - type: StaticPrice
-    price: 8000
+    price: 2500
   - type: ShipVoucher
     ship: RollingReverie
 
@@ -324,7 +307,7 @@
     layers:
     - state: icon
   - type: StaticPrice
-    price: 125000
+    price: 2500
   - type: ShipVoucher
     ship: Duchess
 
@@ -341,7 +324,7 @@
     layers:
     - state: icon
   - type: StaticPrice
-    price: 45000
+    price: 2500
   - type: ShipVoucher
     ship: Tyche
 
@@ -358,7 +341,7 @@
     layers:
     - state: icon
   - type: StaticPrice
-    price: 46200
+    price: 2500
   - type: ShipVoucher
     ship: Torturer
   - type: ReverseEngineering # Sector Crescent
@@ -378,7 +361,7 @@
     layers:
     - state: icon
   - type: StaticPrice
-    price: 40000
+    price: 2500
   - type: ShipVoucher
     ship: Magnate
   - type: ReverseEngineering # Sector Crescent
@@ -402,7 +385,7 @@
     layers:
     - state: icon
   - type: StaticPrice
-    price: 26000
+    price: 2500
   - type: ShipVoucher
     ship: Vanguard
   - type: ReverseEngineering # SectorCrescent
@@ -422,7 +405,7 @@
     layers:
     - state: icon
   - type: StaticPrice
-    price: 22500
+    price: 2500
   - type: ShipVoucher
     ship: Lodka
   - type: ReverseEngineering # SectorCrescent
@@ -442,27 +425,9 @@
     layers:
     - state: icon
   - type: StaticPrice
-    price: 42500
+    price: 2500
   - type: ShipVoucher
     ship: Vasinya
-
-- type: entity
-  parent: BaseItem
-  id: ShipVoucherPsoglav
-  name: NCWL 'Psoglav' pattern LPC fabprint disk
-  description: An LPC fabprint disk loaded with a communard combat mining-carrier barge pattern. Has to be redeemed at a shipyard console.
-  components:
-  - type: Item
-    size: Small
-  - type: Sprite
-    sprite: _Crescent/Objects/Misc/lpcchip.rsi
-    layers:
-    - state: icon
-  - type: StaticPrice
-    price: 50000
-  - type: ShipVoucher
-    ship: Psoglav
-
 
 #T0 END
 
@@ -481,7 +446,7 @@
     layers:
     - state: icon
   - type: StaticPrice
-    price: 18000
+    price: 2500
   - type: ShipVoucher
     ship: Krechet
   - type: ReverseEngineering # SectorCrescent
@@ -501,7 +466,7 @@
     layers:
     - state: icon
   - type: StaticPrice
-    price: 30000
+    price: 2500
   - type: ShipVoucher
     ship: Molot
   - type: ReverseEngineering # SectorCrescent
@@ -521,7 +486,7 @@
     layers:
     - state: icon
   - type: StaticPrice
-    price: 67500
+    price: 2500
   - type: ShipVoucher
     ship: Ivarod
   - type: ReverseEngineering # SectorCrescent
@@ -545,7 +510,7 @@
     layers:
     - state: icon
   - type: StaticPrice
-    price: 43500
+    price: 2500
   - type: ShipVoucher
     ship: Hind
   - type: ReverseEngineering # SectorCrescent
@@ -565,7 +530,7 @@
     layers:
     - state: icon
   - type: StaticPrice
-    price: 93750
+    price: 2500
   - type: ShipVoucher
     ship: Gargut
   - type: ReverseEngineering # SectorCrescent
@@ -590,7 +555,7 @@
     layers:
     - state: icon
   - type: StaticPrice
-    price: 93750
+    price: 2500
   - type: ShipVoucher
     ship: Stern
   - type: ReverseEngineering # SectorCrescent
@@ -610,7 +575,7 @@
     layers:
     - state: icon
   - type: StaticPrice
-    price: 65000
+    price: 2500
   - type: ShipVoucher
     ship: Bogatyr
   - type: ReverseEngineering # SectorCrescent
@@ -630,7 +595,7 @@
     layers:
     - state: icon
   - type: StaticPrice
-    price: 70000 #normally this'd be 75% from the ship price but having a t3 cruiser lpc sell for 50k is absurd
+    price: 2500 #normally this'd be 75% from the ship price but having a t3 cruiser lpc sell for 50k is absurd
   - type: ShipVoucher
     ship: Sunder
   - type: ReverseEngineering # SectorCrescent
@@ -654,7 +619,7 @@
     layers:
     - state: icon
   - type: StaticPrice
-    price: 75000
+    price: 2500
   - type: ShipVoucher
     ship: Sasha
 
@@ -671,7 +636,7 @@
     layers:
     - state: icon
   - type: StaticPrice
-    price: 93750
+    price: 2500
   - type: ShipVoucher
     ship: Chelubey
 
@@ -697,7 +662,7 @@
     layers:
     - state: icon
   - type: StaticPrice
-    price: 20000
+    price: 2500
   - type: ShipVoucher
     ship: buffalo
   - type: ReverseEngineering # SectorCrescent
@@ -717,7 +682,7 @@
     layers:
     - state: icon
   - type: StaticPrice
-    price: 20000
+    price: 2500
   - type: ShipVoucher
     ship: Flea
   - type: ReverseEngineering # SectorCrescent
@@ -737,7 +702,7 @@
     layers:
     - state: icon
   - type: StaticPrice
-    price: 22000
+    price: 2500
   - type: ShipVoucher
     ship: gazpachov
   - type: ReverseEngineering # SectorCrescent
@@ -757,7 +722,7 @@
     layers:
     - state: icon
   - type: StaticPrice
-    price: 45000
+    price: 2500
   - type: ShipVoucher
     ship: Chanchu
   - type: ReverseEngineering # SectorCrescent
@@ -777,7 +742,7 @@
     layers:
     - state: icon
   - type: StaticPrice
-    price: 25000
+    price: 2500
   - type: ShipVoucher
     ship: Musinyane
   - type: ReverseEngineering # SectorCrescent
@@ -817,7 +782,7 @@
     layers:
     - state: icon
   - type: StaticPrice
-    price: 60000
+    price: 2500
   - type: ShipVoucher
     ship: Fujin
   - type: ReverseEngineering # SectorCrescent
@@ -859,7 +824,7 @@
     layers:
     - state: icon
   - type: StaticPrice
-    price: 27500
+    price: 2500
   - type: ShipVoucher
     ship: Cleaver
   - type: ReverseEngineering # SectorCrescent
@@ -879,7 +844,7 @@
     layers:
     - state: icon
   - type: StaticPrice
-    price: 60000
+    price: 2500
   - type: ShipVoucher
     ship: Eradicator
   - type: ReverseEngineering # SectorCrescent
@@ -899,7 +864,7 @@
     layers:
     - state: icon
   - type: StaticPrice
-    price: 40000
+    price: 2500
   - type: ShipVoucher
     ship: Cerberus
 
@@ -916,7 +881,7 @@
     layers:
     - state: icon
   - type: StaticPrice
-    price: 37500
+    price: 2500
   - type: ShipVoucher
     ship: Ouroboros
   - type: ReverseEngineering # SectorCrescent
@@ -936,7 +901,7 @@
     layers:
     - state: icon
   - type: StaticPrice
-    price: 15000
+    price: 2500
   - type: ShipVoucher
     ship: Itch
   - type: ReverseEngineering # SectorCrescent
@@ -956,7 +921,7 @@
     layers:
     - state: icon
   - type: StaticPrice
-    price: 5000
+    price: 2500
   - type: ShipVoucher
     ship: Tick
   - type: ReverseEngineering # SectorCrescent
@@ -976,7 +941,7 @@
     layers:
     - state: icon
   - type: StaticPrice
-    price: 7500
+    price: 2500
   - type: ShipVoucher
     ship: Gnat
   - type: ReverseEngineering # SectorCrescent
@@ -996,7 +961,7 @@
     layers:
     - state: icon
   - type: StaticPrice
-    price: 30000
+    price: 2500
   - type: ShipVoucher
     ship: Harpy
   - type: ReverseEngineering # SectorCrescent
@@ -1016,7 +981,7 @@
     layers:
     - state: icon
   - type: StaticPrice
-    price: 30000
+    price: 2500
   - type: ShipVoucher
     ship: Corvax
   - type: ReverseEngineering # SectorCrescent
@@ -1036,7 +1001,7 @@
     layers:
     - state: icon
   - type: StaticPrice
-    price: 70000
+    price: 2500
   - type: ShipVoucher
     ship: Hornetsnest
 
@@ -1053,7 +1018,7 @@
     layers:
     - state: icon
   - type: StaticPrice
-    price: 40000
+    price: 2500
   - type: ShipVoucher
     ship: Sinn
   - type: ReverseEngineering # SectorCrescent
@@ -1073,7 +1038,7 @@
     layers:
     - state: icon
   - type: StaticPrice
-    price: 45000
+    price: 2500
   - type: ShipVoucher
     ship: Thanapod
   - type: ReverseEngineering # SectorCrescent
@@ -1093,7 +1058,7 @@
     layers:
     - state: icon
   - type: StaticPrice
-    price: 50000
+    price: 2500
   - type: ShipVoucher
     ship: Hyena
   - type: ReverseEngineering # SectorCrescent
@@ -1113,7 +1078,7 @@
     layers:
     - state: icon
   - type: StaticPrice
-    price: 40000
+    price: 2500
   - type: ShipVoucher
     ship: Hulk
   - type: ReverseEngineering # SectorCrescent
@@ -1133,7 +1098,7 @@
     layers:
     - state: icon
   - type: StaticPrice
-    price: 5000
+    price: 2500
   - type: ShipVoucher
     ship: Fridge
   - type: ReverseEngineering # SectorCrescent
@@ -1153,7 +1118,7 @@
     layers:
     - state: icon
   - type: StaticPrice
-    price: 9000
+    price: 2500
   - type: ShipVoucher
     ship: Meatwagon
   - type: ReverseEngineering # SectorCrescent
@@ -1173,7 +1138,7 @@
     layers:
     - state: icon
   - type: StaticPrice
-    price: 8000
+    price: 2500
   - type: ShipVoucher
     ship: Matabele
   - type: ReverseEngineering # SectorCrescent
@@ -1193,7 +1158,7 @@
     layers:
     - state: icon
   - type: StaticPrice
-    price: 5000
+    price: 2500
   - type: ShipVoucher
     ship: Piranha
   - type: ReverseEngineering # SectorCrescent
@@ -1213,7 +1178,7 @@
     layers:
     - state: icon
   - type: StaticPrice
-    price: 6000
+    price: 2500
   - type: ShipVoucher
     ship: Scuttlefish
   - type: ReverseEngineering # SectorCrescent
@@ -1233,7 +1198,7 @@
     layers:
     - state: icon
   - type: StaticPrice
-    price: 12000
+    price: 2500
   - type: ShipVoucher
     ship: Reaver
   - type: ReverseEngineering # SectorCrescent
@@ -1253,7 +1218,7 @@
     layers:
     - state: icon
   - type: StaticPrice
-    price: 50000
+    price: 2500
   - type: ShipVoucher
     ship: Wolf
   - type: ReverseEngineering # SectorCrescent
@@ -1273,7 +1238,7 @@
     layers:
     - state: icon
   - type: StaticPrice
-    price: 5000
+    price: 2500
   - type: ShipVoucher
     ship: Shanty
   - type: ReverseEngineering # SectorCrescent
@@ -1293,7 +1258,7 @@
     layers:
     - state: icon
   - type: StaticPrice
-    price: 60000
+    price: 2500
   - type: ShipVoucher
     ship: Velator
   - type: ReverseEngineering # SectorCrescent
@@ -1313,7 +1278,7 @@
     layers:
     - state: icon
   - type: StaticPrice
-    price: 60000
+    price: 2500
   - type: ShipVoucher
     ship: Taipan
   - type: ReverseEngineering # SectorCrescent
@@ -1333,7 +1298,7 @@
     layers:
     - state: icon
   - type: StaticPrice
-    price: 35000
+    price: 2500
   - type: ShipVoucher
     ship: Wisp
   - type: ReverseEngineering # SectorCrescent
@@ -1353,7 +1318,7 @@
     layers:
     - state: icon
   - type: StaticPrice
-    price: 38000
+    price: 2500
   - type: ShipVoucher
     ship: Spriggan
   - type: ReverseEngineering # SectorCrescent
@@ -1373,7 +1338,7 @@
     layers:
     - state: icon
   - type: StaticPrice
-    price: 27000
+    price: 2500
   - type: ShipVoucher
     ship: Wreck
   - type: ReverseEngineering # SectorCrescent
@@ -1395,7 +1360,7 @@
     layers:
     - state: icon
   - type: StaticPrice
-    price: 11000
+    price: 2500
   - type: ShipVoucher
     ship: Justiciar
 
@@ -1412,7 +1377,7 @@
     layers:
     - state: icon
   - type: StaticPrice
-    price: 8000
+    price: 2500
   - type: ShipVoucher
     ship: Provost
 
@@ -1429,7 +1394,7 @@
     layers:
     - state: icon
   - type: StaticPrice
-    price: 50000
+    price: 2500
   - type: ShipVoucher
     ship: Courageous
 
@@ -1446,7 +1411,7 @@
     layers:
     - state: icon
   - type: StaticPrice
-    price: 32000
+    price: 2500
   - type: ShipVoucher
     ship: Templar
 
@@ -1482,7 +1447,7 @@
     layers:
     - state: icon
   - type: StaticPrice
-    price: 100000
+    price: 2500
   - type: ShipVoucher
     ship: Executioner
 
@@ -1499,7 +1464,7 @@
     layers:
     - state: icon
   - type: StaticPrice
-    price: 14000
+    price: 2500
   - type: ShipVoucher
     ship: Adjudicator
 
@@ -1516,7 +1481,7 @@
     layers:
     - state: icon
   - type: StaticPrice
-    price: 32000
+    price: 2500
   - type: ShipVoucher
     ship: Arbiter
 
@@ -1533,7 +1498,7 @@
     layers:
     - state: icon
   - type: StaticPrice
-    price: 24000
+    price: 2500
   - type: ShipVoucher
     ship: Corsair
 
@@ -1550,7 +1515,7 @@
     layers:
     - state: icon
   - type: StaticPrice
-    price: 22000
+    price: 2500
   - type: ShipVoucher
     ship: Minuteman
 
@@ -1567,7 +1532,7 @@
     layers:
     - state: icon
   - type: StaticPrice
-    price: 8000
+    price: 2500
   - type: ShipVoucher
     ship: Sentry
 
@@ -1584,7 +1549,7 @@
     layers:
     - state: icon
   - type: StaticPrice
-    price: 16000
+    price: 2500
   - type: ShipVoucher
     ship: Respondant
 
@@ -1601,7 +1566,7 @@
     layers:
     - state: icon
   - type: StaticPrice
-    price: 5000
+    price: 2500
   - type: ShipVoucher
     ship: Guard
 
@@ -1618,7 +1583,7 @@
     layers:
     - state: icon
   - type: StaticPrice
-    price: 32000
+    price: 2500
   - type: ShipVoucher
     ship: Judge
 
@@ -1635,7 +1600,7 @@
     layers:
     - state: icon
   - type: StaticPrice
-    price: 18000
+    price: 2500
   - type: ShipVoucher
     ship: Sentinel
 
@@ -1673,7 +1638,7 @@
     layers:
     - state: icon
   - type: StaticPrice
-    price: 19000
+    price: 2500
   - type: ShipVoucher
     ship: Spider
 
@@ -1692,7 +1657,7 @@
     layers:
     - state: icon
   - type: StaticPrice
-    price: 22000
+    price: 2500
   - type: ShipVoucher
     ship: Exhumer
 
@@ -1709,7 +1674,7 @@
     layers:
     - state: icon
   - type: StaticPrice
-    price: 21000
+    price: 2500
   - type: ShipVoucher
     ship: Homesteader
 
@@ -1726,7 +1691,7 @@
     layers:
     - state: icon
   - type: StaticPrice
-    price: 21000
+    price: 2500
   - type: ShipVoucher
     ship: Paracelsus
 
@@ -1743,7 +1708,7 @@
     layers:
     - state: icon
   - type: StaticPrice
-    price: 3000
+    price: 2500
   - type: ShipVoucher
     ship: Termite
 
@@ -1760,7 +1725,7 @@
     layers:
     - state: icon
   - type: StaticPrice
-    price: 3000
+    price: 2500
   - type: ShipVoucher
     ship: Rockchipper
   - type: ReverseEngineering # SectorCrescent
@@ -1780,7 +1745,7 @@
     layers:
     - state: icon
   - type: StaticPrice
-    price: 5000
+    price: 2500
   - type: ShipVoucher
     ship: Mercury
 
@@ -1797,7 +1762,7 @@
     layers:
     - state: icon
   - type: StaticPrice
-    price: 12000
+    price: 2500
   - type: ShipVoucher
     ship: Kite
 
@@ -1814,7 +1779,7 @@
     layers:
     - state: icon
   - type: StaticPrice
-    price: 60000
+    price: 2500
   - type: ShipVoucher
     ship: Archon
 
@@ -1831,7 +1796,7 @@
     layers:
     - state: icon
   - type: StaticPrice
-    price: 60000
+    price: 2500
   - type: ShipVoucher
     ship: Lictor
 
@@ -1848,7 +1813,7 @@
     layers:
     - state: icon
   - type: StaticPrice
-    price: 10000
+    price: 2500
   - type: ShipVoucher
     ship: Khorkoi
 
@@ -1883,7 +1848,7 @@
     layers:
     - state: icon
   - type: StaticPrice
-    price: 10000 # change later
+    price: 2500 # change later
   - type: ShipVoucher
     ship: Carrum
 
@@ -1900,7 +1865,7 @@
     layers:
     - state: icon
   - type: StaticPrice
-    price: 27000
+    price: 2500
   - type: ShipVoucher
     ship: Geode
   - type: ReverseEngineering # SectorCrescent
@@ -1920,7 +1885,7 @@
     layers:
     - state: icon
   - type: StaticPrice
-    price: 27000
+    price: 2500
   - type: ShipVoucher
     ship: Mercurymk2
   - type: ReverseEngineering # SectorCrescent
@@ -1940,7 +1905,7 @@
     layers:
     - state: icon
   - type: StaticPrice
-    price: 135000
+    price: 2500
   - type: ShipVoucher
     ship: Rokh
   - type: ReverseEngineering # SectorCrescent
@@ -1960,7 +1925,7 @@
     layers:
     - state: icon
   - type: StaticPrice
-    price: 55000
+    price: 2500
   - type: ShipVoucher
     ship: Caracal
   - type: ReverseEngineering # SectorCrescent
@@ -1980,7 +1945,7 @@
     layers:
     - state: icon
   - type: StaticPrice
-    price: 90000
+    price: 2500
   - type: ShipVoucher
     ship: Amadeus
   - type: ReverseEngineering # SectorCrescent
@@ -2000,7 +1965,7 @@
     layers:
     - state: icon
   - type: StaticPrice
-    price: 18000
+    price: 2500
   - type: ShipVoucher
     ship: Scabrak
   - type: ReverseEngineering # SectorCrescent
@@ -2020,7 +1985,7 @@
     layers:
     - state: icon
   - type: StaticPrice
-    price: 80000
+    price: 2500
   - type: ShipVoucher
     ship: Lockjaw
 
@@ -2156,7 +2121,7 @@
     layers:
     - state: icon
   - type: StaticPrice
-    price: 5000 #Don't want this to be free money - it's just for drugrunning - It won't be free money, they're pawning off one of two combat vessels
+    price: 2500 #Don't want this to be free money - it's just for drugrunning - It won't be free money, they're pawning off one of two combat vessels
   - type: ShipVoucher
     ship: Beelzebub
   - type: ReverseEngineering # SectorCrescent
@@ -2178,7 +2143,6 @@
     layers:
     - state: icon
   - type: StaticPrice
-    price: 40000
+    price: 2500
   - type: ShipVoucher
     ship: Lungspot
-
