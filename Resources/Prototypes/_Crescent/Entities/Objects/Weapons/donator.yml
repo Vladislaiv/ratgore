@@ -419,7 +419,7 @@
   id: CaseAR2PulseRifle
   parent: WeaponCasePulseRifle
   name: Wu-Tan Industries AR-2 case
-  suffix: Donor - Kingpin
+  suffix: Donor - Pulser
   description: A Wu-Tan Industries weapon case containing a AR-2 Pulse rifle
   components:
   - type: StorageFill
