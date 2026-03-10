@@ -84,7 +84,7 @@
     id: NCWLHomeguardLeaderPDA
     ears: ClothingHeadsetNCWL
     shoes: ClothingShoesBootsMagNCWL
-    outerClothing: ClothingOuterHardsuitNCWLPetya
+    outerClothing: ClothingOuterCoatJacketJamrock
     head: ClothingHeadHatNCWLBeretAdmiral
     belt: ClothingBeltAssaultFilledCrew #looks better
     pocket1: DoubleEmergencyOxygenTankFilled
@@ -93,7 +93,10 @@
     eyes: ClothingEyesHudSecurity
     suitstorage: WeaponPistolT91
   storage:
-    back:
+  inhand:
+    - ClothingOuterHardsuitNCWLPetya
+    - JetpackBlackFilled
+  back:
       - VoidsuitKitNCWL
       - BoxMRE
       - WeaponPistolT91
