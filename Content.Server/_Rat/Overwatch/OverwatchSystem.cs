@@ -332,6 +332,10 @@ public sealed class OverwatchSystem : EntitySystem
         if (player == null || !player.Valid)
             return;
 
+        if (!TryComp<HullrotFactionComponent>(player, out var factionComp) ||
+            factionComp.Faction != ent.Comp.Faction)
+            return;
+
         if (_squadSystem.AssignToSquad(player, args.SquadId, ent.Comp.Faction))
         {
             RefreshData(ent);
@@ -434,7 +438,9 @@ public sealed class OverwatchSystem : EntitySystem
             return;
 
         var target = GetEntity(args.Target);
-        if (!IsValidCameraTarget(target))
+        if (!TryComp<HullrotFactionComponent>(target, out var factionComp) ||
+            factionComp.Faction != ent.Comp.Faction ||
+            !IsValidCameraTarget(target))
             return;
 
         if (!_inventorySystem.TryGetSlotEntity(target, CameraSlotId, out var neckItem))
@@ -497,10 +503,10 @@ public sealed class OverwatchSystem : EntitySystem
 
         var target = watchingComp.Watching.Value;
 
-        if (_inventorySystem.TryGetSlotEntity(target, CameraSlotId, out var neckItem) &&
-            TryComp<SurveillanceCameraComponent>(neckItem.Value, out var cameraComp))
+        if (watchingComp.Camera is { } camera &&
+            TryComp<SurveillanceCameraComponent>(camera, out var cameraComp))
         {
-            _cameraSystem.RemoveActiveViewer(neckItem.Value, watcher, component: cameraComp);
+            _cameraSystem.RemoveActiveViewer(camera, watcher, component: cameraComp);
         }
 
         if (TryComp<RatOverwatchCameraComponent>(target, out var cameraCompTarget))
@@ -530,10 +536,10 @@ public sealed class OverwatchSystem : EntitySystem
 
         var target = ent.Comp.Watching.Value;
 
-        if (_inventorySystem.TryGetSlotEntity(target, CameraSlotId, out var neckItem) &&
-            TryComp<SurveillanceCameraComponent>(neckItem.Value, out var cameraComp))
+        if (ent.Comp.Camera is { } camera &&
+            TryComp<SurveillanceCameraComponent>(camera, out var cameraComp))
         {
-            _cameraSystem.RemoveActiveViewer(neckItem.Value, ent.Owner, component: cameraComp);
+            _cameraSystem.RemoveActiveViewer(camera, ent.Owner, component: cameraComp);
         }
 
         if (TryComp<RatOverwatchCameraComponent>(target, out var cameraCompTarget))
