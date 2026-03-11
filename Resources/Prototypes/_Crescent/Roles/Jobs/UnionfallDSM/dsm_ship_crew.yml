@@ -94,5 +94,6 @@
     - JetpackBlackFilled
   storage:
     back:
-      - BoxMRE
-      - WeaponPistolNeoVolker
+    - ClothingMaskImperialCombatGasmask
+    - HandHeldMassScannerEE
+    - CrowbarRed

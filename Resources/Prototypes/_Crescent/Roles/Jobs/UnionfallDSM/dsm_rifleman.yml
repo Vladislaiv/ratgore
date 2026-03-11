@@ -63,7 +63,7 @@
     - JetpackBlackFilled
   storage:
     back:
-      - BoxMRE
-      - WeaponPistolComplianceImperial
-      - CrowbarRed
-      - HandHeldMassScannerEE
+    - ClothingMaskImperialCombatGasmask
+    - WeaponPistolComplianceImperial
+    - CrowbarRed
+    - HandHeldMassScannerEE

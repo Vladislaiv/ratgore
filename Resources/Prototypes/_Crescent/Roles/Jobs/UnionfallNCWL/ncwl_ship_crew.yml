@@ -92,10 +92,14 @@
     outerClothing: ClothingOuterHardsuitNCWLEngi
     eyes: ClothingEyesHudSecurity
     suitstorage: WeaponPistolT91
+
   inhand:
     - UnionfallNCWLCadetNote
     - JetpackBlackFilled
+    
   storage:
     back:
-      - BoxMRE
-      - WeaponPistolT91
+    - ClothingMaskNCWLGasmask
+    - WeaponPistolT91
+    - HandHeldMassScannerEE
+    - CrowbarRed

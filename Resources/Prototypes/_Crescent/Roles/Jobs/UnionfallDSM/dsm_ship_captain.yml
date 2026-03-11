@@ -85,15 +85,19 @@
     neck: ClothingNeckCloakImperialGovernor
     back: ClothingBackpackDSM
     shoes: ClothingShoesBootsMagDSM
-    head: ClothingHeadHatImperialPeakedCap
+    head: ClothingHeadHatImperialBicorne
+    gloves: ClothingHandsGlovesImperialLonggloves
     outerClothing: ClothingOuterHardsuitImperialCommand
     id: KnightPDA
     belt: ClothingBeltAssaultFilledCrew
     pocket1: DoubleEmergencyOxygenTankFilled
     ears: ClothingHeadsetEmpire
     eyes: ClothingEyesHudSecurity
+  inhand:
+    - JetpackBlackFilled
   storage:
     back:
-      - VoidsuitKitDSM
-      - BoxMRE
-      - WeaponPistolNeoVolker
+    - ClothingMaskImperialCombatGasmask
+    - WeaponPistolNeoVolker
+    - HandHeldMassScannerEE
+    - CrowbarRed

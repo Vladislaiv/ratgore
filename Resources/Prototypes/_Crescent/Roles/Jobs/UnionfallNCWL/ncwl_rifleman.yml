@@ -64,12 +64,14 @@
     suitstorage: WeaponSniperNCWLNovomosin
     gloves: ClothingHandsGlovesCombat
     eyes: ClothingEyesGlassesNCWL
+
   inhand:
     - UnionfallNCWLCadetNote
     - JetpackBlackFilled
+    
   storage:
     back:
-      - BoxMRE
-      - WeaponPistolComrade
-      - CrowbarRed
-      - HandHeldMassScannerEE
+    - ClothingMaskNCWLGasmask
+    - WeaponPistolComrade
+    - CrowbarRed
+    - HandHeldMassScannerEE

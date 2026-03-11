@@ -49,7 +49,7 @@
     head: ClothingHeadHatImperialSurgeon
     neck: ClothingNeckIFFCyan
     jumpsuit: ClothingUniformJumpsuitImperialSurgeon
-    outerClothing: ClothingOuterHardsuitImperialWorker
+    outerClothing: ClothingOuterCoatAuthorityChirurgeon
     shoes: ClothingShoesBootsMagDSM
     belt: ClothingBeltAssaultFilledMedic
     eyes: ClothingEyesHudMedSec
@@ -62,18 +62,16 @@
     back: ClothingBackpackSatchelMedical
   inhand:
     - UnionfallDSMCadetNote
-    - JetpackBlackFilled
   storage:
     back:
-      - DefibrillatorCompact
-      - BoxMRE
-      - MedkitCombatFilled
-      - OmnizineChemistryBottle
-      - Bloodpack
-      - CartridgePuncturase
-      - CartridgePuncturase
-      - CartridgePuncturase
-      - CartridgePuncturase
-      - CartridgePuncturase
-      - CrowbarRed
-      - HandHeldMassScannerEE
+    - DefibrillatorCompact
+    - MedkitCombatFilled
+    - OmnizineChemistryBottle
+    - Bloodpack
+    - CartridgePuncturase
+    - CartridgePuncturase
+    - CartridgePuncturase
+    - CartridgePuncturase
+    - CartridgePuncturase
+    - CrowbarRed
+    - HandHeldMassScannerEE

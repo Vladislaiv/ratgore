@@ -83,10 +83,11 @@
   id: UnionfallLeaderDSMGear
   equipment:
     jumpsuit: ClothingUniformJumpsuitImperialGovernor
-    neck: ClothingNeckCloakImperialCapelet
+    neck: ClothingNeckImperialGreatcoat
     back: ClothingBackpackDSM
     shoes: ClothingShoesBootsMagDSM
-    head: ClothingHeadHatImperialBicorne
+    head: ClothingHeadHatImperialPeakedCap
+    gloves: ClothingHandsGlovesImperialLonggloves
     outerClothing: ClothingOuterHardsuitImperialKnight
     id: KnightPDA
     belt: ClothingBeltAssaultFilledAdjutant
@@ -99,7 +100,7 @@
     - JetpackBlackFilled
   storage:
     back:
-      - BoxMRE
-      - WeaponPistolNeoVolker
-      - CrowbarRed
-      - HandHeldMassScannerEE
+    - ClothingMaskImperialCombatGasmask
+    - WeaponPistolNeoVolker
+    - CrowbarRed
+    - HandHeldMassScannerEE

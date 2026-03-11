@@ -44,7 +44,7 @@
   equipment:
     neck: ClothingNeckIFFCyan
     jumpsuit: ClothingUniformJumpsuitImperialCombat
-    outerClothing: ClothingOuterHardsuitImperialSoldier
+    outerClothing: ClothingOuterCoatVictorian
     shoes: ClothingShoesBootsMagDSM
     belt: ClothingBeltAssaultFilledRifleman
     gloves: ClothingHandsGlovesImperialLonggloves
@@ -60,7 +60,8 @@
     - JetpackBlackFilled
   storage:
     back:
-      - BoxMRE
-      - WeaponPistolComplianceImperial
-      - CrowbarRed
-      - HandHeldMassScannerEE
+    - ClothingMaskImperialCombatGasmask
+    - VoidsuitKitDSM
+    - WeaponPistolComplianceImperial
+    - CrowbarRed
+    - HandHeldMassScannerEE
