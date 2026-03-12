@@ -507,8 +507,9 @@ public sealed partial class OverwatchWindow : FancyWindow
         if (_memberRows.TryGetValue(member, out var row))
         {
             row.SetWatching(isWatching);
-            StopWatchingButton.Visible = _memberRows.Values.Any(r => r.IsWatching);
         }
+
+        StopWatchingButton.Visible = _watchingStateCache.Values.Any(v => v);
     }
 
     /// <inheritdoc/>

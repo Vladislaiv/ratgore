@@ -530,6 +530,10 @@ public sealed class OverwatchSystem : EntitySystem
         if (args.Actor is not { Valid: true } actor)
             return;
 
+        var userFaction = GetUserFaction(actor);
+        if (string.IsNullOrEmpty(userFaction) || userFaction != ent.Comp.Faction)
+            return;
+
         if (TryComp<RatOverwatchWatchingComponent>(actor, out var watchingComp) && watchingComp.Watching.HasValue)
         {
             StopWatching(actor, watchingComp);
@@ -690,21 +694,26 @@ public sealed class OverwatchSystem : EntitySystem
 
         _updateTimer -= UpdateInterval;
 
-        if (_cacheInvalidationTimer >= CacheInvalidationInterval)
+        var hasOpenUi = false;
+        var query = EntityQueryEnumerator<OverwatchConsoleComponent>();
+        while (query.MoveNext(out var uid, out var comp))
+        {
+            if (_uiSystem.IsUiOpen(uid, OverwatchUiKey.Key))
+            {
+                hasOpenUi = true;
+                RefreshData((uid, comp));
+            }
+        }
+
+        if (_cacheInvalidationTimer >= CacheInvalidationInterval && hasOpenUi)
         {
             _cacheInvalidationTimer -= CacheInvalidationInterval;
             _factionMembersCache.Clear();
             _memberDataCache.Clear();
         }
 
-        var query = EntityQueryEnumerator<OverwatchConsoleComponent>();
-        while (query.MoveNext(out var uid, out var comp))
-        {
-            if (_uiSystem.IsUiOpen(uid, OverwatchUiKey.Key))
-            {
-                RefreshData((uid, comp));
-            }
-        }
+        else if (!hasOpenUi)
+            _cacheInvalidationTimer = 0;
     }
 
     /// <summary>
