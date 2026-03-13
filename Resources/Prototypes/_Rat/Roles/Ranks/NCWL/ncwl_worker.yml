@@ -1,0 +1,17 @@
+- type: rank
+  id: RatRankWorkerSenior
+  name: Прониар
+  prefix: Прониар
+  paygrade: E3
+
+- type: rank
+  id: RatRankWorkerMiddle
+  name: Йомен
+  prefix: Йомен
+  paygrade: E2
+
+- type: rank
+  id: RatRankWorkerJunior
+  name: Фригольдер
+  prefix: Фригольдер
+  paygrade: E1

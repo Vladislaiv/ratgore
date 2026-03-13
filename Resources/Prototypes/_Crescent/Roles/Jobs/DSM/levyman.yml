@@ -3,6 +3,24 @@
   name: job-name-levyman
   description: job-description-levyman
   playTimeTracker: JobLevymanDSM
+  ranks:
+    RatRankLevymanHead:
+    - !type:CharacterPlaytimeRequirement
+      tracker: JobLevymanDSM
+      min: 144000 # 40 hours
+    RatRankLevymanLead:
+    - !type:CharacterPlaytimeRequirement
+      tracker: JobLevymanDSM
+      min: 108000 # 30 hours
+    RatRankLevymanSenior:
+    - !type:CharacterPlaytimeRequirement
+      tracker: JobLevymanDSM
+      min: 72000 # 20 hours
+    RatRankLevymanMiddle:
+    - !type:CharacterPlaytimeRequirement
+      tracker: JobLevymanDSM
+      min: 360000 # 10 hours
+    RatRankLevymanJunior: []
   weight: 4
   startingGear: LevymanGear
   alwaysUseSpawner: true
@@ -30,8 +48,6 @@
   special:
   - !type:AddComponentSpecial
     components:
-      - type: ChatRank
-        rank: crescent-rank-manatarms
       - type: HullrotFaction
         faction: DSM
       - type: LanguageAdder

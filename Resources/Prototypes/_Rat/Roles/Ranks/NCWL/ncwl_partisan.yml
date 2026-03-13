@@ -1,0 +1,29 @@
+- type: rank
+  id: RatRankPartisanHead
+  name: Легат
+  prefix: Легат
+  paygrade: E5
+
+- type: rank
+  id: RatRankPartisanLead
+  name: Центурион
+  prefix: Центурион
+  paygrade: E4
+
+- type: rank
+  id: RatRankPartisanSenior
+  name: Трибун
+  prefix: Трибун
+  paygrade: E3
+
+- type: rank
+  id: RatRankPartisanMiddle
+  name: Проктор
+  prefix: Проктор
+  paygrade: E2
+
+- type: rank
+  id: RatRankPartisanJunior
+  name: Леви
+  prefix: Леви
+  paygrade: E1

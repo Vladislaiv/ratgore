@@ -3,6 +3,16 @@
   name: job-name-ritter
   description: job-description-ritter
   playTimeTracker: JobRitterDSM
+  ranks:
+    RatRankKnightSenior:
+    - !type:CharacterPlaytimeRequirement
+      tracker: JobKnightDSM
+      min: 72000 # 20 hours
+    RatRankKnightMiddle:
+    - !type:CharacterPlaytimeRequirement
+      tracker: JobKnightDSM
+      min: 360000 # 10 hours
+    RatRankKnightJunior: []
   weight: 51
   startingGear: RitterGear
   alwaysUseSpawner: true

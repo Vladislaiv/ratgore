@@ -1,0 +1,17 @@
+- type: rank
+  id: RatRankKnightSenior
+  name: Магистр
+  prefix: Магистр
+  paygrade: E3
+
+- type: rank
+  id: RatRankKnightMiddle
+  name: Баннерет
+  prefix: Баннерет
+  paygrade: E2
+
+- type: rank
+  id: RatRankKnightJunior
+  name: Сир
+  prefix: Сир
+  paygrade: E1
