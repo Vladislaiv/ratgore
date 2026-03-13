@@ -48,7 +48,7 @@ crescent-rank-ncwl-cqc = Штурмовик
 crescent-rank-ncwl-grunt = Солдат
 crescent-rank-ncwl-new = Кадет
 crescent-rank-ncwl-doctor = Доктор
-#ncwl
+# ncwl
 crescent-rank-ncwl-mvd-officer = Colonel
 crescent-rank-ncwl-mvd-grunt = Komrade
 crescent-rank-ncwl-faction-leader = Майор
