@@ -3,7 +3,9 @@ using Content.Shared._Rat.Ranks;
 using Content.Shared.Chat;
 using Content.Shared.GameTicking;
 using Content.Shared.Roles;
+using Robust.Shared.Configuration;
 using Robust.Shared.Prototypes;
+using Content.Shared.Customization.Systems;
 
 namespace Content.Server._Rat.Ranks;
 
@@ -12,6 +14,8 @@ public sealed class RankSystem : SharedRankSystem
     [Dependency] private readonly PlayTimeTrackingManager _tracking = default!;
     [Dependency] private readonly IPrototypeManager _prototypes = default!;
     [Dependency] private readonly IEntityManager _entityManager = default!;
+    [Dependency] private readonly CharacterRequirementsSystem _characterRequirements = default!;
+    [Dependency] private readonly IConfigurationManager _cfg = default!;
 
     public override void Initialize()
     {
@@ -59,8 +63,20 @@ public sealed class RankSystem : SharedRankSystem
                 {
                     foreach (var req in jobRequirements)
                     {
-                        if (!req.Check(_entityManager, _prototypes, ev.Profile, playTimes, out _))
+                        if (!_characterRequirements.CheckRequirementValid(
+                                req,
+                                jobPrototype,
+                                ev.Profile,
+                                playTimes,
+                                jobPrototype.Whitelisted,
+                                rankPrototype,
+                                _entityManager,
+                                _prototypes,
+                                _cfg,
+                                out _))
+                        {
                             failed = true;
+                        }
                     }
                 }
 

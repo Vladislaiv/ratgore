@@ -3,6 +3,16 @@
   name: job-name-wealth
   description: job-description-wealth
   playTimeTracker: JobWealthDSM
+  ranks:
+    RatRankKnightSenior:
+    - !type:CharacterPlaytimeRequirement
+      tracker: JobKnightDSM
+      min: 72000 # 20 hours
+    RatRankKnightMiddle:
+    - !type:CharacterPlaytimeRequirement
+      tracker: JobKnightDSM
+      min: 360000 # 10 hours
+    RatRankKnightJunior: []
   weight: 95
   startingGear: WealthGear
   alwaysUseSpawner: true

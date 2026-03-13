@@ -8,7 +8,7 @@ using Content.Shared.StatusIcon;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Serialization.TypeSerializers.Implementations.Custom.Prototype;
 using Robust.Shared.Serialization.TypeSerializers.Implementations.Custom.Prototype.List;
-﻿using Content.Shared._Rat.Ranks;
+using Content.Shared._Rat.Ranks;
 
 namespace Content.Shared.Roles
 {
@@ -167,7 +167,7 @@ namespace Content.Shared.Roles
         public List<ProtoId<GuideEntryPrototype>>? Guides;
 
         [DataField]
-        public readonly Dictionary<ProtoId<RankPrototype>, HashSet<JobRequirement>?>? Ranks;
+        public readonly Dictionary<ProtoId<RankPrototype>, HashSet<CharacterRequirement>?>? Ranks;
 
     }
 

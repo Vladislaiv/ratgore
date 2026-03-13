@@ -3,6 +3,16 @@
   name: job-name-freeholder
   description: job-description-freeholder
   playTimeTracker: JobFreeholderDSM
+  ranks:
+    RatRankFreeholderSenior:
+    - !type:CharacterPlaytimeRequirement
+      tracker: JobFreeholderDSM
+      min: 72000 # 20 hours
+    RatRankFreeholderMiddle:
+    - !type:CharacterPlaytimeRequirement
+      tracker: JobFreeholderDSM
+      min: 360000 # 10 hours
+    RatRankFreeholderJunior: []
   weight: 1
   startingGear: FreeholderGear
   alwaysUseSpawner: true
@@ -20,8 +30,6 @@
   special:
   - !type:AddComponentSpecial
     components:
-      - type: ChatRank
-        rank: crescent-rank-freeholder
       - type: HullrotFaction
         faction: DSM
       - type: LanguageAdder
