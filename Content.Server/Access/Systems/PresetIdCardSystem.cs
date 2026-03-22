@@ -33,7 +33,7 @@ public sealed class PresetIdCardSystem : EntitySystem
             var station = _stationSystem.GetOwningStation(uid);
 
             // If we're not on an extended access station, the ID is already configured correctly from MapInit.
-            if (station == null || !Comp<StationJobsComponent>(station.Value).ExtendedAccess)
+            if (station == null || !TryComp<StationJobsComponent>(station.Value, out var jobsComp) || !jobsComp.ExtendedAccess) // rat-change
                 return;
 
             SetupIdAccess(uid, card, true);

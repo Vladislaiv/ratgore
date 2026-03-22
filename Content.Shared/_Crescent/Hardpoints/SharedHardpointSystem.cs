@@ -121,7 +121,7 @@ public class SharedHardpointSystem : EntitySystem
     }
 
     /// <summary>
-    /// this is used for when shipguns are destroyed, but this ALSO runs when the grid is deleted. 
+    /// this is used for when shipguns are destroyed, but this ALSO runs when the grid is deleted.
     /// </summary>
     /// <param name="uid"></param>
     /// <param name="component"></param>
@@ -132,10 +132,17 @@ public class SharedHardpointSystem : EntitySystem
         {
             return;
         }
-        var gridUid = Transform(component.anchoredTo.Value).GridUid;
+
+        if (!TryComp<TransformComponent>(component.anchoredTo.Value, out var anchoredTransform)) // rat-change
+        {
+            return;
+        }
+
+        var gridUid = anchoredTransform.GridUid;
         if (gridUid is null)
             return;
-        var hardpointComp = Comp<HardpointComponent>(component.anchoredTo.Value);
+        if (!TryComp<HardpointComponent>(component.anchoredTo.Value, out var hardpointComp)) // rat-change
+            return;
         var hardpointUid = component.anchoredTo.Value;
         hardpointComp.anchoring = null;
         HardpointCannonDeanchoredEvent arg = new();

@@ -109,34 +109,33 @@
     - None
   - type: Dispenser
     defaultItem: TradeDeedStub
-    inventory:
-      TradeGoodScrap: TradeDeedHigh
-      TradeGoodScrapersLootbox: TradeDeedHigh
-      TradeGoodImperialScrap: TradeDeed10k
-      TradeGoodScop: TradeDeedHigh
-      TradeGoodAntibiotics: TradeDeedHigh
-      TradeGoodWine: TradeDeed10k
-      TradeGoodAmmo: TradeDeedHigh
-      TradeGoodGunparts: TradeDeedHigh
-      TradeGoodCybernetics: TradeDeed10k
-      TradeGoodAlloys: TradeDeed15k
-      TradeGoodPlasma: TradeDeed15k
-      TradeGoodImperialArmor: TradeDeed20k
-      TradeGoodGoodScrap: TradeDeed15k
-      TradeGoodValuableScrapTFSC: TradeDeed15k
-      TradeGoodImperialQualitySalvage: TradeDeed20k
-      TradeGoodSilks: TradeDeed15k
-      TradeGoodOrgans: TradeDeed15k
-      TradeGoodDrugs: TradeDeed15k
-      TradeGoodFabrics: TradeDeed4500
-      TradeGoodMiltech: TradeDeed4500
-      TradeGoodAlcohol: TradeDeed4500
-      TradeGoodRice: TradeDeed4500
-      TradeGoodSugar: TradeDeed4500
-      TradeGoodFlour: TradeDeed4500
-      TradeGoodOldParts: TradeDeed4500
-      TradeGoodOldCyber: TradeDeed4500
-      TradeGoodNanoTrasen: TradeDeed4500
+    SalesAccumulator: 2
+    dynamicInventory:  
+    ### Производство
+      # БМС
+      TradeGoodWine: 16000
+      TradeGoodImperialArmor: 16000
+      TradeGoodCybernetics: 16000
+      TradeGoodImperialScrap: 16000
+      TradeGoodImperialQualitySalvage: 16000
+
+      # КВСТ
+      TradeGoodGunparts: 8000
+      TradeGoodAntibiotics: 8000
+      TradeGoodPlasma: 8000
+      TradeGoodDrugs: 8000
+      TradeGoodScrapersLootbox: 8000
+      TradeGoodValuableScrapTFSC: 8000
+
+      # Шиногара + Глисс Санто
+      TradeGoodSilks: 6000
+      TradeGoodAlcohol: 6000
+      TradeGoodScrap: 6000
+      TradeGoodAmmo: 6000
+
+      # Шиногара
+      TradeGoodAlloys: 6000
+      TradeGoodGoodScrap: 6000
   - type: Sprite
     sprite: _Crescent/Structures/cargochute.rsi
     layers:
@@ -154,34 +153,33 @@
   components:
   - type: Dispenser
     defaultItem: TradeDeedStub
-    inventory:
-      TradeGoodScrap: TradeDeedHigh
-      TradeGoodScrapersLootbox: TradeDeedHigh
-      TradeGoodCommunardScrap: TradeDeed10k
-      TradeGoodScop: TradeDeedHigh
-      TradeGoodAntibiotics: TradeDeedHigh
-      TradeGoodUnionVodka: TradeDeed10k
-      TradeGoodAmmo: TradeDeedHigh
-      TradeGoodGunparts: TradeDeedHigh
-      TradeGoodUnionWeapon: TradeDeed10k
-      TradeGoodAlloys: TradeDeed15k
-      TradeGoodPlasma: TradeDeed15k
-      TradeGoodUnionBallistic: TradeDeed20k
-      TradeGoodGoodScrap: TradeDeed15k
-      TradeGoodValuableScrapTFSC: TradeDeed15k
-      TradeGoodUnionQualitySalvage: TradeDeed20k
-      TradeGoodSilks: TradeDeed15k
-      TradeGoodOrgans: TradeDeed15k
-      TradeGoodDrugs: TradeDeed15k
-      TradeGoodFabrics: TradeDeed4500
-      TradeGoodMiltech: TradeDeed4500
-      TradeGoodAlcohol: TradeDeed4500
-      TradeGoodRice: TradeDeed4500
-      TradeGoodSugar: TradeDeed4500
-      TradeGoodFlour: TradeDeed4500
-      TradeGoodOldParts: TradeDeed4500
-      TradeGoodOldCyber: TradeDeed4500
-      TradeGoodNanoTrasen: TradeDeed4500
+    SalesAccumulator: 2
+    dynamicInventory:  
+    ### Производство
+      # ЛРНП
+      TradeGoodUnionWeapon: 16000
+      TradeGoodUnionVodka: 16000
+      TradeGoodUnionBallistic: 16000
+      TradeGoodUnionQualitySalvage: 16000
+      TradeGoodCommunardScrap: 16000
+
+      # КВСТ
+      TradeGoodGunparts: 8000
+      TradeGoodAntibiotics: 8000
+      TradeGoodPlasma: 8000
+      TradeGoodDrugs: 8000
+      TradeGoodScrapersLootbox: 8000
+      TradeGoodValuableScrapTFSC: 8000
+
+      # Шиногара + Глисс Санто
+      TradeGoodSilks: 6000
+      TradeGoodAlcohol: 6000
+      TradeGoodScrap: 6000
+      TradeGoodAmmo: 6000
+
+      # Шиногара
+      TradeGoodAlloys: 6000
+      TradeGoodGoodScrap: 6000
   - type: Sprite
     sprite: _Crescent/Structures/cargochute.rsi
     layers:
@@ -199,32 +197,32 @@
   components:
   - type: Dispenser
     defaultItem: TradeDeedStub
-    inventory:
-      TradeGoodScrap: TradeDeed6k
-      TradeGoodCommunardScrap: TradeDeedHigh
-      TradeGoodImperialScrap: TradeDeedHigh
-      TradeGoodScop: TradeDeed6k
-      TradeGoodUnionVodka: TradeDeedHigh
-      TradeGoodWine: TradeDeedHigh
-      TradeGoodAmmo: TradeDeed6k
-      TradeGoodUnionWeapon: TradeDeedHigh
-      TradeGoodCybernetics: TradeDeedHigh
-      TradeGoodAlloys: TradeDeed15k
-      TradeGoodUnionBallistic: TradeDeed10k
-      TradeGoodImperialArmor: TradeDeed10k
-      TradeGoodGoodScrap: TradeDeed15k
-      TradeGoodUnionQualitySalvage: TradeDeed10k
-      TradeGoodImperialQualitySalvage: TradeDeed10k
-      TradeGoodSilks: TradeDeed10k
-      TradeGoodFabrics: TradeDeed4500
-      TradeGoodMiltech: TradeDeed4500
-      TradeGoodAlcohol: TradeDeed4500
-      TradeGoodRice: TradeDeed4500
-      TradeGoodSugar: TradeDeed4500
-      TradeGoodFlour: TradeDeed4500
-      TradeGoodOldParts: TradeDeed4500
-      TradeGoodOldCyber: TradeDeed4500
-      TradeGoodNanoTrasen: TradeDeed4500
+    SalesAccumulator: 2
+    dynamicInventory:  
+    ### Производство
+      # БМС
+      TradeGoodWine: 8000
+      TradeGoodImperialArmor: 8000
+      TradeGoodCybernetics: 8000
+      TradeGoodImperialScrap: 8000
+      TradeGoodImperialQualitySalvage: 8000
+
+      # ЛРНП
+      TradeGoodUnionWeapon: 8000
+      TradeGoodUnionVodka: 8000
+      TradeGoodUnionBallistic: 8000
+      TradeGoodUnionQualitySalvage: 8000
+      TradeGoodCommunardScrap: 8000
+
+      # Шиногара + Глисс Санто
+      TradeGoodSilks: 10000
+      TradeGoodAlcohol: 10000
+      TradeGoodScrap: 10000
+      TradeGoodAmmo: 10000
+
+      # Шиногара
+      TradeGoodAlloys: 10000
+      TradeGoodGoodScrap: 10000
   - type: Sprite
     sprite: _Crescent/Structures/cargochute.rsi
     layers:
@@ -242,33 +240,30 @@
   components:
   - type: Dispenser
     defaultItem: TradeDeedStub
-    inventory:
-      TradeGoodScrapersLootbox: TradeDeed6k
-      TradeGoodCommunardScrap: TradeDeedHigh
-      TradeGoodImperialScrap: TradeDeedHigh
-      TradeGoodAntibiotics: TradeDeed6k
-      TradeGoodUnionVodka: TradeDeedHigh
-      TradeGoodWine: TradeDeedHigh
-      TradeGoodGunparts: TradeDeed6k
-      TradeGoodUnionWeapon: TradeDeedHigh
-      TradeGoodCybernetics: TradeDeedHigh
-      TradeGoodPlasma: TradeDeed15k
-      TradeGoodUnionBallistic: TradeDeed10k
-      TradeGoodImperialArmor: TradeDeed10k
-      TradeGoodValuableScrapTFSC: TradeDeed15k
-      TradeGoodUnionQualitySalvage: TradeDeed10k
-      TradeGoodImperialQualitySalvage: TradeDeed10k
-      TradeGoodOrgans: TradeDeed15k
-      TradeGoodDrugs: TradeDeed15k
-      TradeGoodFabrics: TradeDeed4500
-      TradeGoodMiltech: TradeDeed4500
-      TradeGoodAlcohol: TradeDeed4500
-      TradeGoodRice: TradeDeed4500
-      TradeGoodSugar: TradeDeed4500
-      TradeGoodFlour: TradeDeed4500
-      TradeGoodOldParts: TradeDeed4500
-      TradeGoodOldCyber: TradeDeed4500
-      TradeGoodNanoTrasen: TradeDeed4500
+    SalesAccumulator: 2
+    dynamicInventory:  
+    ### Производство
+      # БМС
+      TradeGoodWine: 8000
+      TradeGoodImperialArmor: 8000
+      TradeGoodCybernetics: 8000
+      TradeGoodImperialScrap: 8000
+      TradeGoodImperialQualitySalvage: 8000
+
+      # ЛРНП
+      TradeGoodUnionWeapon: 8000
+      TradeGoodUnionVodka: 8000
+      TradeGoodUnionBallistic: 8000
+      TradeGoodUnionQualitySalvage: 8000
+      TradeGoodCommunardScrap: 8000
+
+      # КВСТ
+      TradeGoodGunparts: 10000
+      TradeGoodAntibiotics: 10000
+      TradeGoodPlasma: 10000
+      TradeGoodDrugs: 10000
+      TradeGoodScrapersLootbox: 10000
+      TradeGoodValuableScrapTFSC: 10000
   - type: Sprite
     sprite: _Crescent/Structures/cargochute.rsi
     layers:

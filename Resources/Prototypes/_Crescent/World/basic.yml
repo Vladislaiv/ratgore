@@ -1,10 +1,10 @@
 ﻿- type: spaceBiome
   id: GliessSantoExclusionZone
   priority: 10000
-  minX: -5
-  maxX: 5
-  minY: -5
-  maxY: 5
+  # minX: -5
+  # maxX: 5
+  # minY: -5
+  # maxY: 5
   noiseRanges: {}
   chunkComponents:
   - type: DebrisFeaturePlacerController
@@ -15,10 +15,10 @@
 - type: spaceBiome
   id: GraveyardWrecks
   priority: 9000
-  minX: -50
-  maxX: -35
-  minY: 35
-  maxY: 50
+  # minX: -50
+  # maxX: -35
+  # minY: 35
+  # maxY: 50
   noiseRanges: {}
   chunkComponents:
   - type: DebrisFeaturePlacerController
@@ -94,10 +94,10 @@
 - type: spaceBiome
   id: BalreskaWrecks
   priority: 9000
-  minX: 7
-  maxX: 16
-  minY: -50
-  maxY: -40
+  # minX: 7
+  # maxX: 16
+  # minY: -50
+  # maxY: -40
   noiseRanges: {}
   chunkComponents:
   - type: DebrisFeaturePlacerController
@@ -173,10 +173,10 @@
 - type: spaceBiome
   id: AncientBattlefieldWrecks
   priority: 9000
-  minX: -1
-  maxX: 7
-  minY: 54
-  maxY: 63
+  # minX: -1
+  # maxX: 7
+  # minY: 54
+  # maxY: 63
   noiseRanges: {}
   chunkComponents:
   - type: DebrisFeaturePlacerController
@@ -246,10 +246,10 @@
 - type: spaceBiome
   id: HeartlandsWrecks
   priority: 9000
-  minX: 35
-  maxX: 50
-  minY: -50
-  maxY: -35
+  # minX: 35
+  # maxX: 50
+  # minY: -50
+  # maxY: -35
   noiseRanges: {}
   chunkComponents:
   - type: DebrisFeaturePlacerController
@@ -321,10 +321,10 @@
 - type: spaceBiome
   id: AsteroidsStandardTaypanOne
   priority: 9000
-  minX: -12
-  maxX: -3
-  minY: -51
-  maxY: -42
+  # minX: -12
+  # maxX: -3
+  # minY: -51
+  # maxY: -42
   noiseRanges: {}
   chunkComponents:
   - type: DebrisFeaturePlacerController
@@ -371,10 +371,10 @@
 - type: spaceBiome
   id: AsteroidsStandardTaypanTwo
   priority: 9000
-  minX: 27
-  maxX: 36
-  minY: -26
-  maxY: -16
+  # minX: 27
+  # maxX: 36
+  # minY: -26
+  # maxY: -16
   noiseRanges: {}
   chunkComponents:
   - type: DebrisFeaturePlacerController
@@ -421,10 +421,10 @@
 - type: spaceBiome
   id: Craster
   priority: 9000
-  minX: -8 #-87
-  maxX: 8 #-78
-  minY: -8 #7
-  maxY: 8 #16
+  # minX: -8 #-87
+  # maxX: 8 #-78
+  # minY: -8 #7
+  # maxY: 8 #16
   noiseRanges: {}
   chunkComponents:
   - type: DebrisFeaturePlacerController
@@ -451,10 +451,10 @@
 - type: spaceBiome
   id: Marchbelt
   priority: 9000
-  minX: -62
-  maxX: -56
-  minY: 46
-  maxY: 52
+  # minX: -62
+  # maxX: -56
+  # minY: 46
+  # maxY: 52
   noiseRanges: {}
   chunkComponents:
   - type: DebrisFeaturePlacerController
@@ -479,10 +479,10 @@
 - type: spaceBiome
   id: Deepbelt
   priority: 9000
-  minX: -40
-  maxX: -34
-  minY: -7
-  maxY: -1
+  # minX: -40
+  # maxX: -34
+  # minY: -7
+  # maxY: -1
   noiseRanges: {}
   chunkComponents:
   - type: DebrisFeaturePlacerController
@@ -529,10 +529,10 @@
 - type: spaceBiome
   id: NewAsteroidsStandardTaypanOne
   priority: 9000
-  minX: 35
-  maxX: 50
-  minY: 35
-  maxY: 50
+  # minX: 35
+  # maxX: 50
+  # minY: 35
+  # maxY: 50
   noiseRanges: {}
   chunkComponents:
   - type: DebrisFeaturePlacerController
@@ -553,10 +553,10 @@
 - type: spaceBiome
   id: NewAsteroidsStandardTaypanTwo
   priority: 9000
-  minX: -50
-  maxX: -35
-  minY: -50
-  maxY: -35
+  # minX: -50
+  # maxX: -35
+  # minY: -50
+  # maxY: -35
   noiseRanges: {}
   chunkComponents:
   - type: DebrisFeaturePlacerController
@@ -577,10 +577,10 @@
 - type: spaceBiome
   id: AsteroidCentralBelt
   priority: 9000
-  minX: -7
-  maxX: 7
-  minY: -7
-  maxY: 7
+  # minX: -7
+  # maxX: 7
+  # minY: -7
+  # maxY: 7
   noiseRanges: {}
   chunkComponents:
   - type: DebrisFeaturePlacerController

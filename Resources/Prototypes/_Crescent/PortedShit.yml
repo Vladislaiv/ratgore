@@ -223,6 +223,15 @@
       map: ["enum.GunVisualLayers.Mag"]
 
 - type: entity
+  id: MagazineMagnumSubEmpty
+  suffix: Submachinegun
+  name: 25-round extended pistol magazine (.327 Imperial magnum)
+  parent: MagazineMagnumSub
+  components:
+  - type: BallisticAmmoProvider
+    proto: null
+
+- type: entity
   id: SpeedLoaderRifleHeavy
   name: "speed loader (5.56x45mm)"
   parent: BaseSpeedLoaderHeavyRifle
@@ -414,7 +423,6 @@
       visible: true
   - type: MagnetPickup # Frontier
     range: 20 # Ore bag has a range of 1.0
-    requireWorn: false
   - type: Fixtures
     fixtures:
       fix1:

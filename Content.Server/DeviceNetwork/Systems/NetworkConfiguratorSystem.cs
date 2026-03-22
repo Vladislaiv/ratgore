@@ -835,7 +835,7 @@ public sealed class NetworkConfiguratorSystem : SharedNetworkConfiguratorSystem
     public void OnDeviceShutdown(Entity<NetworkConfiguratorComponent?> conf, Entity<DeviceNetworkComponent> device)
     {
         device.Comp.Configurators.Remove(conf.Owner);
-        if (!Resolve(conf.Owner, ref conf.Comp))
+        if (!Resolve(conf.Owner, ref conf.Comp, false)) // rat-change
             return;
 
         foreach (var (addr, dev) in conf.Comp.Devices)

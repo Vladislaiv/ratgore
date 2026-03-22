@@ -1,5 +1,5 @@
 - type: vessel
-  id: Voruna
+  id: Khan
   name: БМС Кхан
   description: |
     Имперский сверхлёгкий истребитель.
@@ -11,8 +11,8 @@
   path: /Maps/_Crescent/Shuttles/DSM/khan.yml
 
 - type: gameMap
-  id: Voruna
-  mapName: 'БМС Воруна'
+  id: Khan
+  mapName: 'БМС Кхан'
   mapPath: /Maps/_Crescent/Shuttles/DSM/khan.yml
   minPlayers: 0
   stations:

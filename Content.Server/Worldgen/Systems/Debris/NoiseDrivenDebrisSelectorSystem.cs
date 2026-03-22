@@ -1,6 +1,5 @@
 ﻿using Content.Server.Worldgen.Components.Debris;
 using Robust.Server.GameObjects;
-using Robust.Shared.Physics;
 using Robust.Shared.Random;
 
 namespace Content.Server.Worldgen.Systems.Debris;
@@ -22,14 +21,13 @@ public sealed class NoiseDrivenDebrisSelectorSystem : BaseWorldSystem
     {
         _sawmill = _logManager.GetSawmill("world.debris.noise_debris_selector");
         // Event is forcibly ordered to always be handled after the simple selector.
-        SubscribeLocalEvent<NoiseDrivenDebrisSelectorComponent, TryGetPlaceableDebrisFeatureEvent>(OnSelectDebrisKind,
-            after: new[] {typeof(DebrisFeaturePlacerSystem)});
+        SubscribeLocalEvent<NoiseDrivenDebrisSelectorComponent, TryGetPlaceableDebrisFeatureEvent>(OnSelectDebrisKind);
     }
 
     private void OnSelectDebrisKind(EntityUid uid, NoiseDrivenDebrisSelectorComponent component,
         ref TryGetPlaceableDebrisFeatureEvent args)
     {
-        var coords = WorldGen.WorldToChunkCoords(_xformSys.ToMapCoordinates(args.Coords).Position);
+        var coords = WorldGen.WorldToChunkCoords(args.Coords.ToMapPos(EntityManager, _xformSys));
         var prob = _index.Evaluate(uid, component.NoiseChannel, coords);
 
         if (prob is < 0 or > 1)
