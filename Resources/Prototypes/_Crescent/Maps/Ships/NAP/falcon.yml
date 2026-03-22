@@ -5,7 +5,7 @@
     A sleek American ultra-light strike shuttle, built for fast hit-and-run operations. The Falcon is perfect for flanking attacks. Are you even reading this man?
     LOADOUT: 1x 48mm missile 
     MINIMUM CREW: 1x Pilot
-  price: 10000
+  price: 20000
   category: Small
   group: None
   path: /Maps/_Crescent/Shuttles/NAP/falcon.yml
