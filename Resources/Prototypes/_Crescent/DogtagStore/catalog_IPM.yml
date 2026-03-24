@@ -31,6 +31,9 @@
     SampleIPM: 20
   categories:
   - StoreCategoryIPMShips
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 1
 
 - type: listing
   id: StoreListingIPMMatabele
@@ -42,6 +45,9 @@
     SampleIPM: 10
   categories:
   - StoreCategoryIPMShips
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 2
 
 - type: listing
   id: StoreListingIPMHarpy
@@ -53,6 +59,9 @@
     SampleIPM: 5
   categories:
   - StoreCategoryIPMShips
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 2
 
 - type: listing
   id: StoreListingIPMMeatwagon
@@ -64,6 +73,9 @@
     SampleIPM: 5
   categories:
   - StoreCategoryIPMShips
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 2
 
 - type: listing
   id: StoreListingIPMFridge
@@ -75,6 +87,9 @@
     SampleIPM: 3
   categories:
   - StoreCategoryIPMShips
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 3
 
 # Cybernetics
 - type: listing

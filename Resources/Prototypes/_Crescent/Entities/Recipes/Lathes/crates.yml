@@ -4,7 +4,7 @@
   result: TradeGoodOrgans
   completetime: 2
   materials:
-    ExoticProteins: 12500
+    ExoticProteins: 7500
 
 - type: latheRecipe
   id: MiltechCrate

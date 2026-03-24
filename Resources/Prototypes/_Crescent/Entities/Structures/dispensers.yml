@@ -126,6 +126,7 @@
       TradeGoodDrugs: 8000
       TradeGoodScrapersLootbox: 8000
       TradeGoodValuableScrapTFSC: 8000
+      TradeGoodOrgans: 8000
 
       # Шиногара + Глисс Санто
       TradeGoodSilks: 6000
@@ -170,6 +171,7 @@
       TradeGoodDrugs: 8000
       TradeGoodScrapersLootbox: 8000
       TradeGoodValuableScrapTFSC: 8000
+      TradeGoodOrgans: 8000
 
       # Шиногара + Глисс Санто
       TradeGoodSilks: 6000
@@ -264,6 +266,7 @@
       TradeGoodDrugs: 10000
       TradeGoodScrapersLootbox: 10000
       TradeGoodValuableScrapTFSC: 10000
+      TradeGoodOrgans: 10000
   - type: Sprite
     sprite: _Crescent/Structures/cargochute.rsi
     layers:
