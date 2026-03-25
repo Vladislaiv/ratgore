@@ -86,7 +86,6 @@
   id: RingleaderGear
   equipment:
     jumpsuit: ClothingUniformJumpsuitSyndicateOfficer
-    back: ClothingBackpackSatchelLeatherFilledNCWLAdministrator
     shoes: ClothingShoesBootsCombat
     head: ClothingHeadHatSyndicateOfficer
     outerClothing: ClothingOuterArmorSyndicateRingmaster
@@ -97,3 +96,7 @@
     pocket1: WeaponPistolDeagleUranium
     pocket2: WeaponPistolDeagleUranium
     mask: ClothingMaskGasSyndicate
+    back: ClothingBackpackSatchelLeatherFilledNCWLAdministrator
+  storage:
+    back:
+      - RatRubberStampTFSCGorlex

@@ -1,19 +1,19 @@
 - type: rank
   id: RatRankLevymanHead
-  name: Легат
-  prefix: Легат
+  name: Центурион
+  prefix: Центурион
   paygrade: L5
 
 - type: rank
   id: RatRankLevymanLead
-  name: Центурион
-  prefix: Центурион
+  name: Трибун
+  prefix: Трибун
   paygrade: L4
 
 - type: rank
   id: RatRankLevymanSenior
-  name: Трибун
-  prefix: Трибун
+  name: Опцион
+  prefix: Опцион
   paygrade: L3
 
 - type: rank

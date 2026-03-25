@@ -30,6 +30,7 @@
           availableJobs:
             CommandantNCWL: [ 1, 1 ]
             KommissarNCWL: [ 1, 1 ]
+            MVDOfficerNCWL: [ 1, 1 ]
             MVDGruntNCWL: [ 4, 4 ]
             FleetkapitanNCWL: [ 5, 5 ]
             PartisanNCWL: [ -1, -1 ]

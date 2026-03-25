@@ -3,6 +3,24 @@
   name: job-name-advocatus
   description: job-description-advocatus
   playTimeTracker: JobAdvocatusDSM
+  ranks:
+    RatRankNobleDuke:
+    - !type:CharacterPlaytimeRequirement
+      tracker: JobAdvocatusDSM
+      min: 144000 # 40 hours
+    RatRankNobleMarquis:
+    - !type:CharacterPlaytimeRequirement
+      tracker: JobAdvocatusDSM
+      min: 108000 # 30 hours
+    RatRankNobleCount:
+    - !type:CharacterPlaytimeRequirement
+      tracker: JobAdvocatusDSM
+      min: 72000 # 20 hours
+    RatRankNobleViscount:
+    - !type:CharacterPlaytimeRequirement
+      tracker: JobAdvocatusDSM
+      min: 36000 # 10 hours
+    RatRankNobleBaron: []
   weight: 98
   startingGear: AdvocatusGear
   alwaysUseSpawner: true
@@ -28,8 +46,6 @@
   special:
   - !type:AddComponentSpecial
     components:
-      - type: ChatRank
-        rank: crescent-rank-advocatus
       - type: HullrotFaction
         faction: DSM
       - type: LanguageAdder

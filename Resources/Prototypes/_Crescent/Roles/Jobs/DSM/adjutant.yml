@@ -3,6 +3,24 @@
   name: job-name-adjutant
   description: job-description-adjutant
   playTimeTracker: JobAdjutantDSM
+  ranks:
+    RatRankNobleDuke:
+    - !type:CharacterPlaytimeRequirement
+      tracker: JobAdjutantDSM
+      min: 144000 # 40 hours
+    RatRankNobleMarquis:
+    - !type:CharacterPlaytimeRequirement
+      tracker: JobAdjutantDSM
+      min: 108000 # 30 hours
+    RatRankNobleCount:
+    - !type:CharacterPlaytimeRequirement
+      tracker: JobAdjutantDSM
+      min: 72000 # 20 hours
+    RatRankNobleViscount:
+    - !type:CharacterPlaytimeRequirement
+      tracker: JobAdjutantDSM
+      min: 36000 # 10 hours
+    RatRankNobleBaron: []
   weight: 99
   startingGear: AdjutantGear
   alwaysUseSpawner: true
@@ -27,8 +45,6 @@
   special:
   - !type:AddComponentSpecial
     components:
-      - type: ChatRank
-        rank: crescent-rank-adjutant
       - type: HullrotFaction
         faction: DSM
       - type: LanguageAdder
