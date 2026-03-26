@@ -41,6 +41,7 @@
   special:
   - !type:AddComponentSpecial
     components:
+      - type: NukeOperative
       - type: HullrotFaction
         faction: CD
       - type: LanguageAdder
