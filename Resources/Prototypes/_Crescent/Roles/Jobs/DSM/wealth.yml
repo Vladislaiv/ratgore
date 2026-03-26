@@ -4,6 +4,10 @@
   description: job-description-wealth
   playTimeTracker: JobWealthDSM
   ranks:
+    RatRankKnightLead:
+    - !type:CharacterPlaytimeRequirement
+      tracker: JobWealthDSM
+      min: 108000 # 30 hours
     RatRankKnightSenior:
     - !type:CharacterPlaytimeRequirement
       tracker: JobWealthDSM

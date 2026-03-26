@@ -3,6 +3,20 @@
   name: job-name-ripperdoc
   description: job-description-ripperdoc
   playTimeTracker: JobRipperdocNCSP
+  ranks:
+    RatRankTFSCRipperdocLead:
+    - !type:CharacterPlaytimeRequirement
+      tracker: JobRipperdocNCSP
+      min: 108000 # 30 hours
+    RatRankTFSCRipperdocSenior:
+    - !type:CharacterPlaytimeRequirement
+      tracker: JobRipperdocNCSP
+      min: 72000 # 20 hours
+    RatRankTFSCRipperdocMiddle:
+    - !type:CharacterPlaytimeRequirement
+      tracker: JobRipperdocNCSP
+      min: 36000 # 10 hours
+    RatRankTFSCRipperdocJunior: []
   weight: 6
   startingGear: RipperdocGear
   alwaysUseSpawner: true
@@ -27,8 +41,6 @@
   special:
   - !type:AddComponentSpecial
     components:
-      - type: ChatRank
-        rank: crescent-rank-doc
       - type: HullrotFaction
         faction: IPM
       - type: CPRTraining

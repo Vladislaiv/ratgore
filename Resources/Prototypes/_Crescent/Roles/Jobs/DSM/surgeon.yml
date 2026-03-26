@@ -4,15 +4,15 @@
   description: job-description-surgeon
   playTimeTracker: JobSurgeonDSM
   ranks:
-    RatRankSurgeonSenior:
+    RatRankFreeholderSenior:
     - !type:CharacterPlaytimeRequirement
       tracker: JobSurgeonDSM
       min: 72000 # 20 hours
-    RatRankSurgeonMiddle:
+    RatRankFreeholderMiddle:
     - !type:CharacterPlaytimeRequirement
       tracker: JobSurgeonDSM
-      min: 360000 # 10 hours
-    RatRankSurgeonJunior: []
+      min: 36000 # 10 hours
+    RatRankFreeholderJunior: []
   weight: 2
   startingGear: SurgeonGear
   alwaysUseSpawner: true

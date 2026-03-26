@@ -24,7 +24,7 @@ job-name-ncwl-newbie = Рабочий
 # syndicate
 
 job-name-ringleader = Главарь Горлекс
-job-name-lieutenant = Лейтенант Горлекс
+job-name-lieutenant = Сержант Горлекс
 job-name-infanteer = Пехотинец Горлекс
 job-name-technician = Новобранец Горлекс
 job-name-coordinator = Координатор Интердайн
@@ -35,15 +35,15 @@ job-name-cyberdawntech = Исследователь Кибердон
 job-name-intelligenceofficer = Патриарх Кибердон
 job-name-shipbreaker = Разборщик Профсоюза
 job-name-foreman = Бригадир Профсоюза
-ghost-role-information-syndicate-cyborg-assault-name-c = CS 5401 Xigou assault cyborg
-ghost-role-information-syndicate-cyborg-Medical-name = CS 4201 Yao Wang Combat Medical cyborg
-ghost-role-information-syndicate-cyborg-saboteur-name-c = CS 3201 Sun Wukong Combat saboteur cyborg
+ghost-role-information-syndicate-cyborg-assault-name-c = CS 5401 Сигоу атакующий киборг
+ghost-role-information-syndicate-cyborg-Medical-name = CS 4201 Яо Ванг боевой медицинский киборг
+ghost-role-information-syndicate-cyborg-saboteur-name-c = CS 3201 Сунь Укун боевой диверсионный киборг
 
 # empire
 
 job-name-freeholder = Колон
 job-name-levyman = Легионер
-job-name-knight = Рыцарь-баннерет
+job-name-knight = Рыцарь-коммандор
 job-name-ritter = Рыцарь-прелат
 job-name-courtier = Придворный
 job-name-ministerlabor = Министр Промышленности
@@ -68,13 +68,13 @@ job-name-overseer = Надзиратель охоты
 
 # shi
 
-job-name-executive = Менеджер сектора
-job-name-board = Помощник менеджера
+job-name-executive = Даймё
+job-name-board = Помощник даймё
 job-name-corpsec = Агент корпоративной безопасности
 job-name-highsec = Агент корпоративной ликвидации
 job-name-boardhr = Специалист по кадрам
 job-name-hos-shi = Начальник корпоративной безопасности
-job-name-employee = Офисный сотрудник
+job-name-employee = Клерк
 job-name-medtech = Исследователь МедТех
 
 # tsp

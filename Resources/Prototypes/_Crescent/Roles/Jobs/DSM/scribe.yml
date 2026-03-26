@@ -3,6 +3,16 @@
   name: job-name-imperialresearch
   description: job-description-scribe
   playTimeTracker: JobScribeDSM
+  ranks:
+    RatRankFreeholderSenior:
+    - !type:CharacterPlaytimeRequirement
+      tracker: JobScribeDSM
+      min: 72000 # 20 hours
+    RatRankFreeholderMiddle:
+    - !type:CharacterPlaytimeRequirement
+      tracker: JobScribeDSM
+      min: 36000 # 10 hours
+    RatRankFreeholderJunior: []
   weight: 93
   startingGear: ScribeGear
   alwaysUseSpawner: true
@@ -26,8 +36,6 @@
   special:
   - !type:AddComponentSpecial
     components:
-      - type: ChatRank
-        rank: crescent-rank-smarts
       - type: HullrotFaction
         faction: DSM
       - type: BibleUser

@@ -102,9 +102,12 @@
     belt: ClothingBeltNCWLDoubleHolster
     pocket1: WeaponRevolverPython
     pocket2: WeaponRevolverPython
-    back: ClothingBackpackNCWL
     gloves: ClothingHandsGlovesNCWLAdmiralParade
     head: ClothingHeadHatNCWLBeretAdmiral
     mask: ClothingMaskNCWLGasmask
     ears: ClothingHeadsetNCWL
     eyes: ClothingEyesHudSecurity
+    back: ClothingBackpackNCWL
+  storage:
+    back:
+      - RatRubberStampNCWLGeneral

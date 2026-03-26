@@ -4,6 +4,10 @@
   description: job-description-knight
   playTimeTracker: JobKnightDSM
   ranks:
+    RatRankKnightLead:
+    - !type:CharacterPlaytimeRequirement
+      tracker: JobKnightDSM
+      min: 108000 # 30 hours
     RatRankKnightSenior:
     - !type:CharacterPlaytimeRequirement
       tracker: JobKnightDSM

@@ -3,6 +3,24 @@
   name: job-name-traumasec
   description: job-description-traumasec
   playTimeTracker: JobTraumasecNCSP
+  ranks:
+    RatRankTFSCTraumasecHead:
+    - !type:CharacterPlaytimeRequirement
+      tracker: JobTraumasecNCSP
+      min: 144000 # 40 hours
+    RatRankTFSCTraumasecLead:
+    - !type:CharacterPlaytimeRequirement
+      tracker: JobTraumasecNCSP
+      min: 108000 # 30 hours
+    RatRankTFSCTraumasecSenior:
+    - !type:CharacterPlaytimeRequirement
+      tracker: JobTraumasecNCSP
+      min: 72000 # 20 hours
+    RatRankTFSCTraumasecMiddle:
+    - !type:CharacterPlaytimeRequirement
+      tracker: JobTraumasecNCSP
+      min: 36000 # 10 hours
+    RatRankTFSCTraumasecJunior: []
   weight: 7
   startingGear: TraumasecGear
   alwaysUseSpawner: true
@@ -26,8 +44,6 @@
   special:
   - !type:AddComponentSpecial
     components:
-      - type: ChatRank
-        rank: crescent-rank-agent
       - type: HullrotFaction
         faction: IPM
       - type: CPRTraining

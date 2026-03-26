@@ -3,6 +3,24 @@
   name: job-name-coordinator
   description: job-description-coordinator
   playTimeTracker: JobCoordinatorNCSP
+  ranks:
+    RatRankTFSCCoordinatorHigh:
+    - !type:CharacterPlaytimeRequirement
+      tracker: JobCoordinatorNCSP
+      min: 144000 # 40 hours
+    RatRankTFSCCoordinatorLead:
+    - !type:CharacterPlaytimeRequirement
+      tracker: JobCoordinatorNCSP
+      min: 108000 # 30 hours
+    RatRankTFSCCoordinatorSenior:
+    - !type:CharacterPlaytimeRequirement
+      tracker: JobCoordinatorNCSP
+      min: 72000 # 20 hours
+    RatRankTFSCCoordinatorMiddle:
+    - !type:CharacterPlaytimeRequirement
+      tracker: JobCoordinatorNCSP
+      min: 36000 # 10 hours
+    RatRankTFSCCoordinatorJunior: []
   weight: 8
   startingGear: CoordinatorGear
   alwaysUseSpawner: true
@@ -29,8 +47,6 @@
   special:
   - !type:AddComponentSpecial
     components:
-      - type: ChatRank
-        rank: crescent-rank-coordinator
       - type: HullrotFaction
         faction: IPM
       - type: CPRTraining
@@ -73,3 +89,4 @@
       - Zipties
       - MagazinePistol
       - CombatKnife
+      - RatRubberStampTFSCInterdyne

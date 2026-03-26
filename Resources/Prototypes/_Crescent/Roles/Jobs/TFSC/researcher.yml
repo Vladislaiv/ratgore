@@ -3,6 +3,16 @@
   name: job-name-cyberdawntech
   description: job-description-cyberdawntech
   playTimeTracker: JobCyberdawnTechNCSP
+  ranks:
+    RatRankTFSCResearcherSenior:
+    - !type:CharacterPlaytimeRequirement
+      tracker: JobCyberdawnTechNCSP
+      min: 72000 # 20 hours
+    RatRankTFSCResearcherMiddle:
+    - !type:CharacterPlaytimeRequirement
+      tracker: JobCyberdawnTechNCSP
+      min: 36000 # 10 hours
+    RatRankTFSCResearcherJunior: []
   weight: 3
   startingGear: CyberdawnGear
   alwaysUseSpawner: true
@@ -27,9 +37,7 @@
   special:
   - !type:AddComponentSpecial
     components:
-      - type: ChatRank
       - type: NukeOperative
-        rank: crescent-rank-doc
       - type: HullrotFaction
         faction: CD
       - type: LanguageAdder

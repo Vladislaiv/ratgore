@@ -3,6 +3,24 @@
   name: job-name-archmaester
   description: job-description-archmaester
   playTimeTracker: JobArchmaesterDSM
+  ranks:
+    RatRankNobleDuke:
+    - !type:CharacterPlaytimeRequirement
+      tracker: JobArchmaesterDSM
+      min: 144000 # 40 hours
+    RatRankNobleMarquis:
+    - !type:CharacterPlaytimeRequirement
+      tracker: JobArchmaesterDSM
+      min: 108000 # 30 hours
+    RatRankNobleCount:
+    - !type:CharacterPlaytimeRequirement
+      tracker: JobArchmaesterDSM
+      min: 72000 # 20 hours
+    RatRankNobleViscount:
+    - !type:CharacterPlaytimeRequirement
+      tracker: JobArchmaesterDSM
+      min: 36000 # 10 hours
+    RatRankNobleBaron: []
   weight: 94
   startingGear: ArchmaesterGear
   alwaysUseSpawner: true
@@ -26,8 +44,6 @@
   special:
   - !type:AddComponentSpecial
     components:
-      - type: ChatRank
-        rank: crescent-rank-archmaester
       - type: HullrotFaction
         faction: DSM
       - type: LanguageAdder

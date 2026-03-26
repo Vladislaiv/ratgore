@@ -3,6 +3,24 @@
   name: job-name-ministerlabor
   description: job-description-labor
   playTimeTracker: JobLaborDSM
+  ranks:
+    RatRankNobleDuke:
+    - !type:CharacterPlaytimeRequirement
+      tracker: JobLaborDSM
+      min: 144000 # 40 hours
+    RatRankNobleMarquis:
+    - !type:CharacterPlaytimeRequirement
+      tracker: JobLaborDSM
+      min: 108000 # 30 hours
+    RatRankNobleCount:
+    - !type:CharacterPlaytimeRequirement
+      tracker: JobLaborDSM
+      min: 72000 # 20 hours
+    RatRankNobleViscount:
+    - !type:CharacterPlaytimeRequirement
+      tracker: JobLaborDSM
+      min: 36000 # 10 hours
+    RatRankNobleBaron: []
   weight: 96
   startingGear: LaborGear
   alwaysUseSpawner: true
@@ -26,8 +44,6 @@
   special:
   - !type:AddComponentSpecial
     components:
-      - type: ChatRank
-        rank: crescent-rank-ministry
       - type: HullrotFaction
         faction: DSM
       - type: LanguageAdder

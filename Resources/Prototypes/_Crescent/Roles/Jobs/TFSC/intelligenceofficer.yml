@@ -3,6 +3,16 @@
   name: job-name-intelligenceofficer
   description: job-description-intelligenceofficer
   playTimeTracker: JobIntelligenceOfficerNCSP
+  ranks:
+    RatRankTFSCPatriarchSenior:
+    - !type:CharacterPlaytimeRequirement
+      tracker: JobIntelligenceOfficerNCSP
+      min: 72000 # 20 hours
+    RatRankTFSCPatriarchMiddle:
+    - !type:CharacterPlaytimeRequirement
+      tracker: JobIntelligenceOfficerNCSP
+      min: 36000 # 10 hours
+    RatRankTFSCPatriarchJunior: []
   weight: 5
   startingGear: IntelligenceOfficerGear
   alwaysUseSpawner: true
@@ -30,9 +40,7 @@
   special:
   - !type:AddComponentSpecial
     components:
-      - type: ChatRank
       - type: NukeOperative
-        rank: crescent-rank-patriarch
       - type: HullrotFaction
         faction: CD
       - type: LanguageAdder
@@ -40,7 +48,7 @@
           - Freespeak
           - SolCommon
           - Tradeband
-          - RobotTalk # one of the main facets of  cybersun was AI so they probably understand it
+          - RobotTalk # one of the main facets of cybersun was AI so they probably understand it
         addUnderstood:
           - Freespeak
           - SolCommon
@@ -69,3 +77,4 @@
     outerClothing: ClothingOuterArmorCyberdawnPatriarch
     ears: ClothingHeadsetNCSPCyberdawn
     pocket1: AccessElevatorCD
+    pocket2: RatRubberStampTFSCCyberDawn

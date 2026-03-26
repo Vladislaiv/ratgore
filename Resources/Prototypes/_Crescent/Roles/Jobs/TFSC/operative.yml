@@ -3,6 +3,20 @@
   name: job-name-operative
   description: job-description-operative
   playTimeTracker: JobOperativeNCSP
+  ranks:
+    RatRankTFSCOperativeLead:
+    - !type:CharacterPlaytimeRequirement
+      tracker: JobOperativeNCSP
+      min: 108000 # 30 hours
+    RatRankTFSCOperativeSenior:
+    - !type:CharacterPlaytimeRequirement
+      tracker: JobOperativeNCSP
+      min: 72000 # 20 hours
+    RatRankTFSCOperativeMiddle:
+    - !type:CharacterPlaytimeRequirement
+      tracker: JobOperativeNCSP
+      min: 36000 # 10 hours
+    RatRankTFSCOperativeJunior: []
   weight: 4
   startingGear: OperativeGear
   alwaysUseSpawner: true
@@ -27,9 +41,7 @@
   special:
   - !type:AddComponentSpecial
     components:
-      - type: ChatRank
       - type: NukeOperative
-        rank: crescent-rank-operative
       - type: HullrotFaction
         faction: CD
       - type: LanguageAdder

@@ -60,7 +60,10 @@
     ears: ClothingHeadsetNCSPSaws
     outerClothing: ClothingOuterArmorSyndicateForeman
     belt: ClothingBeltUtilityEngineering
-    back: ClothingBackpackNCSPFilledInfanteer
     pocket1: WeaponPistolViperWood
     gloves: ClothingHandsGlovesFingerless
     pocket2: AccessElevatorSAW
+    back: ClothingBackpackNCSPFilledInfanteer
+  storage:
+    back:
+      - RatRubberStampTFSCSAW

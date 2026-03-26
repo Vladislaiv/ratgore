@@ -4,15 +4,15 @@
   description: job-description-foremanimp
   playTimeTracker: JobForemanDSM
   ranks:
-    RatRankForemanSenior:
+    RatRankFreeholderSenior:
     - !type:CharacterPlaytimeRequirement
       tracker: JobForemanDSM
       min: 72000 # 20 hours
-    RatRankForemanMiddle:
+    RatRankFreeholderMiddle:
     - !type:CharacterPlaytimeRequirement
       tracker: JobForemanDSM
-      min: 360000 # 10 hours
-    RatRankForemanJunior: []
+      min: 36000 # 10 hours
+    RatRankFreeholderJunior: []
   weight: 3
   startingGear: ForemanImpGear
   alwaysUseSpawner: true
