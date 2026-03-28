@@ -1,3 +1,72 @@
+#15mm harvester
+
+- type: entity
+  parent: BaseTurretShipgun
+  id: WeaponTurretSmallBulletPD
+  suffix: Point Defense, Small Ballistics
+  name: 15mm 'Harvester' Revolver Cannon
+  description: A dated yet still potent point defense system that served as the progenitor for the 'Starburst' weapons platform. It's modern applications outside of it's keen point defense role are negligible.
+  components:
+    - type: Sprite
+      sprite: _Crescent/Objects/Turrets/Projectile/harvester.rsi
+      drawdepth: Mobs
+      layers:
+        - state: harvester
+    - type: Destructible
+      thresholds:
+        - trigger:
+            !type:DamageTrigger
+            damage: 1200
+          # TODO: Construction graph
+          behaviors:
+            - !type:ChangeConstructionNodeBehavior
+              node: machineFrame
+            - !type:PlaySoundBehavior
+              sound:
+                collection: MetalGlassBreak
+    - type: ContainerContainer
+      containers:
+        ballistic-ammo: !type:Container
+          ents: []
+    - type: Gun
+      fireOnDropChance: 0
+      projectileSpeed: 167
+      burstFireRate: 15
+      burstCooldown: 0.7
+      shotsPerBurst: 6
+      selectedMode: Burst
+      availableModes:
+        - Burst
+      angleDecay: 1
+      minAngle: 0.4
+      maxAngle: 2.8
+      angleIncrease: 0.15
+      soundGunshot: /Audio/Weapons/Guns/Gunshots/vulcan.ogg
+    - type: ItemSlots
+      slots:
+        gun_magazine:
+          name: Magazine
+          startingItem: Magazine15mm
+          insertSound: /Audio/Weapons/Guns/MagIn/ltrifle_magin.ogg
+          ejectSound: /Audio/Weapons/Guns/MagOut/ltrifle_magout.ogg
+          priority: 2
+          whitelist:
+            tags:
+              - Magazine15mm
+        gun_chamber:
+          name: Chamber
+          startingItem: Cartridge15mm
+          priority: 1
+          whitelist:
+            tags:
+              - Cartridge15mm
+    - type: ApcPowerReceiver
+      powerLoad: 2000
+    - type: HardpointAnchorableOnly
+      class: Ballistic
+      size: Small
+    - type: MagazineAmmoProvider
+
 #20mm screamer
 
 - type: entity

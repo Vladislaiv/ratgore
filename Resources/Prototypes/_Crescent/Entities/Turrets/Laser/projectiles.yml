@@ -67,6 +67,37 @@
       - state: bluespace
 
 - type: entity
+  id: BulletScourer
+  name: diffused hardlight bolt
+  parent: BaseBulletTrigger
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: ProjectilePhasePrevent
+  - type: ShipWeaponProjectile
+  - type: Projectile
+    ignoreWeaponGrid: true
+    damage:
+      types:
+        Heat: 10
+  - type: ProjectileIFF
+    visualType: Circle
+    color: Red
+  - type: PointLight
+    radius: 3.5
+    color: blue
+    energy: 0.5
+  - type: TimedDespawn
+    lifetime: 3 #501
+  - type: Sprite
+    sprite: _Crescent/Objects/Turrets/Ammunition/Projectiles/lasers.rsi
+    layers:
+      - state: laserlight
+  - type: ProjectileSpread
+    proto: BulletScourer
+    count: 9
+    spread: 5
+
+- type: entity
   id: BulletRetribution
   name: volatile hardlight bolt
   parent: BaseBulletTrigger

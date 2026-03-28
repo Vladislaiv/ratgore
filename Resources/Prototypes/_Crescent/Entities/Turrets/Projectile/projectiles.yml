@@ -1,4 +1,33 @@
 - type: entity
+  id: Bullet15mmBase
+  name: 15mm FMJ projectile
+  description: That's not good...
+  parent: BaseBulletTrigger
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: ProjectilePhasePrevent
+  - type: ProjectileIFF
+    visualType: Circle
+    color: White
+  - type: Projectile
+    ignoreWeaponGrid: true
+    damage:
+      types:
+        Structural: 5
+        Piercing: 10
+  - type: PointLight
+    radius: 3.5
+    color: orange
+    energy: 0.5
+  - type: TimedDespawn
+    lifetime: 3 #501
+  - type: Sprite
+    sprite: _NF/Objects/SpaceArtillery/pdtcasing.rsi
+    layers:
+      - state: base-projectile
+  - type: ShipWeaponProjectile
+
+- type: entity
   id: Bullet20mmBase
   name: 20mm FMJ projectile
   description: Uh oh.
