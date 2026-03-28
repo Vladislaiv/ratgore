@@ -14,9 +14,12 @@ public sealed partial class IFFConsoleWindow : FancyWindow,
 {
     private readonly ButtonGroup _showIFFButtonGroup = new();
     private readonly ButtonGroup _showVesselButtonGroup = new();
+    private readonly ButtonGroup _massCloakButtonGroup = new();
     public event Action<Color>? ColorSelected;
     public event Action<bool>? ShowIFF;
     public event Action<bool>? ShowVessel;
+    public event Action<bool>? MassCloak;
+    public event Action<float>? MassCloakRangeChanged;
 
     public IFFConsoleWindow()
     {
@@ -39,6 +42,23 @@ public sealed partial class IFFConsoleWindow : FancyWindow,
             ColorPreset3Button.OnPressed += _ => TrySelectColor("#88B0D1FF");
         if (ColorPreset4Button != null)
             ColorPreset4Button.OnPressed += _ => TrySelectColor("#8178CCFF");
+
+        if (MassCloakOnButton != null && MassCloakOffButton != null)
+        {
+            MassCloakOnButton.Group = _massCloakButtonGroup;
+            MassCloakOffButton.Group = _massCloakButtonGroup;
+            MassCloakOnButton.OnPressed += _ => MassCloak?.Invoke(true);
+            MassCloakOffButton.OnPressed += _ => MassCloak?.Invoke(false);
+        }
+
+        if (MassCloakRangeSlider != null)
+        {
+            MassCloakRangeSlider.OnValueChanged += args =>
+            {
+                MassCloakRangeValue.Text = ((int)args.Value).ToString();
+                MassCloakRangeChanged?.Invoke(args.Value);
+            };
+        }
 
         if (ApplyColorButton != null && CustomColorLineEdit != null)
         {
@@ -130,6 +150,33 @@ public sealed partial class IFFConsoleWindow : FancyWindow,
 
             if (allow && CustomColorLineEdit != null)
                 CustomColorLineEdit.Text = state.Color.ToHex();
+        }
+
+        if (MassCloakRangeSlider != null)
+        {
+            MassCloakRangeSlider.MinValue = state.MassCloakMinRange;
+            MassCloakRangeSlider.MaxValue = state.MassCloakMaxRange;
+            MassCloakRangeSlider.SetValueWithoutEvent(state.MassCloakRange);
+        }
+
+        if (MassCloakRangeValue != null)
+        {
+            MassCloakRangeValue.Text = ((int)state.MassCloakRange).ToString();
+        }
+
+        if (MassCloakOnButton != null && MassCloakOffButton != null)
+        {
+            MassCloakOnButton.Disabled = false;
+            MassCloakOffButton.Disabled = false;
+
+            if (state.MassCloakEnabled)
+            {
+                MassCloakOnButton.Pressed = true;
+            }
+            else
+            {
+                MassCloakOffButton.Pressed = true;
+            }
         }
     }
 }

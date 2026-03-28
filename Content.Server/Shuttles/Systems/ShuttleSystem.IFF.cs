@@ -14,6 +14,7 @@ public sealed partial class ShuttleSystem
         SubscribeLocalEvent<IFFConsoleComponent, AnchorStateChangedEvent>(OnIFFConsoleAnchor);
         SubscribeLocalEvent<IFFConsoleComponent, IFFShowIFFMessage>(OnIFFShow);
         SubscribeLocalEvent<IFFConsoleComponent, IFFShowVesselMessage>(OnIFFShowVessel);
+        SubscribeLocalEvent<IFFConsoleComponent, IFFSetMassCloakMessage>(OnIFFSetMassCloak);
         SubscribeLocalEvent<IFFConsoleComponent, MapInitEvent>(OnInit);
 
         // The color adding
@@ -79,6 +80,13 @@ public sealed partial class ShuttleSystem
         }
     }
 
+    private void OnIFFSetMassCloak(EntityUid uid, IFFConsoleComponent component, IFFSetMassCloakMessage args)
+    {
+        component.MassCloakEnabled = args.Enabled;
+        component.MassCloakRange = Math.Clamp(args.Range, IFFConsoleComponent.MassCloakMinRange, IFFConsoleComponent.MassCloakMaxRange);
+        UpdateIFFInterface(uid, component);
+    }
+
     private void OnIFFConsoleAnchor(EntityUid uid, IFFConsoleComponent component, ref AnchorStateChangedEvent args)
     {
         // If we anchor / re-anchor then make sure flags up to date.
@@ -92,6 +100,10 @@ public sealed partial class ShuttleSystem
                 Flags = IFFFlags.None,
                 HeatCapacity = component.HeatCapacity,
                 CurrentHeat = component.CurrentHeat,
+                MassCloakEnabled = component.MassCloakEnabled,
+                MassCloakRange = component.MassCloakRange,
+                MassCloakMinRange = IFFConsoleComponent.MassCloakMinRange,
+                MassCloakMaxRange = IFFConsoleComponent.MassCloakMaxRange,
             });
             component.active = false;
         }
@@ -103,6 +115,10 @@ public sealed partial class ShuttleSystem
                 Flags = iff.Flags,
                 HeatCapacity = component.HeatCapacity,
                 CurrentHeat = component.CurrentHeat,
+                MassCloakEnabled = component.MassCloakEnabled,
+                MassCloakRange = component.MassCloakRange,
+                MassCloakMinRange = IFFConsoleComponent.MassCloakMinRange,
+                MassCloakMaxRange = IFFConsoleComponent.MassCloakMaxRange,
             });
         }
     }
@@ -135,6 +151,10 @@ public sealed partial class ShuttleSystem
                 CurrentHeat = comp.CurrentHeat,
                 Color = iff.Color,
                 AllowColorChange = comp.AllowColorChange,
+                MassCloakEnabled = comp.MassCloakEnabled,
+                MassCloakRange = comp.MassCloakRange,
+                MassCloakMinRange = IFFConsoleComponent.MassCloakMinRange,
+                MassCloakMaxRange = IFFConsoleComponent.MassCloakMaxRange,
             });
 
     }

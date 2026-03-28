@@ -1,5 +1,6 @@
 using System.Linq;
 using Content.Server._Crescent.HullrotSelfDeleteTimer;
+using Content.Server._Rat.Shuttles.Components;
 using Content.Server.Administration.Logs;
 using Content.Server.Body.Systems;
 using Content.Server.Buckle.Systems;
@@ -146,6 +147,9 @@ public sealed partial class ShuttleSystem : SharedShuttleSystem
             }
         }
 
+        UpdateMassCloakFields();
+        UpdateMassValues();
+
         UpdateHyperspace();
     }
 
@@ -155,6 +159,74 @@ public sealed partial class ShuttleSystem : SharedShuttleSystem
         {
             _physics.SetDensity(uid, fixture.Key, fixture.Value, TileMassMultiplier, false, manager);
             _fixtures.SetRestitution(uid, fixture.Key, fixture.Value, 0.1f, false, manager);
+        }
+    }
+
+    private void UpdateMassCloakFields()
+    {
+        var activeFields = new List<(TransformComponent Xform, MassCloakConsoleComponent Comp)>();
+        var consoleQuery = EntityQueryEnumerator<MassCloakConsoleComponent, TransformComponent>();
+
+        while (consoleQuery.MoveNext(out _, out var consoleComp, out var consoleXform))
+        {
+            if (!consoleComp.MassCloakEnabled || consoleXform.GridUid is null)
+                continue;
+            activeFields.Add((consoleXform, consoleComp));
+        }
+
+        var toCloak = new HashSet<EntityUid>();
+        if (activeFields.Count > 0)
+        {
+            var gridsQuery = EntityQueryEnumerator<MapGridComponent, TransformComponent>();
+            while (gridsQuery.MoveNext(out var gridUid, out _, out var gridXform))
+            {
+                foreach (var (fieldXform, fieldComp) in activeFields)
+                {
+                    if (gridXform.MapID != fieldXform.MapID)
+                        continue;
+
+                    var dist = (gridXform.WorldPosition - fieldXform.WorldPosition).Length();
+                    if (dist <= fieldComp.MassCloakRange)
+                    {
+                        toCloak.Add(gridUid);
+                        break;
+                    }
+                }
+            }
+        }
+
+        var existingCloaks = EntityQueryEnumerator<MassCloakComponent>();
+        var existList = new List<EntityUid>();
+        while (existingCloaks.MoveNext(out var gridUid, out _))
+        {
+            existList.Add(gridUid);
+        }
+
+        foreach (var gridUid in existList)
+        {
+            if (!toCloak.Contains(gridUid))
+            {
+                RemComp<MassCloakComponent>(gridUid);
+            }
+        }
+
+        foreach (var gridUid in toCloak)
+        {
+            EnsureComp<MassCloakComponent>(gridUid);
+        }
+    }
+
+    private void UpdateMassValues()
+    {
+        var query = EntityQueryEnumerator<IFFComponent, PhysicsComponent>();
+        while (query.MoveNext(out var uid, out var iff, out var physics))
+        {
+            var mass = physics.Mass;
+            if (Math.Abs(iff.Mass - mass) > 0.01f)
+            {
+                iff.Mass = mass;
+                Dirty(uid, iff);
+            }
         }
     }
 

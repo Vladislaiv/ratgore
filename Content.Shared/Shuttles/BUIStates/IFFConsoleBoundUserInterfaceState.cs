@@ -14,6 +14,11 @@ public sealed class IFFConsoleBoundUserInterfaceState : BoundUserInterfaceState
     // The color adding
     public Color Color;
     public bool AllowColorChange;
+
+    public bool MassCloakEnabled;
+    public float MassCloakRange;
+    public float MassCloakMinRange;
+    public float MassCloakMaxRange;
 }
 
 [Serializable, NetSerializable]

@@ -128,6 +128,7 @@ public sealed partial class ShuttleNavControl : BaseShuttleControl
         public float MinimapScale;
 
         public EntityUid selfGrid;
+        public bool selfMassCloaked;
         public Matrix3x2 selfWorldMatrixInvert;
         public List<Entity<MapGridComponent>> grids;
         public ConcurrentBag<Entity<MapGridComponent>> closeGrids;
@@ -144,18 +145,21 @@ public sealed partial class ShuttleNavControl : BaseShuttleControl
             var gridBody = bodyQuery.GetComponent(gUid);
             EntManager.TryGetComponent<IFFComponent>(gUid, out var iff);
 
-            if (!ShuttlesSys.CanDraw(gUid, gridBody, iff))
+            if (!selfMassCloaked && !ShuttlesSys.CanDraw(gUid, gridBody, iff))
                 return;
 
-            var labelName = ShuttlesSys.GetIFFLabel(gUid, self: false, iff);
-            var shouldDrawIFF = ShowIFF && labelName != null && labelName != "grid";
+            var labelName = selfMassCloaked
+                ? $"{(iff?.Mass ?? 0f):0.0}"
+                : ShuttlesSys.GetIFFLabel(gUid, self: false, iff);
+
+            var shouldDrawIFF = selfMassCloaked || (ShowIFF && labelName != null && labelName != "grid");
             if (IFFFilter != null)
             {
                 shouldDrawIFF &= IFFFilter(gUid, gComp, iff);
             }
             var gridMatrix = TransformSys.GetWorldMatrix(gUid);
             var matty = Matrix3x2.Multiply(gridMatrix, selfWorldMatrixInvert);
-            var color = ShuttlesSys.GetIFFColor(gUid, self: false, iff);
+            var color = selfMassCloaked ? Color.Gray : ShuttlesSys.GetIFFColor(gUid, self: false, iff);
             shipData data;
             if (!gridData.ContainsKey(gUid))
             {
@@ -511,7 +515,10 @@ public sealed partial class ShuttleNavControl : BaseShuttleControl
         _grids.Clear();
         _mapManager.FindGridsIntersecting(xform.MapID, new Box2(mapPos.Position - MaxRadarRangeVector, mapPos.Position + MaxRadarRangeVector), ref _grids, approx: true, includeMap: false);
         if(ourGridId is not null)
+        {
             drawJob.selfGrid = ourGridId.Value;
+            drawJob.selfMassCloaked = EntManager.HasComponent<MassCloakComponent>(ourGridId.Value);
+        }
         drawJob.MidPointVector = MidPointVector;
         drawJob.MinimapScale = MinimapScale;
         drawJob.Font = Font;
