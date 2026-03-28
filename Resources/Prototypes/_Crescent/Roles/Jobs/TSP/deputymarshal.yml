@@ -35,6 +35,8 @@
   special:
   - !type:AddComponentSpecial
     components:
+      - type: HullrotFaction
+        faction: TSP
       - type: LanguageAdder
         addSpoken:
           - American
@@ -42,6 +44,8 @@
         addUnderstood:
           - American
           - Tradeband
+  accessGroups:
+  - GeneralAccess
   access:
   - Command
   - Maintenance
@@ -53,6 +57,8 @@
   - External
   - Mercenary # Frontier
   - Captain # Frontier
+  - GliessSheriff
+  - GliessDockmaster
 
 - type: startingGear
   id: DeputyMarshalGear

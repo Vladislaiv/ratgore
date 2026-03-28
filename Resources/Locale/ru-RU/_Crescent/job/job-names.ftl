@@ -79,11 +79,11 @@ job-name-medtech = Исследователь МедТех
 
 # tsp
 
-job-name-ordnanceman = Оружейник
-job-name-machinist = Машинист двигателя
+job-name-ordnanceman = Колониальный блюститель
+job-name-machinist = Боевой инженер
 job-name-physician = Боевой врач
 job-name-minuteman = Колониальный минитмен
-job-name-watchmaster = Колониальный надсмотрщик
+job-name-watchmaster = Колониальный офицер
 job-name-deputymarshal = Заместитель маршала
 job-name-marshal = Колониальный маршал
 

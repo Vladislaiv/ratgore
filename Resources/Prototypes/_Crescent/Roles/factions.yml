@@ -185,17 +185,17 @@
     state: csa
 
 - type: faction
-  name: "Colonial Minutemen"
+  name: "Колониальное ополчение"
   id: TSP
   description: |
-    Appointed by themselves as a civil enforcement agency, the Colonial Minutemen are a frontier sheriff agency
-    run solely on scant funding from confiscated items and donations from private and civilian entities.
-    Formed with the system's best interests at heart, underperforming equipment, underfunded staff, and
-    tendency to draw their members from within impoverished circles leave them susceptible to corruption - which
-    the major powers of the system often has little manpower or resources to mitigate or mend.
+    Колониальное ополчение - малочисленная организация, сформировавшаяся вокруг харизматичных лидеров.
+    Основанные на идеалах свободы, равноправия и американской мечты, они принимают под своё крыло космонавтов
+    и беженцев со всей системы, давая им дом и место для отдыха, взамен принимая конфискованную контрабанду
+    или снаряжение для оснащения отрядов ополчения. Расположенные на вольной торговой станции Глисс-Санто,
+    они находятся под управлением колониального маршала, координирующего отряды ополчения во всей системе, и управляющего станцией.
   color: "#9FED58"
   weight: 1
-  enabled: false
+  enabled: true
   icon:
     sprite: /Textures/_Crescent/faction_icons.rsi
     state: tsp

@@ -39,6 +39,8 @@
   special:
   - !type:AddComponentSpecial
     components:
+      - type: HullrotFaction
+        faction: TSP
       - type: LanguageAdder
         addSpoken:
           - American
@@ -49,6 +51,8 @@
       - type: CPRTraining
       - type: SurgerySpeedModifier
         speedModifier: 1.75
+  accessGroups:
+  - GeneralAccess
   access:
   - Command
   - Maintenance
@@ -56,6 +60,8 @@
   - External
   - Mercenary # Frontier
   - Captain # Frontier
+  - GliessSheriff
+  - GliessDockmaster
 
 - type: startingGear
   id: PhysicianGear

@@ -17,9 +17,13 @@
   color: "#9FED58"
   weight: 5
   roles:
-  - GliessianDockmaster
-  - GliessianSheriff
-  - GliessianDeputy
+  - OrdnancemanCMM
+  - MachinistCMM
+  - PhysicianCMM
+  - MinutemanCMM
+  - WatchmasterCMM
+  - DeputyMarshalCMM
+  - MarshalCMM
   - Spacer
   - GliessianDockhand
   editorHidden: false
@@ -176,20 +180,20 @@
   - HosSHI
   editorHidden: false
 
-- type: department
-  id: CMM
-  description: department-CMM-description
-  color: "#5191e0"
-  weight: 70
-  roles:
-  - OrdnancemanCMM
-  - MachinistCMM
-  - PhysicianCMM
-  - MinutemanCMM
-  - WatchmasterCMM
-  - DeputyMarshalCMM
-  - MarshalCMM
-  editorHidden: true
+#- type: department
+#  id: CMM
+#  description: department-CMM-description
+#  color: "#5191e0"
+#  weight: 70
+#  roles:
+#  - OrdnancemanCMM
+#  - MachinistCMM
+#  - PhysicianCMM
+#  - MinutemanCMM
+#  - WatchmasterCMM
+#  - DeputyMarshalCMM
+#  - MarshalCMM
+#  editorHidden: true
 
 - type: department
   id: TAP

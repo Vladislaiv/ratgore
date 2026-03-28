@@ -60,10 +60,14 @@
         - type: StationJobs
           overflowJobs: []
           availableJobs:
-            GliessianDockmaster: [ 1, 1 ]
-            GliessianSheriff: [ 1, 1 ]
-            GliessianDeputy: [ 4, 4 ]
-            GliessianDockhand: [ 4, 4 ]
+            MarshalCMM: [ 1, 1 ]
+            DeputyMarshalCMM: [ 1, 1 ]
+            WatchmasterCMM: [ 1, 1 ]
+            OrdnancemanCMM: [ 2, 2 ]
+            MinutemanCMM: [ 7, 7 ]
+            PhysicianCMM: [ 2, 2 ]
+            MachinistCMM: [ 2, 2 ]
+            GliessianDockhand: [ 5, 5 ]
             Spacer: [ -1, -1 ]
 
 
