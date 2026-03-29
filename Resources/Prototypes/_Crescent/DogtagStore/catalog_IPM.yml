@@ -180,6 +180,29 @@
   categories:
   - StoreCategoryIPMCybernetics
 
+- type: listing
+  id: StoreListingIPMCyberneticsMantisBladeRight
+  name: plasteel mantis blade right
+  description: An instrument of war. Directly in your forearm!
+  icon: { sprite: /Textures/_Crescent/Objects/Weapons/Melee/mantis_blade.rsi, state: icon }
+  productEntity: CyberneticsMantisBladeRight
+  cost:
+    SampleIPM: 18
+  categories:
+  - StoreCategoryIPMCybernetics
+
+- type: listing
+  id: StoreListingIPMCyberneticsMantisBladeLeft
+  name: plasteel mantis blade left
+  description: An instrument of war. Directly in your forearm!
+  icon: { sprite: /Textures/_Crescent/Objects/Weapons/Melee/mantis_blade.rsi, state: icon }
+  productEntity: CyberneticsMantisBladeLeft
+  cost:
+    SampleIPM: 18
+  categories:
+  - StoreCategoryIPMCybernetics
+
+
 # Equipment
 - type: listing
   id: StoreListingIPMEquipmentHardsuit

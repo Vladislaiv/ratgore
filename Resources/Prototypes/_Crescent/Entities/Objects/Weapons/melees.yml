@@ -60,7 +60,7 @@
     range: 1.25 #Longer reach than with fists, but not longer than an actual sword
     damage:
       types:
-        Slash: 45
+        Slash: 35
         Structural: 20
     heavyDamageBaseModifier: 1.25
     heavyStaminaCost: 5

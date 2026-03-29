@@ -73,11 +73,11 @@
           damageCap: 150
           damage:
             groups:
-              Brute: -0.15
-              Burn: -0.15
-              Airloss: -0.15
-              Toxin: -0.15
-              Genetic: -0.15
+              Brute: -0.25
+              Burn: -0.25
+              Airloss: -0.25
+              Toxin: -0.25
+              Genetic: -0.25
     - type: ReverseEngineering # SectorCrescent
       difficulty: 3
       recipes:
@@ -296,7 +296,7 @@
         - type: MobThresholds
           thresholds:
             0: Alive
-            150: Critical
+            160: Critical
             200: Dead
         - type: SlowOnDamage # without this the player gets no slowdown thresholds since they're removed for some reason
           speedModifierThresholds: # doubled thresholds
