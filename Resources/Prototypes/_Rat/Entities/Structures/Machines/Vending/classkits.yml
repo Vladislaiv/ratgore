@@ -1,0 +1,179 @@
+- type: entity
+  parent: ColMarTechBase
+  id: ColMarTechEquipmentNCWL
+  name: автоматическая стойка снаряжения коммунаров
+  description: Автоматизированный стеллаж, соединенный с колоссальным хранилищем стандартного снаряжения лиги.
+  components:
+  - type: Sprite
+    sprite: _Crescent/Structures/syndicatearmory.rsi
+  - type: CMAutomatedVendor
+    sections:
+    - name: Class Kit
+      choices: { CMClass: 1 }
+      entries:
+      - id: CMVendorBundleRiflemanApparelNCWL
+        name: базовый набор ЛРНП
+        recommended: true
+    - name: Armor kit
+      choices: { CMArmour: 1 }
+      entries:
+      - id: ClothingOuterHardsuitNCWLInfantry
+        name: скафандр ЛРНП
+        recommended: true    
+      - id: ClothingOuterArmorNCWLHeavyCarapace
+        name: бронежилет ЛРНП
+    - name: Weapon kits
+      choices: { CMWeapon: 1 }
+      entries:
+      - id: WeaponRifleFAL
+        name: НКВЛ МК-2 Фалин 5.56x45 мм
+        recommended: true    
+      - id: WeaponShotgunProletar
+        name: НКВЛ Тоз-97 Пролетарий 12 кал
+      - id: WeaponSubMachineGunNCWLWatchdog
+        name: НКВЛ ДС1 Страж 9x19mm
+    - name: Utilities
+      choices: { CMUtilities: 2 }
+      entries:
+      - id: ExGrenade
+        name: разрывная граната 
+      - id: EmpGrenade
+        name: ЭМИ Граната
+      - id: BreachingCharge
+        name: Прорывной заряд
+      - id: HandHeldMassScannerEE
+        name: портативный сканер масс
+        recommended: true   
+    - name: Ammo
+      choices: { CMAmmo: 2 }
+      entries:
+      - id: MagazinePistolSubMachineGun
+        name: 35-зарядный магазин для пистолета-пулемета (9x19 мм PSTF auto)
+      - id: MagazineLightRifle
+        name: 30-зарядный магазин (5,56x45 мм)
+      - id: MagazineShotgun
+        name: 10-зарядный магазин (12 калибр)
+
+- type: entity
+  parent: ColMarTechBase
+  id: ColMarTechEquipmentDSM
+  name: автоматическая стойка снаряжения империи
+  description: Автоматизированный стеллаж, соединенный с колоссальным хранилищем стандартного снаряжения имперцев.
+  components:
+  - type: Sprite
+    sprite: _Crescent/Structures/syndicatearmory.rsi
+  - type: CMAutomatedVendor
+    sections:
+    - name: Class Kit
+      choices: { CMClass: 1 }
+      entries:
+      - id: CMVendorBundleRiflemanApparelDSM
+        name: базовый набор БМС
+        recommended: true
+    - name: Armor kit
+      choices: { CMArmour: 1 }
+      entries:
+      - id: ClothingOuterHardsuitImperialSoldier
+        name: скафандр БМС
+        recommended: true    
+      - id: ClothingOuterArmorImperialTrooperArmor
+        name: бронежилет БМС
+    - name: Weapon kits
+      choices: { CMWeapon: 1 }
+      entries:
+      - id: WeaponShotgunReno
+        name: БМС ДА-13 Рено 12 кал.
+      - id: WeaponRifleMiller
+        name: БМС ДА-8 Миллер 5.56x45 мм
+        recommended: true
+      - id: WeaponSubMachineGunBeetle
+        name: ХП Мак-11 Жук 9x19 мм
+    - name: Utilities
+      choices: { CMUtilities: 2 }
+      entries:
+      - id: ExGrenade
+        name: разрывная граната
+      - id: EmpGrenade
+        name: ЭМИ Граната
+      - id: BreachingCharge
+        name: Прорывной заряд
+      - id: HandHeldMassScannerEE
+        name: портативный сканер масс
+        recommended: true 
+    - name: Ammo
+      choices: { CMAmmo: 2 }
+      entries:
+      - id: MagazinePistolSubMachineGun
+        name: 35-зарядный магазин для пистолета-пулемета (9x19 мм PSTF auto)
+      - id: MagazineLightRifle
+        name: 30-зарядный магазин (5,56x45 мм)
+      - id: MagazineShotgun
+        name: 10-зарядный магазин (12 калибр)
+
+- type: entity
+  parent: ColMarTechBase
+  id: ColMarTechEquipmentCMM
+  name: автоматическая стойка снаряжения минитменов
+  description: Автоматизированный стеллаж, соединенный с колоссальным хранилищем стандартного снаряжения минитменов.
+  components:
+  - type: Sprite
+    sprite: _Crescent/Structures/syndicatearmory.rsi
+  - type: CMAutomatedVendor
+    sections:
+    - name: Классовый набор
+      choices: { CMClass: 1 }
+      entries:
+      - id: CMVendorBundleRiflemanApparelCMM
+        name: базовый набор минитменов
+        recommended: true
+    - name: Броня
+      choices: { CMArmour: 1 }
+      entries:
+      - id: ClothingOuterHardsuitMidshipman
+        name: скафандр минитменов "Мичман"
+        recommended: true    
+      - id: ClothingOuterArmorCMM
+        name: кираса патрульного
+    - name: Основное оружие
+      choices: { CMWeapon: 1 }
+      entries:
+      - id: WeaponShotgunSHIDoubleBarreled4g
+        name: SHI M135 Двустволка 12g
+      - id: WeaponRifleCMMNimrod
+        name: НТ MP5 9x19mm
+        recommended: true
+      - id: WeaponSubMachineGunMP5
+        name: НТ MP5 9x19mm
+    - name: Дополнительное оружие
+      choices: { CMPistol: 1 }
+      entries:
+      - id: WeaponRevolverSnubnose
+        name: НТ-6R Бульдог .327
+      - id: WeaponPistolHKUSP
+        name: НТ MX-32 Локвелл 9x19mm
+        recommended: true
+    - name: Утилиты
+      choices: { CMUtilities: 2 }
+      entries:
+      - id: ExGrenade
+        name: разрывная граната
+      - id: EmpGrenade
+        name: ЭМИ Граната
+      - id: BreachingCharge
+        name: Прорывной заряд
+      - id: HandHeldMassScannerEE
+        name: портативный сканер масс
+        recommended: true 
+    - name: Боеприпасы
+      choices: { CMAmmo: 4 }
+      entries:
+      - id: MagazinePistolSubMachineGun
+        name: 35-зарядный магазин для пистолета-пулемета (9x19 мм PSTF auto)
+      - id: MagazineBoxRifle
+        name: коробка патронов (.20 винтовочные)
+      - id: BoxLethalshot
+        name: коробка ружейных патронов (.50 летальные)
+      - id: MagazinePistol
+        name: 18-зарядный пистолетный магазин (9x19 мм PSTF auto)
+      - id: SpeedLoaderMagnum
+        name: спидлоадер (.45 магнум)
