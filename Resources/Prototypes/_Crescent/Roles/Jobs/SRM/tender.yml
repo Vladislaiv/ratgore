@@ -30,7 +30,7 @@
       species:
         - Human
     - !type:SexRequirement
-      sex: Male
+      sex: Female
     - !type:CharacterTraitRequirement
       inverted: true
       traits:
