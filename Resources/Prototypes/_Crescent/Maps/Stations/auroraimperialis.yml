@@ -1,7 +1,7 @@
 - type: gameMap
   id: AuroraImperialis
-  mapName: 'БМС Аврора'
-  mapPath: /Maps/_Rat/Stations/aurora.yml # taleryn-version
+  mapName: 'БМС Aurora Imperialis'
+  mapPath: /Maps/_Rat/Stations/auroraİmperialis.yml # taleryn-version
   minPlayers: 0
   stations:
     AuroraImperialis:

@@ -39,5 +39,6 @@ public sealed partial class IFFConsoleComponent : Component
     public float HeatDissipation = 1f;
 
     public bool active = false;
+
     // end
 }

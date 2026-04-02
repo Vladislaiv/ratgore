@@ -2,6 +2,7 @@ using Content.Shared.Containers.ItemSlots;
 using Content.Shared.Shuttles.Components;
 using Content.Shared.Shuttles.UI.MapObjects;
 using Content.Shared.Whitelist;
+using Content.Shared._Rat.Shuttles.Components;
 using Robust.Shared.Map;
 using Robust.Shared.Map.Components;
 using Robust.Shared.Physics;
@@ -120,7 +121,7 @@ public abstract partial class SharedShuttleSystem : EntitySystem
         }
     }
 
-    public bool CanDraw(EntityUid gridUid, PhysicsComponent? physics = null, IFFComponent? iffComp = null)
+    public bool CanDraw(EntityUid gridUid, PhysicsComponent? physics = null, IFFComponent? iffComp = null, EntityUid? viewer = null)
     {
         if (!Resolve(gridUid, ref physics))
             return true;
@@ -130,8 +131,39 @@ public abstract partial class SharedShuttleSystem : EntitySystem
             return true;
         }
 
-        // Hide it entirely.
-        return (iffComp.Flags & IFFFlags.Hide) == 0x0;
+        // If the grid is hidden, check if the viewer is also inside the same cloak field
+        // If the grid is hidden, check if the viewer is also inside the same cloak field
+        if ((iffComp.Flags & IFFFlags.Hide) != 0x0)
+        {
+            if (viewer == null)
+                return false;
+
+            // First check if both have MassCloakedByComponent from the same console (on-grid/on-grid case)
+            if (TryComp(gridUid, out MassCloakedByComponent? targetCloaked) &&
+                TryComp(viewer, out MassCloakedByComponent? viewerCloaked) &&
+                targetCloaked.CloakingConsoleUid == viewerCloaked.CloakingConsoleUid)
+            {
+                return true;
+            }
+
+            // If target is cloaked, check if off-grid viewer is in the same cloaking field
+            if (TryComp(gridUid, out targetCloaked) &&
+                _xformQuery.TryGetComponent(viewer, out var viewerXform) &&
+                _xformQuery.TryGetComponent(targetCloaked.CloakingConsoleUid, out var consoleXform) &&
+                viewerXform.MapID == consoleXform.MapID)
+            {
+                var dist = (XformSystem.GetWorldPosition(viewerXform) - XformSystem.GetWorldPosition(consoleXform)).Length();
+                if (dist <= targetCloaked.CloakingRange)
+                {
+                    return true;
+                }
+            }
+
+            return false;
+        }
+
+        return true;
+
     }
 
     public bool IsBeaconMap(EntityUid mapUid)

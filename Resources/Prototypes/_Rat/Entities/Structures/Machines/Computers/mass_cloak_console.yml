@@ -1,0 +1,30 @@
+- type: entity
+  parent: [BaseComputerAiAccess, BaseStructureDisableToolUse, BaseStructureUnanchorable]
+  id: ComputerMassCloak
+  name: mass cloak console
+  description: Allows you to control mass cloaking fields around this vessel.
+  components:
+  - type: MassCloakConsole
+  - type: Sprite
+    layers:
+    - map: ["computerLayerBody"]
+      state: computer
+    - map: ["computerLayerKeyboard"]
+      state: generic_keyboard
+    - map: ["computerLayerScreen"]
+      sprite: Structures/Shuttles/iff.rsi
+      state: helm
+    - map: ["computerLayerKeys"]
+      state: generic_keys
+    - map: [ "enum.WiresVisualLayers.MaintenancePanel" ]
+      state: generic_panel_open
+  - type: ActivatableUI
+    key: enum.MassCloakConsoleUiKey.Key
+  - type: UserInterface
+    interfaces:
+        enum.MassCloakConsoleUiKey.Key:
+          type: MassCloakConsoleBoundUserInterface
+        enum.WiresUiKey.Key:
+          type: WiresBoundUserInterface
+  - type: Computer
+    board: ComputerTelevisionCircuitboard

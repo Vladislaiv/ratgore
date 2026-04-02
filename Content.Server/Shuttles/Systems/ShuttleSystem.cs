@@ -1,5 +1,6 @@
 using System.Linq;
 using Content.Server._Crescent.HullrotSelfDeleteTimer;
+using Content.Server._Rat.Shuttles.Components;
 using Content.Server.Administration.Logs;
 using Content.Server.Body.Systems;
 using Content.Server.Buckle.Systems;
@@ -18,6 +19,7 @@ using Content.Shared.Salvage;
 using Content.Shared.Shuttles.Components;
 using Content.Shared.Shuttles.Systems;
 using Content.Shared.Throwing;
+using Content.Shared._Rat.Shuttles.Components;
 using JetBrains.Annotations;
 using Robust.Server.GameObjects;
 using Robust.Server.GameStates;
@@ -146,6 +148,9 @@ public sealed partial class ShuttleSystem : SharedShuttleSystem
             }
         }
 
+        UpdateMassCloakFields();
+        UpdateMassValues();
+
         UpdateHyperspace();
     }
 
@@ -155,6 +160,147 @@ public sealed partial class ShuttleSystem : SharedShuttleSystem
         {
             _physics.SetDensity(uid, fixture.Key, fixture.Value, TileMassMultiplier, false, manager);
             _fixtures.SetRestitution(uid, fixture.Key, fixture.Value, 0.1f, false, manager);
+        }
+    }
+
+    private void UpdateMassCloakFields()
+    {
+        var activeFields = new List<(EntityUid ConsoleUid, TransformComponent Xform, MassCloakConsoleComponent Comp)>();
+        var consoleQuery = EntityQueryEnumerator<MassCloakConsoleComponent, TransformComponent>();
+
+        while (consoleQuery.MoveNext(out var consoleUid, out var consoleComp, out var consoleXform))
+        {
+            if (!consoleComp.MassCloakEnabled || consoleXform.GridUid is null)
+                continue;
+            activeFields.Add((consoleUid, consoleXform, consoleComp));
+        }
+
+        // Clear old cloak tracking
+        foreach (var activeField in activeFields)
+        {
+            activeField.Comp.CloakedGrids.Clear();
+        }
+
+        var toCloak = new Dictionary<EntityUid, EntityUid>(); // gridUid -> consoleUid
+        if (activeFields.Count > 0)
+        {
+            var gridsQuery = EntityQueryEnumerator<MapGridComponent, TransformComponent>();
+            while (gridsQuery.MoveNext(out var gridUid, out _, out var gridXform))
+            {
+                foreach (var (consoleUid, fieldXform, fieldComp) in activeFields)
+                {
+                    if (gridXform.MapID != fieldXform.MapID)
+                        continue;
+
+                    var dist = (gridXform.WorldPosition - fieldXform.WorldPosition).Length();
+                    if (dist <= fieldComp.MassCloakRange)
+                    {
+                        // Track this cloak
+                        if (!toCloak.ContainsKey(gridUid))
+                        {
+                            toCloak[gridUid] = consoleUid;
+                            fieldComp.CloakedGrids.Add(gridUid);
+                        }
+                        break;
+                    }
+                }
+            }
+        }
+
+        var existingCloaks = EntityQueryEnumerator<MassCloakComponent>();
+        var existList = new List<EntityUid>();
+        while (existingCloaks.MoveNext(out var gridUid, out _))
+        {
+            existList.Add(gridUid);
+        }
+
+        // Remove mass cloaking from grids that are no longer in range
+        foreach (var gridUid in existList)
+        {
+            if (!toCloak.ContainsKey(gridUid))
+            {
+                RemComp<MassCloakComponent>(gridUid);
+                RemComp<MassCloakedByComponent>(gridUid);
+                // Only clear the IFF hide flag if mass cloak set it (now that we're removing MassCloakedByComponent,
+                // no other mass cloak system is managing this grid, so it's safe to remove the flag)
+                if (TryComp(gridUid, out IFFComponent? iff))
+                {
+                    // Check if Hide flag is set before trying to remove it
+                    if ((iff.Flags & IFFFlags.Hide) != 0)
+                    {
+                        iff.Flags &= ~IFFFlags.Hide;
+                        Dirty(gridUid, iff);
+                    }
+                }
+            }
+        }
+
+        // Add mass cloaking to grids in range
+        foreach (var (gridUid, consoleUid) in toCloak)
+        {
+            EnsureComp<MassCloakComponent>(gridUid);
+
+            // Track which console is cloaking this grid
+            var cloakedBy = EnsureComp<MassCloakedByComponent>(gridUid);
+
+            // Only update and mark dirty if the console UID actually changed
+            if (cloakedBy.CloakingConsoleUid != consoleUid)
+            {
+                cloakedBy.CloakingConsoleUid = consoleUid;
+
+                // Find and set the cloaking range from the console
+                foreach (var (cuid, _, comp) in activeFields)
+                {
+                    if (cuid == consoleUid)
+                    {
+                        cloakedBy.CloakingRange = comp.MassCloakRange;
+                        break;
+                    }
+                }
+                Dirty(gridUid, cloakedBy);
+            }
+            else if (cloakedBy.CloakingRange != activeFields.FirstOrDefault(f => f.ConsoleUid == consoleUid).Comp.MassCloakRange)
+            {
+                // Only update range if it actually changed
+                foreach (var (cuid, _, comp) in activeFields)
+                {
+                    if (cuid == consoleUid)
+                    {
+                        cloakedBy.CloakingRange = comp.MassCloakRange;
+                        break;
+                    }
+                }
+                Dirty(gridUid, cloakedBy);
+            }
+
+            // Also set the IFF hide flag (create IFF component if needed)
+            if (!TryComp(gridUid, out IFFComponent? iff))
+            {
+                iff = AddComp<IFFComponent>(gridUid);
+            }
+            if (iff != null)
+            {
+                // Only mark dirty if Hide flag isn't already set
+                if ((iff.Flags & IFFFlags.Hide) == 0)
+                {
+                    iff.Flags |= IFFFlags.Hide;
+                    Dirty(gridUid, iff);
+                }
+            }
+        }
+    }
+
+    private void UpdateMassValues()
+    {
+        var query = EntityQueryEnumerator<IFFComponent, PhysicsComponent>();
+        while (query.MoveNext(out var uid, out var iff, out var physics))
+        {
+            var mass = physics.Mass;
+            if (Math.Abs(iff.Mass - mass) > 0.01f)
+            {
+                iff.Mass = mass;
+                Dirty(uid, iff);
+            }
         }
     }
 

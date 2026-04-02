@@ -133,7 +133,7 @@ public sealed partial class ShuttleDockControl : BaseShuttleControl
         {
             EntManager.TryGetComponent(grid.Owner, out IFFComponent? iffComp);
 
-            if (grid.Owner != GridEntity && !_shuttles.CanDraw(grid.Owner, iffComp: iffComp))
+            if (grid.Owner != GridEntity && !_shuttles.CanDraw(grid.Owner, iffComp: iffComp, viewer: GridEntity))
                 continue;
 
             var gridMatrix = _xformSystem.GetWorldMatrix(grid.Owner);

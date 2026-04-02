@@ -27,6 +27,9 @@ public sealed partial class IFFComponent : Component
     [ViewVariables(VVAccess.ReadWrite), DataField, AutoNetworkedField]
     public Color Color = IFFColor;
 
+    [ViewVariables(VVAccess.ReadWrite), DataField, AutoNetworkedField]
+    public float Mass = 0f;
+
      // hullrot variables - SPCR
     // <summary>
     /// Which faction this ship is advertising as.

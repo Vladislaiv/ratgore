@@ -128,6 +128,7 @@ public sealed partial class ShuttleNavControl : BaseShuttleControl
         public float MinimapScale;
 
         public EntityUid selfGrid;
+        public bool selfMassCloaked;
         public Matrix3x2 selfWorldMatrixInvert;
         public List<Entity<MapGridComponent>> grids;
         public ConcurrentBag<Entity<MapGridComponent>> closeGrids;
@@ -144,10 +145,11 @@ public sealed partial class ShuttleNavControl : BaseShuttleControl
             var gridBody = bodyQuery.GetComponent(gUid);
             EntManager.TryGetComponent<IFFComponent>(gUid, out var iff);
 
-            if (!ShuttlesSys.CanDraw(gUid, gridBody, iff))
+            if (!ShuttlesSys.CanDraw(gUid, gridBody, iff, selfGrid))
                 return;
 
             var labelName = ShuttlesSys.GetIFFLabel(gUid, self: false, iff);
+
             var shouldDrawIFF = ShowIFF && labelName != null && labelName != "grid";
             if (IFFFilter != null)
             {
@@ -510,8 +512,12 @@ public sealed partial class ShuttleNavControl : BaseShuttleControl
 
         _grids.Clear();
         _mapManager.FindGridsIntersecting(xform.MapID, new Box2(mapPos.Position - MaxRadarRangeVector, mapPos.Position + MaxRadarRangeVector), ref _grids, approx: true, includeMap: false);
+        // Use scanner grid if on-grid, otherwise use scanner entity itself as viewer
+        drawJob.selfGrid = ourGridId ?? _coordinates.Value.EntityId;
         if(ourGridId is not null)
-            drawJob.selfGrid = ourGridId.Value;
+        {
+            drawJob.selfMassCloaked = EntManager.HasComponent<MassCloakComponent>(ourGridId.Value);
+        }
         drawJob.MidPointVector = MidPointVector;
         drawJob.MinimapScale = MinimapScale;
         drawJob.Font = Font;
@@ -539,7 +545,9 @@ public sealed partial class ShuttleNavControl : BaseShuttleControl
             var gridBody = bodyQuery.GetComponent(gUid);
             EntManager.TryGetComponent<IFFComponent>(gUid, out var iff);
 
-            if (!_shuttles.CanDraw(gUid, gridBody, iff))
+            // Use scanner grid if on-grid, otherwise use scanner entity itself as viewer
+            var viewer = ourGridId ?? _coordinates.Value.EntityId;
+            if (!_shuttles.CanDraw(gUid, gridBody, iff, viewer))
                 continue;
 
             var gridMatrix = _transform.GetWorldMatrix(gUid);
@@ -653,7 +661,7 @@ public sealed partial class ShuttleNavControl : BaseShuttleControl
             var gridBody = bodyQuery.GetComponent(gUid);
             EntManager.TryGetComponent<IFFComponent>(gUid, out var iff);
 
-            if (!_shuttles.CanDraw(gUid, gridBody, iff))
+            if (!_shuttles.CanDraw(gUid, gridBody, iff, selfGrid))
                 continue;
 
             if (IFFLineFilter != null && !IFFLineFilter(gUid, grid.Comp, iff))
@@ -926,7 +934,7 @@ public sealed partial class ShuttleNavControl : BaseShuttleControl
         var mapPos = _transform.ToMapCoordinates(_coordinates.Value);
         var (_, ourEntRot, ourEntMatrix) = _transform.GetWorldPositionRotationMatrix(_coordinates.Value.EntityId);
         var rot = ourEntRot + _rotation.Value;
-        
+
         if (keepWorldAligned)
         {
             ourEntRot = Angle.Zero;
@@ -941,14 +949,14 @@ public sealed partial class ShuttleNavControl : BaseShuttleControl
 
         // Центр карты (0,0) в мировых координатах
         var mapCenterWorld = Vector2.Zero;
-        
+
         // Преобразуем центр карты через ту же матрицу, что и другие объекты
         var mapCenterUI = Vector2.Transform(mapCenterWorld, ourWorldMatrixInvert);
         mapCenterUI.Y = -mapCenterUI.Y; // Инвертируем Y для UI
-        
+
         // Масштабируем для отображения
         var uiCenter = ScalePosition(mapCenterUI);
-        
+
         // Рисуем зоны с фиксированным центром в координатах карты (0,0)
         handle.DrawCircle(uiCenter, 650 * MinimapScale, new Color(255, 0, 0, 50), false);
         handle.DrawCircle(uiCenter, 3950 * MinimapScale, new Color(0, 255, 0, 50), false);

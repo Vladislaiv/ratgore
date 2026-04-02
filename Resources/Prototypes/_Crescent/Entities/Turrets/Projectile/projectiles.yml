@@ -1,33 +1,4 @@
 - type: entity
-  id: Bullet15mmBase
-  name: 15mm FMJ projectile
-  description: That's not good...
-  parent: BaseBulletTrigger
-  categories: [ HideSpawnMenu ]
-  components:
-  - type: ProjectilePhasePrevent
-  - type: ProjectileIFF
-    visualType: Circle
-    color: White
-  - type: Projectile
-    ignoreWeaponGrid: true
-    damage:
-      types:
-        Structural: 6
-        Piercing: 50
-  - type: PointLight
-    radius: 3.5
-    color: orange
-    energy: 0.5
-  - type: TimedDespawn
-    lifetime: 3 #540
-  - type: Sprite
-    sprite: _NF/Objects/SpaceArtillery/pdtcasing.rsi
-    layers:
-      - state: base-projectile
-  - type: ShipWeaponProjectile
-
-- type: entity
   id: Bullet20mmBase
   name: 20mm FMJ projectile
   description: Uh oh.
@@ -42,14 +13,14 @@
     ignoreWeaponGrid: true
     damage:
       types:
-        Structural: 80
+        Structural: 50
         Piercing: 100
   - type: PointLight
     radius: 3.5
     color: orange
     energy: 0.5
   - type: TimedDespawn
-    lifetime: 3 #848
+    lifetime: 14 #1960
   - type: Sprite
     sprite: _NF/Objects/SpaceArtillery/pdtcasing.rsi
     layers:
@@ -57,7 +28,7 @@
   - type: ShipWeaponProjectile
 
 - type: entity
-  id: Bullet20mmFrag # DONTUSE
+  id: Bullet20mmFrag
   name: 20mm fragmentation projectile
   description: Uh oh.
   parent: BaseBulletTrigger
@@ -85,12 +56,46 @@
     color: orange
     energy: 0.5
   - type: TimedDespawn
-    lifetime: 3 #501
+    lifetime: 14 #1960
   - type: Sprite
     sprite: _NF/Objects/SpaceArtillery/pdtcasing.rsi
     layers:
       - state: base-projectile
   - type: ShipWeaponProjectile
+
+# - type: entity
+#   id: Bullet20mmPlasma
+#   name: 20mm unstable plasma-core projectile
+#   parent: BaseBulletTrigger
+#   categories: [ HideSpawnMenu ]
+#   components:
+#   - type: ProjectilePhasePrevent
+#   - type: ProjectileIFF
+#     visualType: Circle
+#     color: White
+#   - type: ShipWeaponProjectile
+#   - type: Projectile
+#     damage:
+#       types:
+#         Structural: 5
+#         Piercing: 20
+#   - type: ExplodeOnTrigger
+#   - type: Explosive
+#     explosionType: Default
+#     maxIntensity: 8
+#     intensitySlope: 50
+#     totalIntensity: 120
+#     maxTileBreak: 1
+#   - type: PointLight
+#     radius: 3.5
+#     color: orange
+#     energy: 0.5
+#   - type: TimedDespawn
+#     lifetime: 10 #1500
+#   - type: Sprite
+#     sprite: _NF/Objects/SpaceArtillery/pdtcasing.rsi
+#     layers:
+#       - state: base-projectile
 
 - type: entity
   id: Bullet35mmBase
@@ -107,14 +112,14 @@
     ignoreWeaponGrid: true
     damage:
       types:
-        Structural: 125
+        Structural: 300
         Piercing: 150
   - type: PointLight
     radius: 3.5
     color: orange
     energy: 0.5
   - type: TimedDespawn
-    lifetime: 7 #980
+    lifetime: 15 #1800
   - type: Sprite
     sprite: _NF/Objects/SpaceArtillery/pdtcasing.rsi
     layers:
@@ -123,7 +128,7 @@
 
 - type: entity
   id: Bullet35mmHE
-  name: 35mm High Explosive projectile #DONTUSE
+  name: 35mm High Explosive projectile
   description: Uh oh.
   parent: BaseBulletTrigger
   categories: [ HideSpawnMenu ]
@@ -157,6 +162,41 @@
       - state: base-projectile
   - type: ShipWeaponProjectile
 
+# - type: entity
+#   id: Bullet35mmPlasma
+#   name: 35mm unstable plasma-core projectile
+#   description: Uh oh.
+#   parent: BaseBulletTrigger
+#   categories: [ HideSpawnMenu ]
+#   components:
+#   - type: ProjectilePhasePrevent
+#   - type: ProjectileIFF
+#     visualType: Circle
+#     color: White
+#   - type: Projectile
+#     damage:
+#       types:
+#         Structural: 10
+#         Piercing: 45
+#   - type: ExplodeOnTrigger
+#   - type: Explosive
+#     explosionType: Default
+#     maxIntensity: 25
+#     intensitySlope: 80
+#     totalIntensity: 200
+#     maxTileBreak: 0
+#   - type: PointLight
+#     radius: 3.5
+#     color: orange
+#     energy: 0.5
+#   - type: TimedDespawn
+#     lifetime: 9 #1170
+#   - type: Sprite
+#     sprite: _NF/Objects/SpaceArtillery/pdtcasing.rsi
+#     layers:
+#       - state: base-projectile
+#   - type: ShipWeaponProjectile
+
 #50mm
 
 - type: entity
@@ -174,21 +214,21 @@
     ignoreWeaponGrid: true
     damage:
       types:
-        Structural: 375
+        Structural: 400
         Piercing: 200
   - type: PointLight
     radius: 3.5
     color: orange
     energy: 0.5
   - type: TimedDespawn
-    lifetime: 12 #1500
+    lifetime: 16 #2240
   - type: Sprite
     sprite: _NF/Objects/SpaceArtillery/pdtcasing.rsi
     layers:
       - state: base-projectile
 
 - type: entity
-  id: Bullet50mmHE #DONTUSE
+  id: Bullet50mmHE
   name: 50mm High Explosive projectile
   parent: BaseBulletTrigger
   categories: [ HideSpawnMenu ]
@@ -216,14 +256,14 @@
     color: orange
     energy: 0.5
   - type: TimedDespawn
-    lifetime: 10 #1500
+    lifetime: 16 #2240m
   - type: Sprite
     sprite: _NF/Objects/SpaceArtillery/pdtcasing.rsi
     layers:
       - state: base-projectile
 
 - type: entity
-  id: Bullet50mmSAPHE #DONTUSE
+  id: Bullet50mmSAPHE
   name: 50mm SAPHE projectile
   parent: BaseBulletTrigger
   categories: [ HideSpawnMenu ]
@@ -251,13 +291,13 @@
     color: orange
     energy: 0.5
   - type: TimedDespawn
-    lifetime: 10 #1500
+    lifetime: 16 #2240m
   - type: Sprite
     sprite: _NF/Objects/SpaceArtillery/pdtcasing.rsi
     layers:
       - state: base-projectile
 
-#Resolute DONTUSE
+#Resolute
 
 - type: entity
   id: Bullet90mmHE
@@ -373,10 +413,10 @@
     ignoreWeaponGrid: true
     damage:
       types:
-        Structural: 950
-        Piercing: 300
+        Structural: 350
+        Piercing: 150
   - type: TimedDespawn
-    lifetime: 13.3 #1995
+    lifetime: 20 #4000m
   - type: Sprite
     sprite: _NF/Objects/SpaceArtillery/630_armorpiercing_shell_casing.rsi
     layers:
@@ -411,7 +451,7 @@
         Structural: 750
         Piercing: 250
   - type: TimedDespawn
-    lifetime: 10 #2000m
+    lifetime: 20 #4000m
   - type: Sprite
     sprite: _NF/Objects/SpaceArtillery/630_armorpiercing_shell_casing.rsi
     layers:
@@ -444,7 +484,7 @@
         Structural: 250
         Piercing: 250
   - type: TimedDespawn
-    lifetime: 10 #2000m
+    lifetime: 20 #4000m
   - type: Sprite
     sprite: _NF/Objects/SpaceArtillery/630_armorpiercing_shell_casing.rsi
     layers:
@@ -501,7 +541,7 @@
 - type: entity
   id: CorpusProjectile
   name: 88mm low-yield flak pellet
-  description:  Shit.
+  description: Shit.
   parent: BaseBulletTrigger
   categories: [ HideSpawnMenu ]
   components:

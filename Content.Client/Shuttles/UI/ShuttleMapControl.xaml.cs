@@ -206,10 +206,10 @@ public sealed partial class ShuttleMapControl : BaseShuttleControl
             return;
 
         var matty = Matrix3Helpers.CreateInverseTransform(Offset, Angle.Zero);
-        
+
         // Центр мира (0,0) на текущей карте
         var worldCenter = new MapCoordinates(Vector2.Zero, ViewingMap);
-        
+
         // Преобразуем центр мира в экранные координаты
         var centerRelativePos = Vector2.Transform(worldCenter.Position, matty);
         centerRelativePos = centerRelativePos with { Y = -centerRelativePos.Y };
@@ -222,7 +222,7 @@ public sealed partial class ShuttleMapControl : BaseShuttleControl
         // Рисуем зелёные зоны (3950 и 4350 units)
         var greenZoneRadius1 = 3950f * MinimapScale;
         var greenZoneRadius2 = 4350f * MinimapScale;
-        
+
         handle.DrawCircle(centerUiPos, greenZoneRadius1, new Color(0, 255, 0, 50), false);
         handle.DrawCircle(centerUiPos, greenZoneRadius2, new Color(0, 255, 0, 50), false);
     }
@@ -410,17 +410,17 @@ public sealed partial class ShuttleMapControl : BaseShuttleControl
             AddMapObject(existingEdges, existingVerts, mapObject);
 
             // Text
+            string? displayText;
             if (iffComp != null && (iffComp.Flags & IFFFlags.HideLabel) != 0x0)
                 continue;
 
-            // Force drawing it at this point.
-            var iffText = _shuttles.GetIFFLabel(grid, self: true, component: iffComp);
+            displayText = _shuttles.GetIFFLabel(grid, self: true, component: iffComp);
 
-            if (string.IsNullOrEmpty(iffText))
+            if (string.IsNullOrEmpty(displayText))
                 continue;
 
             var existingStrings = _strings.GetOrNew(gridColor);
-            existingStrings.Add((gridUiPos, iffText));
+            existingStrings.Add((gridUiPos, displayText));
         }
 
         // Batch the colors whoopie

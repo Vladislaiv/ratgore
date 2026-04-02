@@ -72,12 +72,7 @@ public abstract class SharedTelescopeSystem : EntitySystem
         if (telescope == null)
             return;
 
-        Vector2 offset; //needed for the other fix
-
-        if (msg.Offset == Vector2.Zero)
-            offset = Vector2.Zero;
-        else
-            offset = Vector2.Lerp(eye.Offset, msg.Offset, telescope.LerpAmount);
+        var offset = Vector2.Lerp(eye.Offset, msg.Offset, telescope.LerpAmount);
 
         SetOffset((ent, eye), offset, telescope);
     }
