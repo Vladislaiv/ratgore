@@ -16,16 +16,16 @@
   - type: ExplosionResistance
     damageCoefficient: 0.6
   - type: DegradeableArmor
-    armorMaxHealth: 800
+    armorMaxHealth: 750
     armorType: Metallic
     armorRepair: PlasteelPlate
     initialModifiers:
       flatReductions:
-        Blunt: 35
-        Slash: 35
-        Piercing: 50
+        Blunt: 30
+        Slash: 30
+        Piercing: 45
         Heat: 20
-        Caustic: 5
+        Caustic: 10
   - type: ClothingSpeedModifier
     walkModifier: 0.90
     sprintModifier: 0.90
@@ -48,19 +48,19 @@
   - type: ExplosionResistance
     damageCoefficient: 0.6
   - type: DegradeableArmor
-    armorMaxHealth: 1000
+    armorMaxHealth: 750
     armorType: Metallic
     armorRepair: PlasteelPlate
     initialModifiers:
       flatReductions:
-        Blunt: 40
-        Slash: 40
+        Blunt: 35
+        Slash: 35
         Piercing: 75
         Heat: 50
         Caustic: 25
   - type: ClothingSpeedModifier
-    walkModifier: 0.70
-    sprintModifier: 0.80
+    walkModifier: 0.85
+    sprintModifier: 0.90
   - type: ToggleableClothing
     clothingPrototype: ClothingHeadHelmetHardsuitHunterElite
 

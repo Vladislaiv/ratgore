@@ -82,7 +82,6 @@
     back: ClothingBackpackSRM
   storage:
     back:
-      - WeaponDSMPlasmaRifle
       - PietyRedeemableHigh
       - PietyRedeemableHigh
       - PietyRedeemableHigh
