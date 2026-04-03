@@ -46,8 +46,8 @@
         randomOffsetY: 3000
       Refuge:
         gameMapID: Refuge
-        posX: -4142
-        posY: 4629
+        posX: -7000
+        posY: 7000
         IFFColor: Green
         IFFFaction: SRM
         randomOffsetX: 3000
@@ -87,7 +87,7 @@
       TribalHideout:
         gameMapID: TribalHideout
         posX: -8000
-        posY: -1500
+        posY: -300
         IFFColor: White
         IFFFaction: TAP
         randomOffsetX: 3000

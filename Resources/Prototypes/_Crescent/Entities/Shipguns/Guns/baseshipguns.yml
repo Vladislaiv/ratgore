@@ -96,3 +96,13 @@
     powerUseActive: 100
     isArmed: true
     isPowerRequiredToFire: true
+  - type: DeviceNetwork
+    deviceNetId: Wireless
+    receiveFrequencyId: BasicDevice
+  - type: WirelessNetworkConnection
+    range: 1000
+  - type: DeviceLinkSource
+    ports:
+      - SpaceArtilleryDetectedFiring
+      - SpaceArtilleryDetectedMalfunction
+      - SpaceArtilleryDetectedSafetyChange
