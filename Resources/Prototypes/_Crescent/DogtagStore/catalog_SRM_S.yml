@@ -220,6 +220,39 @@
   categories:
   - StoreCategorySRMSupport
 
+- type: listing
+  id: StoreListingSRMHuntSupplies
+  name: Припасы для охоты
+  description: Ящик, набитый до отвала различным полезным для охоты снаряжением. Кажется, его собирали с любовью.
+  icon: { sprite: _Nuclear14/Structures/Storage/Crates/woodencrates.rsi, state: army_crate }
+  productEntity: CrateSRMNLHuntSupplies
+  cost:
+    PietySRM: 5
+  categories:
+  - StoreCategorySRMSupport
+
+- type: listing
+  id: StoreListingSRMBolaShipment
+  name: Ящик с болой
+  description: Партия с несколькими обычными и парой энергобол для эффективного отлова рабов... я имел ввиду реквизиции активов!
+  icon: { sprite: _Nuclear14/Structures/Storage/Crates/woodencrates.rsi, state: army_crate }
+  productEntity: CrateSRMBolaShipment
+  cost:
+    PietySRM: 2
+  categories:
+  - StoreCategorySRMSupport
+
+- type: listing
+  id: StoreListingSRMDisablerShipment
+  name: Ящик дизайблеров
+  description: Ящик с несколькими дизейплерами и дизейблер-пулемётом. Если кому-то не хватило в оружейке, жадины!
+  icon: { sprite: _Nuclear14/Structures/Storage/Crates/woodencrates.rsi, state: army_crate }
+  productEntity: CrateSRMDisablerShipment
+  cost:
+    PietySRM: 3
+  categories:
+  - StoreCategorySRMSupport
+
 #Support End
 
 #Materials

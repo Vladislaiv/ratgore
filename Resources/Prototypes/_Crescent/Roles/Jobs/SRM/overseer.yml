@@ -80,3 +80,9 @@
     pocket2: RomaineBible
     belt: ClothingBeltAssault
     back: ClothingBackpackSRM
+  storage:
+    back:
+      - WeaponDSMPlasmaRifle
+      - PietyRedeemableHigh
+      - PietyRedeemableHigh
+      - PietyRedeemableHigh

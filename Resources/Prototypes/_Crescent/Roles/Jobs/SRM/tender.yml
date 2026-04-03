@@ -57,9 +57,11 @@
         addSpoken:
           - LowImperial
           - Saintspact
+          - Tradeband
         addUnderstood:
           - LowImperial
           - Saintspact
+          - Tradeband
       - type: InnatePsionicPowers
         powersToAdd:
           - TelepathyPower
