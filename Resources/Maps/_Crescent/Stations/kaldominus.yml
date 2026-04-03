@@ -121656,7 +121656,7 @@ entities:
       parent: 138
     - type: Physics
       canCollide: False
-- proto: WildBiomeSource
+- proto: ImperialBiomeSource
   entities:
   - uid: 16242
     components:
