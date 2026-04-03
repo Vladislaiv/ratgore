@@ -547,5 +547,14 @@ Entries:
     id: 72
     time: '2026-04-02T04:43:22.0000000+00:00'
     url: https://github.com/ss14-art/ratgore/pull/98
+  - author: freycyik
+    changes:
+      - type: Tweak
+        message: Побочные эффекты Сандевистана стали сильнее.
+      - type: Tweak
+        message: Они стали слабее
+    id: 73
+    time: '2026-04-03T02:46:57.0000000+00:00'
+    url: https://github.com/ss14-art/ratgore/pull/99
 Name: Rat
 Order: -1
