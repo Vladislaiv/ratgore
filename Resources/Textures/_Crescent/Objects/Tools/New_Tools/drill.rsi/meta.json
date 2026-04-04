@@ -8,7 +8,10 @@
   },
   "states": [
     {
-      "name": "icon"
+      "name": "drill_bolt"
+    },
+    {
+      "name": "drill_screw"
     },
     {
       "name": "inhand-left",

@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "license": "CC-BY-SA-3.0",
+  "license": "CC-BY-SA 3.0",
   "copyright": "sprites provided by @WillyBillyGilly and @miket, licensed under CC-BY-SA 3.0",
   "size": {
     "x": 32,
@@ -8,10 +8,13 @@
   },
   "states": [
     {
-      "name": "jawsoflife-pry"
+      "name": "flashlight"
     },
     {
-      "name": "jawsoflife-cutter"
+      "name": "flashlight-on"
+    },
+    {
+      "name": "flashlight-overlay"
     },
     {
       "name": "inhand-left",
@@ -19,6 +22,14 @@
     },
     {
       "name": "inhand-right",
+      "directions": 4
+    },
+    {
+      "name": "inhand-left-light",
+      "directions": 4
+    },
+    {
+      "name": "inhand-right-light",
       "directions": 4
     }
   ]
