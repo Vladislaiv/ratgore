@@ -30,8 +30,8 @@ public sealed class ChatFilterManager
     [Dependency] private readonly IGameTiming _timing = default!;
     [Dependency] private readonly IServerNetManager _netManager = default!;
     private readonly Dictionary<NetUserId, Queue<(string Message, TimeSpan Timestamp)>> _messageHistory = new();
-    private const int MaxRepeatedMessages = 3;
-    private const int MessageHistorySize = 5;
+    private const int MaxRepeatedMessages = 10;
+    private const int MessageHistorySize = 13;
     private static readonly TimeSpan MessageHistoryTimeout = TimeSpan.FromSeconds(10);
     private static readonly Regex SingleWordRegex = new(@"^(\w+)$", RegexOptions.Compiled);
     private static readonly Regex WordBoundaryRegex = new(@"\b(\w+)\b", RegexOptions.Compiled);
@@ -509,12 +509,6 @@ public sealed class ChatFilterManager
         {
             var lower = match.Value.ToLower();
             if (SingleWordReplacements.TryGetValue(lower, out var replacement)) return match.Value.All(char.IsUpper) ? replacement.ToUpper() : replacement;
-            return match.Value;
-        });
-        filtered = WordBoundaryRegex.Replace(filtered, match =>
-        {
-            var lower = match.Value.ToLower();
-            if (WordReplacements.TryGetValue(lower, out var replacement)) return match.Value.All(char.IsUpper) ? replacement.ToUpper() : replacement;
             return match.Value;
         });
         return filtered;
