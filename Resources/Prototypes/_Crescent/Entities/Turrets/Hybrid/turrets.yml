@@ -30,14 +30,14 @@
           ents: []
     - type: Gun
       fireOnDropChance: 0
-      projectileSpeed: 100
+      projectileSpeed: 150
       fireRate: 8
       selectedMode: FullAuto
       availableModes:
         - FullAuto
-      angleDecay: 5
+      angleDecay: 20
       minAngle: 3.5
-      maxAngle: 20
+      maxAngle: 35
       angleIncrease: 2.75
       soundGunshot:
         path: /Audio/Weapons/Guns/Gunshots/laserturret.ogg
@@ -52,8 +52,8 @@
           variation: 0.08
     - type: BasicEntityAmmoProvider
       proto: BulletPlasmaGatling
-      capacity: 50
-      count: 50
+      capacity: 120
+      count: 120
     - type: ApcPowerReceiver
       powerLoad: 2500
     - type: HardpointAnchorableOnly

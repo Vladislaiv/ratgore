@@ -83,7 +83,7 @@
     shoes: ClothingShoesBootsCombat
     jumpsuit: ClothingUniformJumpsuitNCWL
     id: NCWLHomeguardSoldatPDA
-    outerClothing: ClothingOuterArmorNCWLLightBodyarmor
+    outerClothing: ClothingOuterArmorNCWLHeavyCarapace
     pocket1: WeaponPistolComrade
     back: ClothingBackpackNCWL
     gloves: ClothingHandsGlovesCombat
@@ -92,8 +92,6 @@
     ears: ClothingHeadsetNCWL
     belt: ClothingBeltNCWLPouches
   storage:
-    outerClothing:
-      - ArmorPlateSteelInsert
     belt:
       - Flash
       - Tourniquet

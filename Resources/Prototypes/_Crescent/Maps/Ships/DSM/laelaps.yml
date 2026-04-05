@@ -16,10 +16,6 @@
     Laelaps:
       stationProto: StandardCrescentVessel
       components:
-        - type: VesselIcon
-          iffIcon:
-            sprite: _Crescent/ShipIcons/ifficons.rsi
-            state: cruiser
         - type: StationNameSetup
           mapNameTemplate: 'БМС Ловчий {1}'
           nameGenerator:

@@ -302,10 +302,10 @@
     ignoreWeaponGrid: true
     damage:
       types:
-        Structural: 600
+        Structural: 400
         Blunt: 200
   - type: TimedDespawn
-    lifetime: 41.6 #2496
+    lifetime: 20 #3200
   - type: Sprite
     sprite: _Crescent/Objects/Turrets/Ammunition/Projectiles/arbalest.rsi
     layers:
@@ -313,9 +313,9 @@
   - type: ExplodeOnTrigger
   - type: Explosive
     explosionType: Default
-    maxIntensity: 350
-    intensitySlope: 1000
-    totalIntensity: 4000
+    maxIntensity: 250
+    intensitySlope: 100
+    totalIntensity: 3000
     maxTileBreak: 8
   - type: PointLight
     radius: 3.5
@@ -326,10 +326,10 @@
     color: Red
   - type: HeatSeeking
     rotationSpeed: 10
-    acceleration: 10
-    topSpeed: 100
+    acceleration: 45
+    topSpeed: 160
     fieldOfView: 20
-    defaultSeekingRange: 2000
+    defaultSeekingRange: 1500
     guidanceAlgorithm: PredictiveGuidance
   - type: Fixtures
     fixtures:
@@ -351,7 +351,7 @@
     thresholds:
     - trigger:
         !type:DamageTrigger
-        damage: 60
+        damage: 300
       behaviors:
       - !type:DoActsBehavior
         acts: [ "Destruction" ]
@@ -374,7 +374,7 @@
         Structural: 500
         Blunt: 200
   - type: TimedDespawn
-    lifetime: 16 #2480
+    lifetime: 23 #3450m
   - type: Sprite
     sprite: _Crescent/Objects/Turrets/Ammunition/Projectiles/arbalest.rsi
     layers:
@@ -443,7 +443,7 @@
         Structural: 750
         Blunt: 200
   - type: TimedDespawn
-    lifetime: 16 #2480
+    lifetime: 14 #2520
   - type: Sprite
     sprite: _Crescent/Objects/Turrets/Ammunition/Projectiles/arbalest.rsi
     layers:
@@ -514,7 +514,7 @@
         Structural: 1000
         Blunt: 200
   - type: TimedDespawn
-    lifetime: 66.6 #3996
+    lifetime: 17 #2040m
   - type: Sprite
     sprite: _Crescent/Objects/Turrets/Ammunition/Projectiles/gargoyle.rsi
     layers:
@@ -524,7 +524,7 @@
     explosionType: Default
     maxIntensity: 1000
     intensitySlope: 200
-    totalIntensity: 3500
+    totalIntensity: 7000
     maxTileBreak: 10
   - type: PointLight
     radius: 3.5
@@ -534,11 +534,11 @@
     visualType: SquareReticle
     color: Red
   - type: HeatSeeking
-    rotationSpeed: 20
-    acceleration: 20
-    topSpeed: 80
+    rotationSpeed: 5 #very slow we'll see how it works..
+    acceleration: 25
+    topSpeed: 120
     fieldOfView: 25
-    defaultSeekingRange: 3000
+    defaultSeekingRange: 2000
     guidanceAlgorithm: PurePursuit
   - type: Fixtures
     fixtures:
@@ -560,7 +560,7 @@
     thresholds:
     - trigger:
         !type:DamageTrigger
-        damage: 100
+        damage: 750
       behaviors:
       - !type:DoActsBehavior
         acts: [ "Destruction" ]
@@ -583,7 +583,7 @@
         Structural: 1000
         Blunt: 200
   - type: TimedDespawn
-    lifetime: 40 #2040m
+    lifetime: 21 #2310m
   - type: Sprite
     sprite: _Crescent/Objects/Turrets/Ammunition/Projectiles/gargoyle.rsi
     layers:
@@ -654,7 +654,7 @@
         Structural: 2000
         Blunt: 500
   - type: TimedDespawn
-    lifetime: 83.3 #4998
+    lifetime: 30 #6000m
   - type: Sprite
     sprite: _Crescent/Objects/Turrets/Ammunition/Projectiles/catapult.rsi
     layers:
@@ -662,9 +662,9 @@
   - type: ExplodeOnTrigger
   - type: Explosive
     explosionType: Default
-    maxIntensity: 2000
+    maxIntensity: 23000
     intensitySlope: 500
-    totalIntensity: 6000
+    totalIntensity: 23000
     maxTileBreak: 32
   - type: PointLight
     radius: 3.5
@@ -676,8 +676,8 @@
   - type: HeatSeeking
     rotationSpeed: 8
     acceleration: 10
-    topSpeed: 60
-    fieldOfView: 25
+    topSpeed: 200
+    fieldOfView: 10
     defaultSeekingRange: 5000
     guidanceAlgorithm: PredictiveGuidance
   - type: Fixtures
@@ -700,7 +700,7 @@
     thresholds:
     - trigger:
         !type:DamageTrigger
-        damage: 100
+        damage: 750 #harder to shoot down than a gargoyle still
       behaviors:
       - !type:DoActsBehavior
         acts: [ "Destruction" ]
