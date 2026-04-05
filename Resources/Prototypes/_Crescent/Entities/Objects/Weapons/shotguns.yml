@@ -172,7 +172,7 @@
 
 - type: entity
   name: SHI-UA SH-13Lvr blaster 18.5g
-  parent: [BaseItem, BaseGunWieldable,]
+  parent: [BaseItem, BaseGunWieldable]
   id: WeaponShotgunBlaster
   description: A large and very oddly designed lever-action shotgun fed by 18.5 gauge clips. Designed and manfucatured by United Arsenal for Shinoharas BudgetArms line.
   components:
