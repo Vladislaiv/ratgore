@@ -825,6 +825,13 @@ entities:
         31:
         - - Group3
           - Toggle
+    - type: NamedModules
+      buttonNames:
+      - Toggle 120mm cannon
+      - Fire 120mm cannon
+      - Open artillery doors
+      - Module D
+      - Module E
     - type: ContainerContainer
       containers:
         board: !type:Container

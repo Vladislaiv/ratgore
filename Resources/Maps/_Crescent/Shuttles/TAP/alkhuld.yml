@@ -657,6 +657,13 @@ entities:
         3:
         - - Group2
           - Toggle
+    - type: NamedModules
+      buttonNames:
+      - Toggle exhumers
+      - Toggle 400c
+      - Module C
+      - Module D
+      - Module E
     - type: ContainerContainer
       containers:
         board: !type:Container
