@@ -10,6 +10,7 @@ research-technology-families-plastic-explosives = Пластические вз�
 research-technology-families-drone-control = Автономные машины
 research-technology-families-high-impulse-thrusters = Высокоимпульсные двигатели
 research-technology-families-hardpoints = Точки крепления
+research-technology-families-ships = Корабли
 research-technology-families-emitter = Технология экранирования
 
 ## Descriptions
@@ -22,4 +23,5 @@ research-technology-families-plastic-explosives-description = Взрывчато
 research-technology-families-drone-control-description = Системы управления дронами
 research-technology-families-high-impulse-thrusters-description = Продвинутые технологии двигателей
 research-technology-families-hardpoints-description = Точки крепления
+research-technology-families-ships-description = Корабли Пакта
 research-technology-families-emitter-description = Источник щита «Errant»

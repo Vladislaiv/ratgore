@@ -243,8 +243,10 @@
   components:
   - type: ShipyardListing
     shuttles:
-    - Lucifer
-    - Fadeem
+    - Yanbue
+    - Alkhuld
+    - Beelzebub
+    - Baghl
 
 - type: entity
   id: OuroborosMothershipComputer
