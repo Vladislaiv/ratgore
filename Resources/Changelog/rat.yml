@@ -621,5 +621,12 @@ Entries:
     id: 78
     time: '2026-04-10T09:54:07.0000000+00:00'
     url: https://github.com/ss14-art/ratgore/pull/122
+  - author: nabegator220
+    changes:
+      - type: Tweak
+        message: TAP rework.
+    id: 79
+    time: '2026-04-10T10:08:28.0000000+00:00'
+    url: https://github.com/ss14-art/ratgore/pull/123
 Name: Rat
 Order: -1
