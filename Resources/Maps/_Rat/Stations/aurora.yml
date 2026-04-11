@@ -169790,7 +169790,7 @@ entities:
   - uid: 16731
     components:
     - type: MetaData
-      name: БМС Аврора
+      name: БМС Aurora Imperialis
     - type: Transform
       pos: 0.5,1.5
       parent: 1
