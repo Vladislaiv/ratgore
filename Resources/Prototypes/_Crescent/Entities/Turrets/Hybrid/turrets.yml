@@ -98,9 +98,9 @@
       availableModes:
         - FullAuto
       angleDecay: 20
-      minAngle: 3
-      maxAngle: 12
-      angleIncrease: 5.5
+      minAngle: 3.5
+      maxAngle: 25
+      angleIncrease: 2.25
       soundGunshot:
         path: /Audio/Weapons/Guns/Gunshots/lasergatling.ogg
         params:

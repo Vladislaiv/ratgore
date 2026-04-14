@@ -33,7 +33,7 @@
       fireOnDropChance: 0
       projectileSpeed: 100
       burstCooldown: 2.5
-      shotsPerBurst: 4
+      shotsPerBurst: 2
       burstFireRate: 8
       selectedMode: Burst
       availableModes:
@@ -81,7 +81,7 @@
       fireOnDropChance: 0
       projectileSpeed: 140
       burstCooldown: 2.5
-      shotsPerBurst: 6
+      shotsPerBurst: 3
       burstFireRate: 8
       selectedMode: Burst
       availableModes:

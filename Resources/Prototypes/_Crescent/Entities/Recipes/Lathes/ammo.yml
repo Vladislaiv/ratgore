@@ -507,7 +507,7 @@
   completetime: 2
   materials:
     Steel: 3000
-    Plasma: 2500
+    Plasma: 1500
 
 #88mm Corpus Flak Ammo
 - type: latheRecipe

@@ -46,10 +46,10 @@
         Piercing: 40
   - type: ExplodeOnTrigger
   - type: Explosive
-    explosionType: Fragmentation #basically a small grenade
-    maxIntensity: 5
-    intensitySlope: 3
-    totalIntensity: 100
+    explosionType: Default
+    maxIntensity: 30
+    intensitySlope: 20
+    totalIntensity: 50
     maxTileBreak: 0
   - type: PointLight
     radius: 3.5
@@ -112,7 +112,7 @@
     ignoreWeaponGrid: true
     damage:
       types:
-        Structural: 300
+        Structural: 350
         Piercing: 150
   - type: PointLight
     radius: 3.5
@@ -214,7 +214,7 @@
     ignoreWeaponGrid: true
     damage:
       types:
-        Structural: 400
+        Structural: 450
         Piercing: 200
   - type: PointLight
     radius: 3.5
@@ -314,7 +314,7 @@
     ignoreWeaponGrid: true
     damage:
       types:
-        Structural: 300
+        Structural: 400
         Piercing: 200
   - type: ExplodeOnTrigger
   - type: Explosive
@@ -349,7 +349,7 @@
     ignoreWeaponGrid: true
     damage:
       types:
-        Structural: 2000
+        Structural: 2500
         Piercing: 500
   - type: PointLight
     radius: 3.5
@@ -377,7 +377,7 @@
     ignoreWeaponGrid: true
     damage:
       types:
-        Structural: 1300
+        Structural: 1800
         Piercing: 200
   - type: ExplodeOnTrigger
   - type: Explosive
@@ -424,9 +424,9 @@
   - type: ExplodeOnTrigger
   - type: Explosive
     explosionType: Default
-    maxIntensity: 400
+    maxIntensity: 600
     intensitySlope: 200
-    totalIntensity: 5000
+    totalIntensity: 10000
     maxTileBreak: 5
   - type: PointLight
     radius: 3.5
@@ -448,7 +448,7 @@
     ignoreWeaponGrid: true
     damage:
       types:
-        Structural: 750
+        Structural: 1500
         Piercing: 250
   - type: TimedDespawn
     lifetime: 20 #4000m
@@ -458,7 +458,7 @@
       - state: base-projectile
   - type: ExplodeOnTrigger
   - type: EmpOnTrigger
-    range: 4
+    range: 8
     energyConsumption: 4500 #IPCs hate this... (nap time)
     disableDuration: 4
   - type: PointLight
@@ -494,7 +494,7 @@
     explosionType: Default
     maxIntensity: 100
     intensitySlope: 5
-    totalIntensity: 5000
+    totalIntensity: 2000
     maxTileBreak: 1
   - type: ProximityFuse
     maxRange: 5
@@ -527,7 +527,7 @@
     explosionType: Default
     maxIntensity: 800
     intensitySlope: 200
-    totalIntensity: 9000
+    totalIntensity: 18000
     maxTileBreak: 15
   - type: PointLight
     radius: 3.5

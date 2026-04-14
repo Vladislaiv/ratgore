@@ -71,7 +71,7 @@
     ignoreWeaponGrid: true
     damage:
       types:
-        Heat: 100
+        Heat: 120
   - type: ProjectileIFF
     visualType: Circle
     color: Red
@@ -80,7 +80,7 @@
     color: blue
     energy: 0.5
   - type: TimedDespawn
-    lifetime: 14 #2800
+    lifetime: 5 #ratgore, nerfed
   - type: Sprite
     sprite: _Crescent/Objects/Turrets/Ammunition/Projectiles/lasers.rsi
     layers:
