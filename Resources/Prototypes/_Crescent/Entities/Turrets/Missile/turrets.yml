@@ -102,7 +102,7 @@
   id: BaseWeaponTurretAzimuth
   suffix: ShipGun
   name: 60mm 'Azimuth' Rocket Pod
-  description: A rapid-fire rocket pod capable of bypassing shields.
+  description: A rapid-fire rocket pod.
   components:
     - type: Sprite
       sprite: _Crescent/Objects/Turrets/Missile/azimuth.rsi
@@ -129,7 +129,7 @@
     - type: Gun
       fireOnDropChance: 0
       projectileSpeed: 180
-      fireRate: 2
+      fireRate: 4
       selectedMode: FullAuto
       availableModes:
         - FullAuto
@@ -153,7 +153,7 @@
   id: BaseWeaponTurretAzimuthNCWL
   suffix: ShipGun
   name: Homeguard 60mm 'Compass' Rocket Pod
-  description: A rapid-fire rocket pod capable of bypassing shields. This one has been reinforced heavily.
+  description: A rapid-fire rocket pod. This one has been reinforced heavily.
   components:
     - type: Sprite
       sprite: _Crescent/Objects/Turrets/Missile/azimuth.rsi
@@ -175,7 +175,7 @@
     - type: Gun
       fireOnDropChance: 0
       projectileSpeed: 170
-      fireRate: 1.75
+      fireRate: 3
       selectedMode: FullAuto
       availableModes:
         - FullAuto
@@ -196,7 +196,7 @@
   id: BaseWeaponTurretAzimuthGSC
   suffix: ShipGun
   name: Gorlex 60mm 'Crossfire' Rocket Pod
-  description: A rapid-fire rocket pod capable of bypassing shields. This one has been upgraded by Gorlex.
+  description: A rapid-fire rocket pod. This one has been upgraded by Gorlex.
   components:
     - type: Sprite
       sprite: _Crescent/Objects/Turrets/Missile/azimuth.rsi
@@ -218,7 +218,7 @@
     - type: Gun
       fireOnDropChance: 0
       projectileSpeed: 190
-      fireRate: 3
+      fireRate: 5
       selectedMode: FullAuto
       availableModes:
         - FullAuto

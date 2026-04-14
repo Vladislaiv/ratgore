@@ -1249,7 +1249,7 @@
         - Azimuth60mmRegularRecipe
         - Azimuth60mmGorlexRecipe
         - Azimuth60mmNCWLRecipe
-        - Azimuth60mmAdvancedRecipe
+        #- Azimuth60mmAdvancedRecipe
         - Arbalest95mmRegularRecipe
         - Arbalest95mmNCWLRecipe
         - Arbalest95mmGorlexRecipe
@@ -1375,7 +1375,7 @@
         - Azimuth60mmRegularRecipe
         - Azimuth60mmGorlexRecipe
         - Azimuth60mmNCWLRecipe
-        - Azimuth60mmAdvancedRecipe
+        #- Azimuth60mmAdvancedRecipe
         - Arbalest95mmRegularRecipe
         - Arbalest95mmNCWLRecipe
         - Arbalest95mmGorlexRecipe
