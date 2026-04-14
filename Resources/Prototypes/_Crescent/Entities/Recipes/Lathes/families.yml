@@ -57,7 +57,7 @@
     Steel: 2000
     Copper: 1000
     Glass: 1500
-    TungstenCarbide: 1000
+    Tungsten: 1000
 
 - type: latheRecipe
   id: BaseWeaponTurretAzimuthFlatpack
@@ -155,7 +155,6 @@
 - type: latheRecipe
   id: FlatpackDroneController
   result: FlatpackDroneController
-  category: Devices
   completetime: 40
   materials:
     Steel: 7000
@@ -168,12 +167,10 @@
 - type: latheRecipe
   id: CompositionC4
   result: C4
-  category: Explosives
   completetime: 10
   materials:
     Plastic: 200
     Plasma: 100
-    Carbon: 500
 
 # High-Impulse Thruster
 
