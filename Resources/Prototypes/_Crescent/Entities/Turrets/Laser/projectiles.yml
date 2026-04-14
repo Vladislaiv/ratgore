@@ -80,7 +80,7 @@
     color: blue
     energy: 0.5
   - type: TimedDespawn
-    lifetime: 5 #ratgore, nerfed
+    lifetime: 4 #ratgore, nerfed
   - type: Sprite
     sprite: _Crescent/Objects/Turrets/Ammunition/Projectiles/lasers.rsi
     layers:
