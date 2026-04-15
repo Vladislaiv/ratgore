@@ -5,7 +5,6 @@
 - type: latheRecipe
   id: WeaponTurretSmallMachinegunFlatpack
   result: WeaponTurretSmallMachinegunFlatpack
-  category: Devices
   completetime: 20
   materials:
     Steel: 500
@@ -16,7 +15,6 @@
 - type: latheRecipe
   id: WeaponTurretMediumMachinegunFlatpack
   result: WeaponTurretMediumMachinegunFlatpack
-  category: Devices
   completetime: 25
   materials:
     Steel: 700
@@ -27,7 +25,6 @@
 - type: latheRecipe
   id: BaseWeaponTurretShortbowFlatpack
   result: BaseWeaponTurretShortbowFlatpack
-  category: Devices
   completetime: 30
   materials:
     Steel: 800
@@ -40,7 +37,6 @@
 - type: latheRecipe
   id: WeaponTurretSmallArtilleryFlatpack
   result: WeaponTurretSmallArtilleryFlatpack
-  category: Devices
   completetime: 28
   materials:
     Steel: 600
@@ -51,18 +47,16 @@
 - type: latheRecipe
   id: WeaponTurretLargeMachinegunFlatpack
   result: WeaponTurretLargeMachinegunFlatpack
-  category: Devices
   completetime: 35
   materials:
     Steel: 2000
     Copper: 1000
     Glass: 1500
-    TungstenCarbide: 1000
+    Tungsten: 1000
 
 - type: latheRecipe
   id: BaseWeaponTurretAzimuthFlatpack
   result: BaseWeaponTurretAzimuthFlatpack
-  category: Devices
   completetime: 40
   materials:
     Steel: 1400
@@ -73,7 +67,6 @@
 - type: latheRecipe
   id: BaseWeaponTurretArbalestFlatpack
   result: BaseWeaponTurretArbalestFlatpack
-  category: Devices
   completetime: 38
   materials:
     Steel: 2200
@@ -87,7 +80,6 @@
 - type: latheRecipe
   id: BaseWeaponTurretRetributionFlatpack
   result: BaseWeaponTurretRetributionFlatpack
-  category: Devices
   completetime: 32
   materials:
     Steel: 1000
@@ -98,7 +90,6 @@
 - type: latheRecipe
   id: BaseWeaponTurretGlareFlatpack
   result: BaseWeaponTurretGlareFlatpack
-  category: Devices
   completetime: 42
   materials:
     Steel: 1800
@@ -109,7 +100,6 @@
 - type: latheRecipe
   id: BaseWeaponTurretStarburstFlatpack
   result: BaseWeaponTurretStarburstFlatpack
-  category: Devices
   completetime: 45
   materials:
     Steel: 1600
@@ -119,7 +109,6 @@
 - type: latheRecipe
   id: BaseWeaponTurretBolterFlatpack
   result: BaseWeaponTurretBolterFlatpack
-  category: Devices
   completetime: 42
   materials:
     Steel: 1500
@@ -144,7 +133,6 @@
 - type: latheRecipe
   id: FlatpackComputerDroneControl
   result: FlatpackComputerDroneControl
-  category: Devices
   completetime: 45
   materials:
     Steel: 8000
@@ -155,7 +143,6 @@
 - type: latheRecipe
   id: FlatpackDroneController
   result: FlatpackDroneController
-  category: Devices
   completetime: 40
   materials:
     Steel: 7000
@@ -168,19 +155,16 @@
 - type: latheRecipe
   id: CompositionC4
   result: C4
-  category: Explosives
   completetime: 10
   materials:
     Plastic: 200
     Plasma: 100
-    Carbon: 500
 
 # High-Impulse Thruster
 
 - type: latheRecipe
   id: ThrusterHighImpulseTAP
   result: ThrusterHighImpulseTAP
-  category: Devices
   completetime: 20
   materials:
     Steel: 1500

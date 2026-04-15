@@ -641,9 +641,7 @@
       - WeaponTurretSmallMachinegunFlatpack
       - WeaponTurretMediumMachinegunFlatpack
       - WeaponTurretSmallArtilleryFlatpack
-      - WeaponTurretMediumArtilleryFlatpack
       - WeaponTurretLargeMachinegunFlatpack
-      - WeaponTurretLargeArtilleryFlatpack
       - BaseWeaponTurretShortbowFlatpack
       - BaseWeaponTurretAzimuthFlatpack
       - BaseWeaponTurretArbalestFlatpack
@@ -1648,6 +1646,7 @@
       - FlatpackComputerDroneControl
       - FlatpackDroneController
       - ThrusterHighImpulseTAP
+      - ClothingOuterHardsuitCybersunDreadnoughtCyberdawn
   - type: MaterialStorageMagnetPickup
     magnetEnabled: True
 
