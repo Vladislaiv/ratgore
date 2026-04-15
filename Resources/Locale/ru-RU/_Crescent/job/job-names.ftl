@@ -24,7 +24,7 @@ job-name-ncwl-newbie = Рабочий
 # syndicate
 
 job-name-ringleader = Главарь Горлекс
-job-name-lieutenant = Сержант Горлекс
+job-name-lieutenant = Лейтенант Горлекс
 job-name-infanteer = Пехотинец Горлекс
 job-name-technician = Новобранец Горлекс
 job-name-coordinator = Координатор Интердайн

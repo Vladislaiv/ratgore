@@ -610,5 +610,52 @@ Entries:
     id: 77
     time: '2026-04-09T15:34:48.0000000+00:00'
     url: https://github.com/ss14-art/ratgore/pull/117
+  - author: EmperorStukov
+    changes:
+      - type: Add
+        message: Т2 скафандр Горлекса в их вендомат (статы Жуньгуо)
+      - type: Add
+        message: Рубашка "бесконечное Джерси" в лодаут для любого
+      - type: Fix
+        message: Немного исправлены отображения иконок скафандров Синдиката
+    id: 78
+    time: '2026-04-10T09:54:07.0000000+00:00'
+    url: https://github.com/ss14-art/ratgore/pull/122
+  - author: nabegator220
+    changes:
+      - type: Tweak
+        message: TAP rework.
+    id: 79
+    time: '2026-04-10T10:08:28.0000000+00:00'
+    url: https://github.com/ss14-art/ratgore/pull/123
+  - author: freycyik
+    changes:
+      - type: Add
+        message: Добавлен джаггернаут КВСТ, он доступен в изучениях Кибердонов. Он наносит владельцу урон взамен - даёт большую защиту
+    id: 80
+    time: '2026-04-11T09:48:07.0000000+00:00'
+    url: https://github.com/ss14-art/ratgore/pull/126
+  - author: EmperorStukov
+    changes:
+      - type: Add
+        message: Добавлены стойки со снаряжением для Горлекс
+      - type: Fix
+        message: Теперь все шкафы со снаряжением требуют спец.доступов. Никаких больше общедоступных шкафов.
+      - type: Tweak
+        message: Стойки со снарягой Горлы добавлены на Гидру
+      - type: Fix
+        message: Исправлено отображение Т2 скафандров Горлекс
+    id: 81
+    time: '2026-04-11T12:07:18.0000000+00:00'
+    url: https://github.com/ss14-art/ratgore/pull/127
+  - author: Ko-mp-otik
+    changes:
+      - type: Add
+        message: ТК Анвил by [okhrimm](https://github.com/okhrimm)
+      - type: Remove
+        message: ТК секира
+    id: 82
+    time: '2026-04-13T14:06:04.0000000+00:00'
+    url: https://github.com/ss14-art/ratgore/pull/131
 Name: Rat
 Order: -1
