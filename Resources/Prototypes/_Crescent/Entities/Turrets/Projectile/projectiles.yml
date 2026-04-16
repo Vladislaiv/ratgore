@@ -319,9 +319,9 @@
   - type: ExplodeOnTrigger
   - type: Explosive
     explosionType: Default
-    maxIntensity: 200 #3 shot to break plastit good range
+    maxIntensity: 200
     intensitySlope: 30
-    totalIntensity: 2000
+    totalIntensity: 1300
     maxTileBreak: 3
   - type: PointLight
     radius: 3.5
@@ -349,7 +349,7 @@
     ignoreWeaponGrid: true
     damage:
       types:
-        Structural: 2500
+        Structural: 1500
         Piercing: 500
   - type: PointLight
     radius: 3.5
@@ -377,7 +377,7 @@
     ignoreWeaponGrid: true
     damage:
       types:
-        Structural: 1800
+        Structural: 1000
         Piercing: 200
   - type: ExplodeOnTrigger
   - type: Explosive
