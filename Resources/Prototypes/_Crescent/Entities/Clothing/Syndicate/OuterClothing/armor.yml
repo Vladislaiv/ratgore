@@ -153,9 +153,6 @@
     armorRepair: NTCeramic
     initialModifiers:
       flatReductions:
-        Blunt: 25
-        Slash: 15
-        Piercing: 90
         Heat: 15
         Caustic: 15
   - type: ClothingSpeedModifier
