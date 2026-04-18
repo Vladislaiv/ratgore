@@ -15,3 +15,9 @@
   background: /Textures/_Crescent/LobbyScreens/kalash.png
   name: Kalash
   artist: dlooodySpy
+
+- type: lobbyBackground
+  id: Kalash2
+  background: /Textures/_Crescent/LobbyScreens/kalash2.png
+  name: Kalash
+  artist: dlooodySpy
