@@ -176,7 +176,7 @@
       - ClothingOuterHardsuitHEV
 
 - type: entity
-  parent: ClothingOuterHardsuitHighsec
+  parent: [ClothingOuterHardsuitHighsec, ClothingArmorInsertHardsuit]
   id: ClothingOuterHardsuitHighsecUA
   name: SHI-UA SVBT-3 Combat Operations Hardsuit
   description: A high quality combat hardsuit and carrier system, developed for internal use by United Arsenal combat employees. This customized model was never intended to even be manufactured by a regular Shinohara branch, but Shinohara had the blueprint and Taypan had the customers.
@@ -389,8 +389,8 @@
       - ClothingOuterArmorShinoharaHOSVest
 
 - type: entity
-  parent: ClothingOuterArmorBasic
-  id: [ClothingOuterArmorShinoharaArmorHighsec, ClothingArmorInsert]
+  parent: [ClothingOuterArmorBasic, ClothingArmorInsert]
+  id: ClothingOuterArmorShinoharaArmorHighsec
   name: Shinohara Corporation BULWARK-2 Combat Operations Suit
   description: A top of the line full body suit of armor, made entirely out of aramid fiber and synthcotton. While not able to seal in an atmosphere, the BULWARK-2 is an incredibly effective piece of kit. This thing would make any military nerd cum his pants.
   components:

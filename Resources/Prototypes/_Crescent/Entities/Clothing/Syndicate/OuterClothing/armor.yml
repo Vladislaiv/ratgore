@@ -46,7 +46,7 @@
       - ClothingOuterHardsuitRamzi
 
 - type: entity
-  parent: [ClothingOuterHardsuitBase, ArmorInsertClothingHardsuit]
+  parent: [ClothingOuterHardsuitBase, ClothingArmorInsertHardsuit]
   id: ClothingOuterHardsuitSyndieDonator
   name: UNIONIZER modified combat technician's hardsuit
   description: A modular hardsuit, bears the colors of the Shipfitters and Astronautics Workers Union of the Syndicate. Hard-worn and modified after many years of use.
@@ -214,8 +214,8 @@
       - ClothingOuterHardsuitTraumasec
 
 - type: entity
-  parent: ClothingOuterHardsuitBase
-  id: [ClothingOuterHardsuitCoordinator, ClothingArmorInsertHardsuit]
+  parent: [ClothingOuterHardsuitBase, ClothingArmorInsertHardsuit]
+  id: ClothingOuterHardsuitCoordinator
   name: interdyne coordinator hardsuit
   description: A modular hardsuit produced by Shinohara Heavy Industries, made for Interdyne coordinators.
   components:
