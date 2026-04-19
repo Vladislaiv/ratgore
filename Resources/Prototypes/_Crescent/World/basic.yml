@@ -88,7 +88,7 @@
       prob: 1
   - type: NoiseRangeCarver
     ranges:
-    - 0.495, 0.505
+    - 0.4, 0.6
     noiseChannel: Carver
 
 - type: spaceBiome
@@ -164,7 +164,7 @@
       prob: 1
   - type: NoiseRangeCarver
     ranges:
-    - 0.495, 0.505
+    - 0.4, 0.6
     noiseChannel: Carver
 
 - type: spaceBiome
@@ -237,7 +237,7 @@
       prob: 1
   - type: NoiseRangeCarver
     ranges:
-    - 0.495, 0.505
+    - 0.4, 0.6
     noiseChannel: Carver
 
 - type: spaceBiome
@@ -312,7 +312,7 @@
       prob: 1
   - type: NoiseRangeCarver
     ranges:
-    - 0.495, 0.505
+    - 0.4, 0.6
     noiseChannel: Carver
 
 - type: spaceBiome
@@ -328,7 +328,7 @@
     densityNoiseChannel: Density
   - type: NoiseRangeCarver
     ranges:
-    - 0.495, 0.505
+    - 0.4, 0.6
     noiseChannel: Carver
   - type: SimpleDebrisSelector
     debrisTable:
@@ -358,7 +358,7 @@
     densityNoiseChannel: Density
   - type: NoiseRangeCarver
     ranges:
-    - 0.495, 0.505
+    - 0.4, 0.6
     noiseChannel: Carver
   - type: SimpleDebrisSelector
     debrisTable:
