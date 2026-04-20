@@ -44,7 +44,7 @@
         - CrescentCartridge_13.9x99mm
     proto: CrescentCartridge_13.9x99mm
   - type: Sprite
-    sprite: _Crescent\Objects\Weapons\Ammunition\New_Ammo\Boxes\large.rsi
+    sprite: _Crescent/Objects/Weapons/Ammunition/New_Ammo/Boxes/large.rsi
     layers:
     - state: base
       map: ["enum.GunVisualLayers.Base"]
@@ -72,7 +72,7 @@
     proto: CrescentCartridge_13.9x99mm
     capacity: 5
   - type: Sprite
-    sprite: _Crescent\Objects\Weapons\Ammunition\New_Ammo\Magazine\13.9x99_Mag.rsi
+    sprite: _Crescent/Objects/Weapons/Ammunition/New_Ammo/Magazine/13.9x99_Mag.rsi
     layers:
     - state: base
       map: ["enum.GunVisualLayers.Base"]
@@ -129,7 +129,7 @@
         - CrescentCartridge_12.7x108mm
     proto: CrescentCartridge_12.7x108mm
   - type: Sprite
-    sprite: _Crescent\Objects\Weapons\Ammunition\New_Ammo\Boxes\large.rsi
+    sprite: _Crescent/Objects/Weapons/Ammunition/New_Ammo/Boxes/large.rsi
     layers:
     - state: base
       map: ["enum.GunVisualLayers.Base"]
@@ -157,7 +157,7 @@
     proto: CrescentCartridge_12.7x108mm
     capacity: 100
   - type: Sprite
-    sprite: _Crescent\Objects\Weapons\Ammunition\New_Ammo\Magazine\12.7x108_Box.rsi
+    sprite: _Crescent/Objects/Weapons/Ammunition/New_Ammo/Magazine/12.7x108_Box.rsi
     layers:
     - state: base
       map: ["enum.GunVisualLayers.Base"]

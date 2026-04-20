@@ -55,7 +55,7 @@
         - CrescentCartridge_18.5ga
     proto: CrescentCartridge_18.5ga
   - type: Sprite
-    sprite: _Crescent\Objects\Weapons\Ammunition\New_Ammo\Boxes\Shotgun.rsi
+    sprite: _Crescent/Objects/Weapons/Ammunition/New_Ammo/Boxes/Shotgun.rsi
     layers:
     - state: base
       map: ["enum.GunVisualLayers.Base"]
@@ -83,7 +83,7 @@
     proto: CrescentCartridge_18.5ga
     capacity: 5
   - type: Sprite
-    sprite: _Crescent\Objects\Weapons\Ammunition\New_Ammo\Magazine\18.5ga_Mag.rsi
+    sprite: _Crescent/Objects/Weapons/Ammunition/New_Ammo/Magazine/18.5ga_Mag.rsi
     layers:
     - state: base
       map: ["enum.GunVisualLayers.Base"]
@@ -111,7 +111,7 @@
     proto: CrescentCartridge_18.5ga
     capacity: 20
   - type: Sprite
-    sprite: _Crescent\Objects\Weapons\Ammunition\New_Ammo\Magazine\18.5ga_Drum.rsi
+    sprite: _Crescent/Objects/Weapons/Ammunition/New_Ammo/Magazine/18.5ga_Drum.rsi
     layers:
     - state: base
       map: ["enum.GunVisualLayers.Base"]
@@ -140,7 +140,7 @@
     proto: CrescentCartridge_18.5ga
     capacity: 4
   - type: Sprite
-    sprite: _Crescent\Objects\Weapons\Ammunition\New_Ammo\Magazine\18.5ga_SpdLdr.rsi
+    sprite: _Crescent/Objects/Weapons/Ammunition/New_Ammo/Magazine/18.5ga_SpdLdr.rsi
     layers:
     - state: base
       map: ["enum.GunVisualLayers.Base"]
@@ -209,7 +209,7 @@
         - CrescentCartridge_12ga
     proto: CrescentCartridge_12ga
   - type: Sprite
-    sprite: _Crescent\Objects\Weapons\Ammunition\New_Ammo\Boxes\Shotgun.rsi
+    sprite: _Crescent/Objects/Weapons/Ammunition/New_Ammo/Boxes/Shotgun.rsi
     layers:
     - state: base
       map: ["enum.GunVisualLayers.Base"]
@@ -237,7 +237,7 @@
     proto: CrescentCartridge_12ga
     capacity: 10
   - type: Sprite
-    sprite: _Crescent\Objects\Weapons\Ammunition\New_Ammo\Magazine\12ga_Mag.rsi
+    sprite: _Crescent/Objects/Weapons/Ammunition/New_Ammo/Magazine/12ga_Mag.rsi
     layers:
     - state: base
       map: ["enum.GunVisualLayers.Base"]
@@ -305,7 +305,7 @@
         - CrescentCartridge_4ga
     proto: CrescentCartridge_4ga
   - type: Sprite
-    sprite: _Crescent\Objects\Weapons\Ammunition\New_Ammo\Boxes\Shotgun.rsi
+    sprite: _Crescent/Objects/Weapons/Ammunition/New_Ammo/Boxes/Shotgun.rsi
     layers:
     - state: base
       map: ["enum.GunVisualLayers.Base"]

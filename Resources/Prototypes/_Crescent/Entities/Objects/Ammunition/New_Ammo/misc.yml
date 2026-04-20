@@ -44,7 +44,7 @@
         - CrescentCartridge_6x24mm
     proto: CrescentCartridge_6x24mm
   - type: Sprite
-    sprite: _Crescent\Objects\Weapons\Ammunition\New_Ammo\Boxes\Intermediary.rsi
+    sprite: _Crescent/Objects/Weapons/Ammunition/New_Ammo/Boxes/Intermediary.rsi
     layers:
     - state: base
       map: ["enum.GunVisualLayers.Base"]
@@ -72,7 +72,7 @@
     proto: CrescentCartridge_6x24mm
     capacity: 30
   - type: Sprite
-    sprite: _Crescent\Objects\Weapons\Ammunition\New_Ammo\Magazine\6x24_Mag.rsi
+    sprite: _Crescent/Objects/Weapons/Ammunition/New_Ammo/Magazine/6x24_Mag.rsi
     layers:
     - state: base
       map: ["enum.GunVisualLayers.Base"]
@@ -100,7 +100,7 @@
     proto: CrescentCartridge_6x24mm
     capacity: 50
   - type: Sprite
-    sprite: _Crescent\Objects\Weapons\Ammunition\New_Ammo\Magazine\6x24_Drum.rsi
+    sprite: _Crescent/Objects/Weapons/Ammunition/New_Ammo/Magazine/6x24_Drum.rsi
     layers:
     - state: base
       map: ["enum.GunVisualLayers.Base"]
