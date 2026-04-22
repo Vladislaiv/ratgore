@@ -26753,4 +26753,11 @@ entities:
     - type: Transform
       pos: -0.5,-14.5
       parent: 1
+- proto: WildBiomeSource
+  entities:
+  - uid: 1368
+    components:
+    - type: Transform
+      pos: 0.44118616,1.7253218
+      parent: 1
 ...
