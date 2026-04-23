@@ -109,7 +109,7 @@
     shoes: ClothingShoesBootsSalvage
     jumpsuit: ClothingUniformJumpsuitNCWLTelnikSleeved
     id: NCWLLogisticWorkerPDA
-    belt: ClothingBeltSalvageWebbingCrescentFilled
+    belt: ClothingBeltSalvageWebbingFilledNF
     back: ClothingBackpackNCWL
     gloves: ClothingHandsGlovesFingerless
     head: ClothingHeadHatNCWLTanker

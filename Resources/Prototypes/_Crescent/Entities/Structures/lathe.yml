@@ -357,15 +357,6 @@
       - ClothingHeadHelmetEVALarge # Frontier
       - TradebandTranslator
       - ClothingBeltSalvageWebbing
-      - ArmorPlateSteelInsertHardsuitCraft
-      - ArmorPlateCeramicInsertBasicHardsuitCraft
-      - ArmorPlatePlasteelInsertHardsuitCraft
-      - ArmorPlateCeramicInsertAdvancedHardsuitCraft
-      - ArmorPlateSteelInsertCraft
-      - ArmorPlateKevlarInsertCraft
-      - ArmorPlateCeramicInsertBasicCraft
-      - ArmorPlatePlasteelInsertCraft
-      - ArmorPlateCeramicInsertAdvancedCraft
     dynamicRecipes:
       #Minutemen
       - MinutemanLPC
@@ -654,7 +645,7 @@
       - BaseWeaponTurretShortbowFlatpack
       - BaseWeaponTurretAzimuthFlatpack
       - BaseWeaponTurretArbalestFlatpack
-      # - WeaponDonorPlasmaCutter
+      - WeaponDonorPlasmaCutter
       - RCDRecharging
       - KineticMachete
       - BreachingHammer

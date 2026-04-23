@@ -72,6 +72,6 @@
     shoes: ClothingShoesBootsSalvage
     jumpsuit: ClothingUniformJumpsuitNCWLTrainee
     id: NCWLWorkerPDA
-    belt: ClothingBeltSalvageWebbingCrescentFilled
+    belt: ClothingBeltSalvageWebbingFilledNF
     back: ClothingBackpackNCWL
     ears: ClothingHeadsetNCWL

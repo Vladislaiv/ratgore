@@ -4,7 +4,6 @@
   category: Head
   cost: 0
   exclusive: true
-  customColorTint: true
   items:
     - ClothingHeadHatImperialBeret
   requirements:

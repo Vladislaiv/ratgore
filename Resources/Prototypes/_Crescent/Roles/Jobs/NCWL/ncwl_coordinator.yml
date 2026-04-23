@@ -96,7 +96,7 @@
     jumpsuit: ClothingUniformJumpsuitNCWLTelnikSleeved
     id: NCWLLogisticLeaderPDA
     outerClothing: ClothingOuterArmorNCWLLogi
-    belt: ClothingBeltSalvageWebbingCrescentFilled
+    belt: ClothingBeltSalvageWebbingFilledNF
     pocket1: WeaponPistolComrade
     back: ClothingBackpackNCWL
     gloves: ClothingHandsGlovesFingerless

@@ -51,7 +51,6 @@
   category: Neck
   cost: 0
   exclusive: true
-  customColorTint: true
   items:
     - ClothingNeckCloakImperialCapelet
   requirements:

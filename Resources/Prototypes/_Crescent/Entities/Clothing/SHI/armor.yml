@@ -3,8 +3,8 @@
 - type: entity
   parent: [ClothingOuterHardsuitBase, StreeCredRedeemable]
   id: ClothingOuterHardsuitMetrocop
-  name: SHI-WTI CMP-1 "Metropolis" security softsuit
-  description: A softsuit padded with durathread soft plates. very effective against low-power rounds and buckshot but weak against rifle rounds. Commony used by peace enforcers in mega cities.
+  name: SHI-WTI OTA-1 "Metrocop" security softsuit
+  description: A softsuit padded with durathread soft plates. Not commonly seen due to its lack of protection but is very durable.
   components:
   - type: Sprite
     sprite: _Crescent/Clothing/SHI/OuterClothing/metrocop.rsi
@@ -41,15 +41,15 @@
 #      - ClothingOuterHardsuitMetrocop
   - type: FootstepModifier
     footstepSoundCollection:
-      collection: MetrocopSuit
+      collection: CombineSuit
       params:
-        volume: -7 # dawg this shit loud and i cant be bothered to make it quieter
+        volume: -5
 
 - type: entity
   parent: [ClothingOuterHardsuitBase, StreeCredRedeemable]
   id: ClothingOuterHardsuitCombine
   name: SHI-WTI OTA-3 "Combine" combat hardsuit
-  description: A nearly fully durathread combat hardsuit developed by Wu-Tan Industries, lacks protection but makes it up in its durability. Has glow up strips on the shoulders to prevent frendly fire in dark enviroments.
+  description: A nearly fully durathread combat hardsuit developed by Wu-Tan Industries, lacks protection but makes it up in its durability. Has glow up strips on the shoulders to prevent frendly fire in dark enviroments,
   components:
   - type: Sprite
     sprite: _Crescent/Clothing/SHI/OuterClothing/combine.rsi
@@ -97,8 +97,8 @@
 - type: entity
   parent: ClothingOuterHardsuitBase
   id: ClothingOuterHardsuitHEV
-  name: Shinohara Corporation Hazardous Environment Protection Hardsuit
-  description: A generic hardsuit, built out of plasteel and polyethylene, designed to protect the wearer from micrometeoroids and higher than nominal radiation. Despite the "armor" being bulky at first glance, it is actually a bunch of small whipple shields, which do absolutely nothing against bullets.
+  name: shinohara hazardous environment hardsuit
+  description: A modular hardsuit produced by Shinohara Heavy Industries, made for logistics officers.
   components:
   - type: Sprite
     sprite: _Crescent/Clothing/SHI/OuterClothing/shinoharahev.rsi
@@ -115,14 +115,15 @@
     armorRepair: PlasteelPlate
     initialModifiers:
       flatReductions:
-        Blunt: 10
-        Slash: 10
+        Blunt: 15
+        Slash: 15
+        Piercing: 10
         Heat: 10
         Caustic: 15
-        Radiation: 45
+        Radiation: 35
   - type: ClothingSpeedModifier
-    walkModifier: 0.97
-    sprintModifier: 0.97
+    walkModifier: 0.85
+    sprintModifier: 0.9
   - type: ToggleableClothing
     clothingPrototype: ClothingHeadHelmetHardsuitHEV
   - type: ClothingAddFaction
@@ -132,21 +133,15 @@
       - ClothingOuterHardsuitHEV
 
 - type: entity
-  parent: [ClothingOuterHardsuitBase, StreeCredRedeemable, ClothingArmorInsertHardsuit]
+  parent: [ClothingOuterHardsuitBase, StreeCredRedeemable]
   id: ClothingOuterHardsuitHighsec
-  name: Shinohara Corporation SVBT-2 Combat Operations Hardsuit
-  description: A high quality hardsuit and carrier system, developed for internal use by Shinohara high risk security, as well as loss prevention teams. While this model was never designed for export usage, the Taypani branch of Shinohara has seen hard times, and this restriction is slowly being phased out.
+  name: shinohara SVBT-2 combat hardsuit
+  description: A modular combat hardsuit developed by Shinohara Heavy Industries. Sold to elite mercs and corporate deathsquads everywhere.
   components:
   - type: Sprite
     sprite: _Crescent/Clothing/SHI/OuterClothing/corpsec.rsi
   - type: Clothing
     sprite: _Crescent/Clothing/SHI/OuterClothing/corpsec.rsi
-  - type: ExtendDescription
-    descriptionList:
-      - description: This is a carrier vest, it will only provide mediocre protection on its own. Put an armor insert into it to fully utilize it.
-        fontSize: 15
-        color: "#ff2106"
-        requireDetailRange: true
   - type: PressureProtection
     highPressureMultiplier: 0.5
     lowPressureMultiplier: 1000
@@ -158,11 +153,14 @@
     armorRepair: NTCeramic
     initialModifiers:
       flatReductions:
+        Blunt: 25
+        Slash: 35
+        Piercing: 70
         Heat: 15
         Caustic: 15
   - type: ClothingSpeedModifier
-    walkModifier: 0.95
-    sprintModifier: 0.95
+    walkModifier: 0.8
+    sprintModifier: 0.85
   - type: ToggleableClothing
     clothingPrototype: ClothingHeadHelmetHardsuitCorpsec
   - type: ClothingAddFaction
@@ -176,21 +174,15 @@
       - ClothingOuterHardsuitHEV
 
 - type: entity
-  parent: [ClothingOuterHardsuitHighsec, ClothingArmorInsertHardsuit]
+  parent: ClothingOuterHardsuitHighsec
   id: ClothingOuterHardsuitHighsecUA
-  name: SHI-UA SVBT-3 Combat Operations Hardsuit
-  description: A high quality combat hardsuit and carrier system, developed for internal use by United Arsenal combat employees. This customized model was never intended to even be manufactured by a regular Shinohara branch, but Shinohara had the blueprint and Taypan had the customers.
+  name: SHI-UA SVBT-2 combat hardsuit
+  description: A modular combat hardsuit developed by Shinohara Heavy Industries. Sold to elite mercs and corporate deathsquads everywhere. Customized by the subsidiary group United Arsenal.
   components:
   - type: Sprite
     sprite: _Crescent/Clothing/SHI/OuterClothing/corpsec_ua.rsi
   - type: Clothing
     sprite: _Crescent/Clothing/SHI/OuterClothing/corpsec_ua.rsi
-  - type: ExtendDescription
-    descriptionList:
-      - description: This is a carrier vest, it will only provide mediocre protection on its own. Put an armor insert into it to fully utilize it.
-        fontSize: 15
-        color: "#ff2106"
-        requireDetailRange: true
   - type: ToggleableClothing
     clothingPrototype: ClothingHeadHelmetHardsuitCorpsecUA
   - type: ClothingAddFaction
@@ -204,21 +196,15 @@
       - ClothingOuterHardsuitHEV
 
 - type: entity
-  parent: [ClothingOuterHardsuitBase, StreeCredRedeemable, ClothingArmorInsertHardsuitJugg]
+  parent: [ClothingOuterHardsuitBase, StreeCredRedeemable]
   id: ClothingOuterHardsuitSHIJuggernaut
-  name: Shinohara Corporation SVBT-2X "KAMADO" Heavy Combat Operations Hardsuit
-  description: An experimental model of the original SVBT-2 hardsuit, with thicker padding, extra plate space, and a reinforced head protection suite. Designed and produced exclusively for SHI Liquidation teams.
+  name: SVBT-XA "KAMADO" juggernaut hardsuit
+  description: Experimental model of the SVBT-2 heavily reinforced with multi layer Kevlar ceramic plates meant for use by shinobi liquidators.
   components:
   - type: Sprite
     sprite: _Crescent/Clothing/SHI/OuterClothing/juggsuit.rsi
   - type: Clothing
     sprite: _Crescent/Clothing/SHI/OuterClothing/juggsuit.rsi
-  - type: ExtendDescription
-    descriptionList:
-      - description: This is a carrier vest, it will only provide mediocre protection on its own. Put an armor insert into it to fully utilize it.
-        fontSize: 15
-        color: "#ff2106"
-        requireDetailRange: true
   - type: PressureProtection
     highPressureMultiplier: 0.02
     lowPressureMultiplier: 1000
@@ -230,6 +216,9 @@
     armorRepair: NTCeramic
     initialModifiers:
       flatReductions:
+        Blunt: 35
+        Slash: 25
+        Piercing: 90
         Heat: 35
         Caustic: 25
   - type: ClothingSpeedModifier
@@ -258,21 +247,15 @@
       - ClothingOuterHardsuitHighsecIndependent
 
 - type: entity
-  parent: [ClothingOuterArmorBasic, StreeCredRedeemable, ClothingArmorInsertHardsuit]
+  parent: [ClothingOuterArmorBasic, StreeCredRedeemable]
   id: ClothingOuterHardsuitSHISpeedsuit
-  name: Shinohara Corporation SVBT-2XB "RAIKU" Combat Operations Hardsuit
-  description: An experimental remodel of the original SVBT-2 hardsuit, which rips out most of the armor, in exchange for fitting an exo-skeleton, that drastically reduces the weight of the suit, and allows the user to move around incredibly quietly.
+  name: SVBT-XB "RAIKU" liquidator suit
+  description: Experimental model of the SVBT-2 with most of the armor stripped off replaced with thick layers of durathread. Equipped with a Exo-Skeleton the suit sliences the users footsteps while also increasing movement capabilities.
   components:
   - type: Sprite
     sprite: _Crescent/Clothing/SHI/OuterClothing/speedsuit.rsi
   - type: Clothing
     sprite: _Crescent/Clothing/SHI/OuterClothing/speedsuit.rsi
-  - type: ExtendDescription
-    descriptionList:
-      - description: This is a carrier vest, it will only provide mediocre protection on its own. Put an armor insert into it to fully utilize it.
-        fontSize: 15
-        color: "#ff2106"
-        requireDetailRange: true
   - type: PressureProtection
     highPressureMultiplier: 0.5
     lowPressureMultiplier: 1000
@@ -288,6 +271,9 @@
     armorRepair: NTCeramic
     initialModifiers:
       flatReductions:
+        Blunt: 20
+        Slash: 20
+        Piercing: 50
         Heat: 15
         Caustic: 15
   - type: ClothingSpeedModifier
@@ -311,27 +297,24 @@
 #armor
 
 - type: entity
-  parent: [ClothingOuterArmorBasic, ClothingArmorInsert]
+  parent: ClothingOuterArmorBasic
   id: ClothingOuterArmorShinoharaHOSVest
-  name: Shinohara Corporation Bulwark-1 Combat Vest
-  description: A simple yet effective load bearing vest and plate carrier, designed to be used by SHI soldiers in atmosphere. Comes with a healthy layer of cushy SHI branded memory foam, for maximum user comfort. 
+  name: SHI BULWARK-1 combat vest
+  description: A kevlar-intervowen durathread vest padded with ballistic gel.
   components:
   - type: Sprite
     sprite: _Crescent/Clothing/SHI/OuterClothing/hosvest.rsi
   - type: Clothing
     sprite: _Crescent/Clothing/SHI/OuterClothing/hosvest.rsi
-  - type: ExtendDescription
-    descriptionList:
-      - description: This is a carrier vest, it will only provide mediocre protection on its own. Put an armor insert into it to fully utilize it.
-        fontSize: 15
-        color: "#ff2106"
-        requireDetailRange: true
   - type: DegradeableArmor
     armorMaxHealth: 1000
     armorType: Metallic
     armorRepair: PlasteelEncasedKevlar
     initialModifiers:
       flatReductions:
+        Blunt: 10
+        Slash: 10
+        Piercing: 30
         Heat: 20
         Caustic: 15
   - type: ClothingSpeedModifier
@@ -349,27 +332,24 @@
       - ClothingOuterArmorShinoharaArmorHighsecUA
 
 - type: entity
-  parent: [ClothingOuterArmorBasic, ClothingArmorInsert]
+  parent: ClothingOuterArmorBasic
   id: ClothingOuterArmorShinoharaArmor
   name: SHI CIV-1 combat vest
-  description: An incredibly cheap aramid vest, with space for a plate, and a yellow strip running down the side. Originally designed to be a budget item on the civilian market (a purpose it still serves), Shinohara has decided that this vest is good enough for Corporate Security teams working on the station.
+  description: A kevlar-intervowen durathread vest padded with ballistic gel. Sold on the civilian self-defense market.
   components:
   - type: Sprite
     sprite: _Crescent/Clothing/SHI/OuterClothing/securityvest.rsi
   - type: Clothing
     sprite: _Crescent/Clothing/SHI/OuterClothing/securityvest.rsi
-  - type: ExtendDescription
-    descriptionList:
-      - description: This is a carrier vest, it will only provide mediocre protection on its own. Put an armor insert into it to fully utilize it.
-        fontSize: 15
-        color: "#ff2106"
-        requireDetailRange: true
   - type: DegradeableArmor
     armorMaxHealth: 1000
     armorType: Metallic
     armorRepair: PlasteelEncasedKevlar
     initialModifiers:
       flatReductions:
+        Blunt: 10
+        Slash: 10
+        Piercing: 30
         Heat: 20
         Caustic: 15
   - type: ClothingSpeedModifier
@@ -389,31 +369,28 @@
       - ClothingOuterArmorShinoharaHOSVest
 
 - type: entity
-  parent: [ClothingOuterArmorBasic, ClothingArmorInsert]
+  parent: ClothingOuterArmorBasic
   id: ClothingOuterArmorShinoharaArmorHighsec
-  name: Shinohara Corporation BULWARK-2 Combat Operations Suit
-  description: A top of the line full body suit of armor, made entirely out of aramid fiber and synthcotton. While not able to seal in an atmosphere, the BULWARK-2 is an incredibly effective piece of kit. This thing would make any military nerd cum his pants.
+  name: SHI BULWARK-2 ballistic hauberk
+  description: A kevlar-intervowen durathread hauberk padded with ballistic gel, plated with NanoTrasen Ballistic Carapace (tm) on the outside. A wet dream for any corporate goon.
   components:
   - type: Sprite
     sprite: _Crescent/Clothing/SHI/OuterClothing/highsec.rsi
   - type: Clothing
     sprite: _Crescent/Clothing/SHI/OuterClothing/highsec.rsi
-  - type: ExtendDescription
-    descriptionList:
-      - description: This is a carrier vest, it will only provide mediocre protection on its own. Put an armor insert into it to fully utilize it.
-        fontSize: 15
-        color: "#ff2106"
-        requireDetailRange: true
   - type: DegradeableArmor
     armorMaxHealth: 1000
     armorType: Metallic
     armorRepair: NTPolymer
     initialModifiers:
       flatReductions:
+        Blunt: 35
+        Slash: 35
+        Piercing: 55
         Heat: 35
         Caustic: 35
   - type: ClothingSpeedModifier
-    walkModifier: 0.9
+    walkModifier: 1.0
     sprintModifier: 1.0
   - type: ExplosionResistance
     damageCoefficient: 0.80
@@ -431,19 +408,13 @@
 - type: entity
   parent: ClothingOuterArmorShinoharaArmorHighsec
   id: ClothingOuterArmorShinoharaArmorHighsecUA
-  name: SHI-UA BULWARK-3 Combat Operations Suit
-  description: A heavy vest of armor, designed to be utilized by the United Arsenal, and has now found its way into Taypan. Comes with a single pauldron, because it looks badass.
+  name: SHI-UA BULWARK-2 ballistic hauberk
+  description: A kevlar-intervowen durathread hauberk padded with ballistic gel, plated with NanoTrasen Ballistic Carapace (tm) on the outside. A wet dream for any corporate goon. Customized by the subsidiary group United Arsenal.
   components:
   - type: Sprite
     sprite: _Crescent/Clothing/SHI/OuterClothing/highsec_ua.rsi
   - type: Clothing
     sprite: _Crescent/Clothing/SHI/OuterClothing/highsec_ua.rsi
-  - type: ExtendDescription
-    descriptionList:
-      - description: This is a carrier vest, it will only provide mediocre protection on its own. Put an armor insert into it to fully utilize it.
-        fontSize: 15
-        color: "#ff2106"
-        requireDetailRange: true
   - type: ClothingAddFaction
     faction: SHI
   - type: ReverseEngineering # SectorCrescent
@@ -459,8 +430,8 @@
 - type: entity
   parent: ClothingOuterBase
   id: ClothingOuterShinoharaVest
-  name: Corporate High-Vis Vest
-  description: A high-vis vest made for Shinohara workers.
+  name: corporate hi-vis vest
+  description: A hi-vis vest made for Shinohara workers.
   components:
   - type: Sprite
     sprite: _Crescent/Clothing/SHI/OuterClothing/logisticsvest.rsi

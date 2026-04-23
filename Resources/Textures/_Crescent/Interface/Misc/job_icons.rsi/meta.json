@@ -276,6 +276,9 @@
             "name": "StationEngineer"
         },
         {
+            "name": "SecurityOfficer"
+        },
+        {
             "name": "NoId"
         },
         {
@@ -378,6 +381,9 @@
             "name": "ServiceWorker"
         },
         {
+            "name": "SecurityCadet"
+        },
+        {
             "name": "Zombie"
         },
         {
@@ -394,6 +400,9 @@
         },
         {
             "name": "SeniorPhysician"
+        },
+        {
+            "name": "SeniorOfficer"
         },
         {
             "name": "Revolutionary"
@@ -493,24 +502,6 @@
         },
         {
             "name": "hl_ncwl_faclead"
-        },
-        {
-            "name": "PFLead"
-        },
-        {
-            "name": "PFsublead"
-        },
-        {
-            "name": "PFmember"
-        },
-        {
-            "name": "PFT1lead"
-        },
-        {
-            "name": "PFT1sublead"
-        },
-        {
-            "name": "PFT1member"
         }
     ]
 }

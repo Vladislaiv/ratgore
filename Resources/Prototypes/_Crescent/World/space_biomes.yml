@@ -31,7 +31,7 @@
   components:
   - type: SpaceBiomeSource
     biome: imperialbiome
-    swapDistance: 2500
+    swapDistance: 750
     priority: 2550
 
 - type: crescentFactionBiome
@@ -82,7 +82,7 @@
   components:
   - type: SpaceBiomeSource
     biome: graveyardbiome
-    swapDistance: 3500
+    swapDistance: 500
     priority: 5000
 
 - type: crescentFactionBiome
@@ -92,13 +92,14 @@
   parallax: RatGraveyardParallax
 
 #corpie
+
 - type: entity
   id: CorpieBiomeSource
   name: corpie source
   components:
   - type: SpaceBiomeSource
     biome: corpiebiome
-    swapDistance: 2000
+    swapDistance: 300
     priority: 2493
 
 - type: crescentFactionBiome
@@ -115,7 +116,7 @@
   components:
   - type: SpaceBiomeSource
     biome: orisbiome
-    swapDistance: 800
+    swapDistance: 1500
     priority: 2492
 
 - type: crescentFactionBiome
@@ -132,7 +133,7 @@
   components:
   - type: SpaceBiomeSource
     biome: taypanonebiome
-    swapDistance: 800
+    swapDistance: 1500
     priority: 2492
 
 - type: crescentFactionBiome
@@ -149,7 +150,7 @@
   components:
   - type: SpaceBiomeSource
     biome: wildbiome
-    swapDistance: 100
+    swapDistance: 6500
     priority: 2430
 
 - type: crescentFactionBiome
@@ -183,7 +184,7 @@
   components:
   - type: SpaceBiomeSource
     biome: deepwildbiome
-    swapDistance: 11500
+    swapDistance: 12500
     priority: 2420
 
 - type: crescentFactionBiome
@@ -231,35 +232,21 @@
 #abyss
 
 - type: entity
-  id: TaypaniAbyssSource
-  name: taypani abyss
-  components:
-  - type: SpaceBiomeSource
-    biome: taypaniabyss
-    swapDistance: 25500
-    priority: 2400
-
-- type: crescentFactionBiome
-  id: taypaniabyss
-  name: Taypani Abyss
-  swapDuration: 2
-  parallax: AbyssParallax
-
-#Deadspace
-- type: entity
-  id: DeadspaceSource #WOKEOPWKWOEK AbyssParallax
+  id: DeadspaceSource
   name: hadal deadspace
   components:
   - type: SpaceBiomeSource
     biome: hadaldeadspace
-    swapDistance: 40500
-    priority: 2390
+    swapDistance: 1
+    priority: 2400
 
 - type: crescentFactionBiome
   id: hadaldeadspace
   name: Мертвый Космос
   swapDuration: 2
   parallax: RatDefault
+
+
 #NEW BIOMES - V1
 
 #generic scrapyard
@@ -270,7 +257,7 @@
   components:
   - type: SpaceBiomeSource
     biome: scrapyardbiome
-    swapDistance: 3500
+    swapDistance: 1500
     priority: 2440
 
 - type: crescentFactionBiome
@@ -287,7 +274,7 @@
   components:
   - type: SpaceBiomeSource
     biome: asteroidbiome
-    swapDistance: 3000
+    swapDistance: 1500
     priority: 2440
 
 - type: crescentFactionBiome
@@ -348,6 +335,8 @@
   parallax: RatRupture
 
 
+
+
   #PRIORITIES & DISTANCES:
   #
   #
@@ -355,9 +344,9 @@
   #
   # STATIONS - 2460 - ATTACHED TO STATIONS THEMSELVES, RANGE 1,000
   # P.O.I. - 2440 - ATTACHED TO ASTEROID FIELDS, P.O.I. AND SCRAPYARDS
-  # BiomeAsteroidFieldSource - 2430 - ATTACHED TO DEFUNCTMININGOUTPOST AT 0,0, RANGE   3,000
-  # DEEPWILDS - 2420 - ATTACHED TO DEFUNCTMININGOUTPOST AT 0,0, RANGE 11,500
-  # HADAL DEADSPACE: 2400 - ATTACHED TO DEFUNCTMININGOUTPOST AT 0,0 - RANGE INFINITE
+  # WILDS - 2430 - ATTACHED TO GLIESS SANTO AT 0,0, RANGE   6,500
+  # DEEPWILDS - 2420 - ATTACHED TO GLIESS SANTO AT 0,0, RANGE 10,000
+  # HADAL DEADSPACE: 2400 - ATTACHED TO GLIESS SANTO AT 0,0 - RANGE INFINITE
 
 #unionfall exclusives, attached to the 2 unionfall grace period rings and the asteroids between them
 

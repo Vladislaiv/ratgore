@@ -117,10 +117,3 @@ crescent-rank-sanitat = Cpl.
 crescent-rank-kanoneer = Sgt.
 crescent-rank-steward = Steward
 crescent-rank-logistat = Marshallie
-
-# planetfall
-
-crescent-rank-PFLeader = Major.
-crescent-rank-PFSubLeader = Lt.
-crescent-rank-PFMember = Pvt.
-

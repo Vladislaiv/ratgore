@@ -38,16 +38,11 @@ public abstract class SharedResearchSystem : EntitySystem
         component.CurrentTechnologyCards.Clear();
         foreach (var discipline in component.SupportedDisciplines)
         {
-            var picksPerDiscipline = 4;
+            var selected = availableTechnology.FirstOrDefault(p => p.Discipline == discipline);
+            if (selected == null)
+                continue;
 
-            var selected = availableTechnology
-                .Where(p => p.Discipline == discipline)
-                .Take(picksPerDiscipline);
-
-            foreach (var tech in selected)
-            {
-                component.CurrentTechnologyCards.Add(tech.ID);
-            }
+            component.CurrentTechnologyCards.Add(selected.ID);
         }
         Dirty(uid, component);
     }

@@ -5,11 +5,15 @@
   - type: BiomeSelection
     biomes:
     - Failsafe
+    #- AsteroidsStandardTaypanOne
+    #- AsteroidsStandardTaypanTwo
     - GraveyardWrecks
-    - AbyssWrecks
+    #- BalreskaWrecks
     #- AncientBattlefieldWrecks
     - HeartlandsWrecks
-    - AsteroidCentralBeltRing
+    #- Craster
+    #- Marchbelt
+    #- Deepbelt
     - NewAsteroidsStandardTaypanOne
     - NewAsteroidsStandardTaypanTwo
     - AsteroidCentralBelt
