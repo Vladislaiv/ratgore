@@ -709,5 +709,12 @@ Entries:
     id: 88
     time: '2026-04-24T09:27:03.0000000+00:00'
     url: https://github.com/ss14-art/ratgore/pull/152
+  - author: Gorox
+    changes:
+      - type: Tweak
+        message: Ракеты больше не наводятся на обломки и астероиды.
+    id: 89
+    time: '2026-04-24T12:31:05.0000000+00:00'
+    url: https://github.com/ss14-art/ratgore/pull/150
 Name: Rat
 Order: -1
