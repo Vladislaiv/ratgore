@@ -32,7 +32,7 @@
   - type: Gun
     fireOnDropChance: 0
     projectileSpeed: 65
-    fireRate: 3
+    fireRate: 1
     selectedMode: SemiAuto
     angleDecay: 45
     minAngle: 5
