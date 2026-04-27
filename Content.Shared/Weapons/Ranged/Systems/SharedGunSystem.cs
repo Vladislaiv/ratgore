@@ -35,7 +35,6 @@ using Content.Shared.Weapons.Ranged.Components;
 using Content.Shared.Weapons.Ranged.Events;
 using Content.Shared.Weapons.Reflect;
 using Content.Shared.Whitelist;
-using Content.Shared._Mono.Radar;
 using Robust.Shared.Audio;
 using Robust.Shared.Audio.Systems;
 using Robust.Shared.Configuration;
@@ -677,7 +676,7 @@ public abstract partial class SharedGunSystem : EntitySystem
                             var hit = result.HitEntity;
                             lastHit = hit;
 
-                            FireEffects(fromEffect, result.Distance, dir.Normalized().ToAngle(), hitscan, hit, gunUid, user);
+                            FireEffects(fromEffect, result.Distance, dir.Normalized().ToAngle(), hitscan, hit);
 
                             var ev = new HitScanReflectAttemptEvent(user, gunUid, hitscan.Reflective, dir, false);
                             RaiseLocalEvent(hit, ref ev);
@@ -732,7 +731,7 @@ public abstract partial class SharedGunSystem : EntitySystem
                     }
                     else
                     {
-                        FireEffects(fromEffect, hitscan.MaxLength, dir.ToAngle(), hitscan, null, gunUid, user);
+                        FireEffects(fromEffect, hitscan.MaxLength, dir.ToAngle(), hitscan);
                     }
 
                     Audio.PlayPredicted(gun.SoundGunshotModified, gunUid, user);
@@ -838,7 +837,7 @@ public abstract partial class SharedGunSystem : EntitySystem
 
     #region Hitscan effects
 
-    private void FireEffects(EntityCoordinates fromCoordinates, float distance, Angle mapDirection, HitscanPrototype hitscan, EntityUid? hitEntity = null, EntityUid? gunUid = null, EntityUid? user = null)
+    private void FireEffects(EntityCoordinates fromCoordinates, float distance, Angle mapDirection, HitscanPrototype hitscan, EntityUid? hitEntity = null)
     {
         // Lord
         // Forgive me for the shitcode I am about to do
@@ -895,12 +894,6 @@ public abstract partial class SharedGunSystem : EntitySystem
             {
                 Sprites = sprites,
             }, Filter.Pvs(fromCoordinates, entityMan: EntityManager));
-        }
-
-        if (_netManager.IsServer && gunUid != null)
-        {
-            var radarEv = new HitscanFiredEvent(fromCoordinates, distance, mapDirection, hitscan, hitEntity, gunUid.Value, user);
-            RaiseLocalEvent(radarEv);
         }
     }
 
