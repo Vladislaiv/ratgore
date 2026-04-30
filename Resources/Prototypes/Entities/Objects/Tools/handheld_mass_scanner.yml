@@ -46,10 +46,6 @@
   - type: Tag
     tags:
       - FitsInVoidsuitKit
-  - type: RadarPinger
-  - type: ProjectileIFF
-    visualType: Circle
-    color: "#FFD800"
 
 - type: entity
   id: HandHeldMassScannerEmpty

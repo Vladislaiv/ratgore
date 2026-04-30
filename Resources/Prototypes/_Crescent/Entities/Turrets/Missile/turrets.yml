@@ -149,6 +149,57 @@
       size: Small
 
 - type: entity
+  parent: BaseTurretShipgunNoIFF
+  id: BaseWeaponTurretAzimuthCDT
+  suffix: ShipGun
+  name: Cyberdawn 60mm 'Haruspex' Rocket Pod
+  description: An Azimuth Rocket Pod modified by Cyberdawn to have no IFF signature.
+  components:
+    - type: Sprite
+      sprite: _Crescent/Objects/Turrets/Missile/azimuth.rsi
+      drawdepth: Mobs
+      layers:
+        - state: azimuth
+    - type: Destructible
+      thresholds:
+        - trigger:
+            !type:DamageTrigger
+            damage: 1200
+          # TODO: Construction graph
+          behaviors:
+            - !type:ChangeConstructionNodeBehavior
+              node: machineFrame
+            - !type:PlaySoundBehavior
+              sound:
+                collection: MetalGlassBreak
+    - type: ProjectileIFF
+    - type: ContainerContainer
+      containers:
+        ballistic-ammo: !type:Container
+          ents: []
+    - type: Gun
+      fireOnDropChance: 0
+      projectileSpeed: 180
+      fireRate: 4
+      selectedMode: FullAuto
+      availableModes:
+        - FullAuto
+      soundGunshot: /Audio/Weapons/Guns/Gunshots/rpgfire.ogg
+    - type: BallisticAmmoProvider
+      cycleable: false
+      capacity: 6
+      fillWithDoAfter: false
+      proto: Cartridge60mmRocket
+      whitelist:
+        tags:
+        - CartridgeAzimuth
+    - type: ApcPowerReceiver
+      powerLoad: 1500
+    - type: HardpointAnchorableOnly
+      class: Missile
+      size: Small
+
+- type: entity
   parent: BaseWeaponTurretAzimuth
   id: BaseWeaponTurretAzimuthNCWL
   suffix: ShipGun
