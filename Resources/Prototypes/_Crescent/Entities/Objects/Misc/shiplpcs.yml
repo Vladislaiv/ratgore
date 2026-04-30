@@ -732,7 +732,7 @@
   - type: StaticPrice
     price: 2500
   - type: ShipVoucher
-    ship: Wasp
+    ship: WaspDrone
   - type: ReverseEngineering # SectorCrescent
     recipes:
       - WaspDroneLPC
