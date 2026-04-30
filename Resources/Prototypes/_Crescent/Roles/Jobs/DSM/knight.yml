@@ -22,6 +22,11 @@
   alwaysUseSpawner: true
   requireAdminNotify: false
   icon: "JobIconImperialKnight"
+  chatAmplification:
+    bubbleScale: 1.08
+    shoutBubbleScale: 1.3
+    radioScale: 1.2
+    radioBold: true
   supervisors: job-supervisors-imperial
   canBeAntag: false
   requirements:
