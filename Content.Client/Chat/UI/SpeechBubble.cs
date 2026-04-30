@@ -1,3 +1,4 @@
+using System;
 using System.Numerics;
 using Content.Client.Chat.Managers;
 using Content.Shared.CCVar;
@@ -233,6 +234,16 @@ namespace Content.Client.Chat.UI
             return FormatSpeech(SharedChatSystem.GetStringInsideTag(message, tag), fontColor);
         }
 
+        protected static bool IsShoutSpeech(ChatMessage message)
+        {
+            var raw = SharedChatSystem.GetStringInsideTag(message, "BubbleContent");
+            if (string.IsNullOrEmpty(raw))
+                raw = message.Message;
+
+            var plain = FormattedMessage.RemoveMarkupPermissive(raw);
+            return plain.TrimEnd().EndsWith("!!", StringComparison.Ordinal);
+        }
+
     }
 
     public sealed class TextSpeechBubble : SpeechBubble
@@ -244,9 +255,13 @@ namespace Content.Client.Chat.UI
 
         protected override Control BuildBubble(ChatMessage message, string speechStyleClass, Color? fontColor = null)
         {
+            var shout = IsShoutSpeech(message);
+            var pad = shout ? new Thickness(4, 4, 4, 4) : new Thickness(0);
+
             var label = new RichTextLabel
             {
                 MaxWidth = SpeechMaxWidth,
+                Margin = pad,
             };
 
             label.SetMessage(FormatSpeech(message.WrappedMessage, fontColor));
@@ -272,11 +287,14 @@ namespace Content.Client.Chat.UI
 
         protected override Control BuildBubble(ChatMessage message, string speechStyleClass, Color? fontColor = null)
         {
+            var shout = IsShoutSpeech(message);
+
             if (!ConfigManager.GetCVar(CCVars.ChatEnableFancyBubbles))
             {
                 var label = new RichTextLabel
                 {
-                    MaxWidth = SpeechMaxWidth
+                    MaxWidth = SpeechMaxWidth,
+                    Margin = shout ? new Thickness(4, 4, 4, 4) : new Thickness(0),
                 };
 
                 label.SetMessage(ExtractAndFormatSpeechSubstring(message, "BubbleContent", fontColor));
@@ -297,10 +315,14 @@ namespace Content.Client.Chat.UI
                 VerticalAlignment = VAlignment.Top,
             };
 
+            var contentMargin = shout
+                ? new Thickness(4, FancyBubbleContentTopMargin + 1, 4, 4)
+                : new Thickness(2, FancyBubbleContentTopMargin, 2, 2);
+
             var bubbleContent = new RichTextLabel
             {
                 MaxWidth = SpeechMaxWidth,
-                Margin = new Thickness(2, FancyBubbleContentTopMargin, 2, 2),
+                Margin = contentMargin,
                 StyleClasses = { "bubbleContent" },
                 VerticalAlignment = VAlignment.Top,
             };
@@ -310,13 +332,17 @@ namespace Content.Client.Chat.UI
             bubbleContent.SetMessage(ExtractAndFormatSpeechSubstring(message, "BubbleContent", fontColor));
 
             //As for below: Some day this could probably be converted to xaml. But that is not today. -Myr
+            var mainPanelMargin = shout
+                ? new Thickness(6, 5, 6, 4)
+                : new Thickness(4, 4, 4, 2);
+
             var mainPanel = new PanelContainer
             {
                 StyleClasses = { "speechBox", speechStyleClass },
                 Children = { bubbleContent },
                 ModulateSelfOverride = Color.White.WithAlpha(0.75f),
                 HorizontalAlignment = HAlignment.Center,
-                Margin = new Thickness(4, 4, 4, 2)
+                Margin = mainPanelMargin,
             };
 
             var headerPanel = new PanelContainer
