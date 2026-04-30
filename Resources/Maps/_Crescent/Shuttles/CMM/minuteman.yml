@@ -1236,12 +1236,6 @@ entities:
       rot: 3.141592653589793 rad
       pos: 0.5,5.5
       parent: 1
-    - type: ApcPowerReceiver
-      powerLoad: 1000
-    - type: Battery
-      startingCharge: 997.5
-    - type: ApcPowerReceiverBattery
-      enabled: True
 - proto: BaseWeaponTurretShortbow
   entities:
   - uid: 62

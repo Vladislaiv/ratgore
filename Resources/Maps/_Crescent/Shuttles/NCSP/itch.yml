@@ -1377,10 +1377,4 @@ entities:
           showEnts: False
           occludes: True
           ent: null
-    - type: ApcPowerReceiver
-      powerLoad: 1000
-    - type: Battery
-      startingCharge: 997.5
-    - type: ApcPowerReceiverBattery
-      enabled: True
 ...
