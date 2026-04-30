@@ -379,7 +379,7 @@
       cycleable: false
       capacity: 8
       fillWithDoAfter: false
-      proto: Cartridge95mmRocketGSC
+      proto: Cartridge95mmRocket
       whitelist:
         tags:
         - CartridgeArbalest
@@ -430,7 +430,7 @@
       cycleable: false
       capacity: 4
       fillWithDoAfter: false
-      proto: Cartridge95mmRocketNCWL
+      proto: Cartridge95mmRocket
       whitelist:
         tags:
         - CartridgeArbalest
