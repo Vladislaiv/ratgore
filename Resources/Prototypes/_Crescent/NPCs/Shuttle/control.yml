@@ -111,6 +111,8 @@
   components:
   - type: DroneControlConsole
     maxOrderRadius: null # infinite
+  - type: RadarConsole
+    maxRange: 2048
 
 - type: deviceFrequency
   id: DroneControl
