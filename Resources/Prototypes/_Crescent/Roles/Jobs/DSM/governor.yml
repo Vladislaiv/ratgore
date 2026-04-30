@@ -17,7 +17,7 @@
   startingGear: GovernorGear
   alwaysUseSpawner: true
   requireAdminNotify: true
-  whitelisted: false # Rat
+  whitelisted: true # Rat
   icon: "JobIconImperialGovernor"
   chatAmplification:
     bubbleScale: 1.095
