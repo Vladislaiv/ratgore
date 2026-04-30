@@ -152,6 +152,8 @@ entities:
         chunkSize: 4
     - type: GasTileOverlay
     - type: RadiationGridResistance
+    - type: BecomesStation
+      id: RocinanteDrone
 - proto: AAAHardpointMediumEnergy
   entities:
   - uid: 2

@@ -90,6 +90,8 @@ entities:
         chunkSize: 4
     - type: GasTileOverlay
     - type: RadiationGridResistance
+    - type: BecomesStation
+      id: HornetDrone
 - proto: AAAHardpointMediumEnergy
   entities:
   - uid: 2
