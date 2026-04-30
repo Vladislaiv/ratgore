@@ -377,7 +377,7 @@
     ignoreWeaponGrid: true
     damage:
       types:
-        Structural: 1000
+        Structural: 1300
         Piercing: 200
   - type: ExplodeOnTrigger
   - type: Explosive
@@ -426,7 +426,7 @@
     explosionType: Default
     maxIntensity: 600
     intensitySlope: 200
-    totalIntensity: 10000
+    totalIntensity: 7000
     maxTileBreak: 5
   - type: PointLight
     radius: 3.5
@@ -527,7 +527,7 @@
     explosionType: Default
     maxIntensity: 800
     intensitySlope: 200
-    totalIntensity: 18000
+    totalIntensity: 13000
     maxTileBreak: 15
   - type: PointLight
     radius: 3.5
