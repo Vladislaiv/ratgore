@@ -1326,7 +1326,6 @@
           - Gauze
           - Metal
 
-
 - type: entity
   id: MedicalTechFab
   parent: [BaseLatheLube, BaseMaterialSiloUtilizer]

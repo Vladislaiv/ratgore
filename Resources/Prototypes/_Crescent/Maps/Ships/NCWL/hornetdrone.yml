@@ -1,26 +1,29 @@
+# Author Info
+# Discord: @fleshangel
+
 - type: vessel
-  id: ValorDrone
-  name: DSM Valor
+  id: HornetDrone
+  name: NCWL Hornet
   description: A fighter drone.
-  price: 10000
+  price: 25000
   category: Small
   group: None
-  path: /Maps/_Crescent/Shuttles/DSM/valordrone.yml
+  path: /Maps/_Crescent/Shuttles/NCWL/hornetdrone.yml
 
 - type: gameMap
-  id: ValorDrone
-  mapName: 'DSM Valor'
-  mapPath: /Maps/_Crescent/Shuttles/DSM/valordrone.yml
+  id: HornetDrone
+  mapName: 'NCWL Hornet'
+  mapPath: /Maps/_Crescent/Shuttles/NCWL/hornetdrone.yml
   minPlayers: 0
   stations:
-    ValorDrone:
+    HornetDrone:
       stationProto: StandardCrescentVessel
       gridComponents:
         - type: MapIcon
           iconType: Shuttle
       components:
         - type: StationNameSetup
-          mapNameTemplate: 'DSM Valor {1}'
+          mapNameTemplate: 'NCWL Hornet {1}'
           nameGenerator:
             !type:NanotrasenNameGenerator
             prefixCreator: '14'
