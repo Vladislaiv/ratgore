@@ -964,6 +964,18 @@ public sealed partial class ChatSystem : SharedChatSystem
         return output;
     }
 
+    public static string ApplyRadioChatFormatting(string text, string fontId, int baseFontSize, float multiplier, bool bold)
+    {
+        var adjustedMultiplier = MathF.Max(multiplier, 0.1f);
+        var targetSize = Math.Clamp((int) MathF.Round(baseFontSize * adjustedMultiplier), 1, MaxAmplifiedChatFontSize);
+        var output = text;
+
+        if (bold)
+            output = $"[bold]{output}[/bold]";
+
+        return $"[font=\"{fontId}\" size={targetSize}]{output}[/font]";
+    }
+
     /// <summary>
     ///     Returns list of players and ranges for all players withing some range. Also returns observers with a range of -1.
     /// </summary>
