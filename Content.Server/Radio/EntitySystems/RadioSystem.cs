@@ -209,9 +209,12 @@ public sealed class RadioSystem : EntitySystem
         // TODO: code duplication with ChatSystem.WrapMessage
         var speech = _chat.GetSpeechVerb(source, message);
         var amplification = _chat.GetJobChatAmplification(source);
+        var nameColor = _chat.GetJobChatNameColor(source);
         var baseFontSize = language.SpeechOverride.FontSize ?? speech.FontSize;
         var radioBold = speech.Bold || (amplification?.RadioBold ?? false);
         var radioScale = amplification?.RadioScale ?? 1f;
+        if (nameColor != null)
+            name = $"[color={nameColor.Value.ToHex()}]{name}[/color]";
         message = ChatSystem.ApplySizeMultiplier(message, baseFontSize, radioScale, radioBold);
         var languageColor = channel.Color;
         if (language.SpeechOverride.Color is { } colorOverride)

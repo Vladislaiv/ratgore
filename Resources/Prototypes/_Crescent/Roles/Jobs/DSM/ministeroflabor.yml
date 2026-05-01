@@ -25,6 +25,7 @@
   startingGear: LaborGear
   alwaysUseSpawner: true
   icon: "JobIconImperialLabor"
+  chatNameColor: "#fc9300"
   chatAmplification:
     bubbleScale: 1.09
     shoutBubbleScale: 1.32

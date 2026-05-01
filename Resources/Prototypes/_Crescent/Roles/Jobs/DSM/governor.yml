@@ -19,6 +19,7 @@
   requireAdminNotify: true
   whitelisted: true # Rat
   icon: "JobIconImperialGovernor"
+  chatNameColor: "#fff700"
   chatAmplification:
     bubbleScale: 1.095
     shoutBubbleScale: 1.35

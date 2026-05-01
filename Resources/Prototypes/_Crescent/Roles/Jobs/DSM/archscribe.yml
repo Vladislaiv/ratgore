@@ -26,6 +26,7 @@
   alwaysUseSpawner: true
   requireAdminNotify: true
   icon: "JobIconArchmaester"
+  chatNameColor: "#ffffff"
   chatAmplification:
     bubbleScale: 1.09
     shoutBubbleScale: 1.32

@@ -899,6 +899,9 @@ public sealed partial class ChatSystem : SharedChatSystem
         var languageDisplay = language.IsVisibleLanguage
             ? Loc.GetString("chat-manager-language-prefix", ("language", language.ChatName))
             : "";
+        var nameColor = GetJobChatNameColor(source);
+        if (nameColor != null)
+            entityName = $"[color={nameColor.Value.ToHex()}]{entityName}[/color]";
 
         return Loc.GetString(wrapId,
             ("color", color),
@@ -919,6 +922,17 @@ public sealed partial class ChatSystem : SharedChatSystem
             return null;
 
         return job.ChatAmplification;
+    }
+
+    public Color? GetJobChatNameColor(EntityUid source)
+    {
+        if (!_mindSystem.TryGetMind(source, out var mindId, out _))
+            return null;
+
+        if (!_jobSystem.MindTryGetJob(mindId, out var job))
+            return null;
+
+        return job.ChatNameColor;
     }
 
     private string AmplifySpeechMessage(EntityUid source, InGameICChatType chatType, string message, int baseFontSize)

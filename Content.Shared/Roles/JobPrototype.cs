@@ -5,6 +5,7 @@ using Content.Shared.Dataset;
 using Content.Shared.Players.PlayTimeTracking;
 using Content.Shared.Roles;
 using Content.Shared.StatusIcon;
+using Robust.Shared.Maths;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Serialization.TypeSerializers.Implementations.Custom.Prototype;
 using Robust.Shared.Serialization.TypeSerializers.Implementations.Custom.Prototype.List;
@@ -174,6 +175,12 @@ namespace Content.Shared.Roles
         /// </summary>
         [DataField("chatAmplification")]
         public JobChatAmplification? ChatAmplification { get; private set; }
+
+        /// <summary>
+        /// Optional override for speaker name color in chat output.
+        /// </summary>
+        [DataField("chatNameColor")]
+        public Color? ChatNameColor { get; private set; }
 
     }
 
