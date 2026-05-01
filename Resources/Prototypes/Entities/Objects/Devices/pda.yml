@@ -106,8 +106,8 @@
       - NotekeeperCartridge
       - NewsReaderCartridge
       - NanoChatCartridge # DeltaV
+      - BountyContractsCartridge # _NF Ratgore
     cartridgeSlot:
-      startingItem: BountyContractsCartridge # _NF Ratgore
       priority: -1
       name: device-pda-slot-component-slot-name-cartridge
       ejectSound: /Audio/Machines/id_swipe.ogg
